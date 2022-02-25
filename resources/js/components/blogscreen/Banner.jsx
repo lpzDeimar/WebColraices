@@ -11,7 +11,7 @@ export const Banner = memo(() => {
 
     useEffect(() => {
 
-        const blogs = async() =>{
+        const blogs = async () => {
             const resp = await fetch('https://blog.colraices.com/api/v1/last');
             const blogs = await resp.json();
             setLastBlog(blogs);
@@ -21,28 +21,28 @@ export const Banner = memo(() => {
         blogs();
     }, [])
 
-    const { titulo, extracto, imagen, id, slug } = lastBlog.data ?? {};
+    const { titulo, extracto, imagen, slug } = lastBlog.data ?? {};
 
     return (
         <>
-        {loading ?
-        <section className='blogscreen-banner'>
-            <h2>El blog para colombianos <span>en el exterior</span></h2>
-            <div className='border'></div>
-            <article className='blogscreen-item'>
-                <img src={imagen} alt={titulo} />
-                <article className='blogscreen-text'>
-                    <h1>{titulo}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: extracto }} />
-                    <Link to={`/blog/${slug}`}><button>Leer</button></Link>
-                </article>
-            </article>
-        </section>
-        :
-        <div>
-            <h1>Loading</h1>
-        </div>
-}
+            {loading ?
+                <section className='blogscreen-banner' data-aos="fade-up" data-aos-duration="1100" >
+                    <h2>El blog para colombianos <span>en el exterior</span></h2>
+                    <div className='border'></div>
+                    <article className='blogscreen-item'>
+                        <img src={imagen} alt={titulo} />
+                        <article className='blogscreen-text'>
+                            <h1>{titulo}</h1>
+                            <div dangerouslySetInnerHTML={{ __html: extracto }} />
+                            <Link to={`/blog/${slug}`}><button>Leer</button></Link>
+                        </article>
+                    </article>
+                </section>
+                :
+                <div>
+                    <h1>Loading</h1>
+                </div>
+            }
         </>
 
     )

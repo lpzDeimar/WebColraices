@@ -14,23 +14,26 @@ import { ActiveContext } from "../components/ActiveContext";
 import useModal from "../components/hooks/useModal";
 import { Contacto } from "../containers/Contacto";
 import { getContryByCod } from "../selectors/getContryByCod";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const contry = document.querySelector('#contry').value;
 
 export const App = () => {
 
-    const [activeModalBlog, activarModalBlog, activeModalVivienda, activarModalVivienda] = useModal();
+    const [activeModalBlog, activarModalBlog, activeModalVivienda, activarModalVivienda, activeModalForm, activarModalForm, apiW] = useModal();
 
     const [contr, setContr] = useState([])
 
     useEffect(() => {
         setContr(getContryByCod(contry));
+        AOS.init();
     }, [contry])
 
 
     return (
 
-        <ActiveContext.Provider value={{ activeModalBlog, activarModalBlog, activeModalVivienda, activarModalVivienda, contr }}>
+        <ActiveContext.Provider value={{ activeModalBlog, activarModalBlog, activeModalVivienda, activarModalVivienda, activeModalForm, activarModalForm, contr, apiW}}>
             <BrowserRouter>
                 <Layout>
                     <Routes>

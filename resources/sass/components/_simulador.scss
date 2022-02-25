@@ -106,7 +106,6 @@
                             2px 2px 7px 0px #38383893 inset;
                         text-align: center;
                         width: 25rem;
-                        outline-color: $secundario;
                         @include tablet {
                             text-align: right;
                             width: 50%;
@@ -248,7 +247,6 @@
                 font-weight: 600;
                 padding: 1.5rem 2rem;
                 border-radius: 1.7rem;
-                outline: 1px $blanco2 solid;
                 box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
                 transition: box-shadow 500ms;
                 border: 1px solid $secundario;
@@ -272,7 +270,6 @@
                 font-weight: 600;
                 padding: 1.5rem 2rem;
                 border-radius: 1.7rem;
-                outline: 1px $blanco2 solid;
                 box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
                 transition: box-shadow 500ms;
                 border: 1px solid $secundario;

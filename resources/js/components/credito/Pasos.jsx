@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ActiveContext } from "../ActiveContext";
 
 export const Pasos = () => {
+    const { apiW } = useContext(ActiveContext);
+
     return (
         <section className="pasos-main">
             <h3>
@@ -8,7 +11,7 @@ export const Pasos = () => {
             </h3>
 
             <section className="pasos-credito">
-                <div className="paso-container">
+                <article data-aos="fade-up" data-aos-duration="1000" className="paso-container">
                     <div className="paso">
                         <h4>1</h4>
                         <div className="line"></div>
@@ -19,9 +22,9 @@ export const Pasos = () => {
                     <figure>
                         <img src="img/credito/Separador.png" alt="Análisis" />
                     </figure>
-                </div>
+                </article>
 
-                <div className="paso-container">
+                <article data-aos="fade-up" data-aos-duration="1100" className="paso-container">
                     <div className="paso">
                         <h4>2</h4>
                         <div className="line"></div>
@@ -32,9 +35,9 @@ export const Pasos = () => {
                     <figure>
                         <img src="img/credito/Separador.png" alt="Estudio de crédito" />
                     </figure>
-                </div>
+                </article>
 
-                <div className="paso-container">
+                <article data-aos="fade-up" data-aos-duration="1200" className="paso-container">
                     <div className="paso">
                         <h4>3</h4>
                         <div className="line"></div>
@@ -45,9 +48,9 @@ export const Pasos = () => {
                     <figure>
                         <img src="img/credito/Separador.png" alt="aprobación" />
                     </figure>
-                </div>
+                </article>
 
-                <div className="paso-container">
+                <article data-aos="fade-up" data-aos-duration="1300" className="paso-container">
                     <div className="paso">
                         <h4>4</h4>
                         <div className="line"></div>
@@ -55,9 +58,9 @@ export const Pasos = () => {
                             <span>Legalización del inmueble y</span> desembolso.
                         </p>
                     </div>
-                </div>
+                </article>
             </section>
-            <button>Empieza tu proceso</button>
+            <button onClick={apiW}>Empieza tu proceso</button>
         </section>
     );
 };

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { ActiveContext } from "../ActiveContext";
+import { Formulario } from "../Formulario";
 
 export const Bancos = () => {
+    const { activarModalForm, apiW } = useContext(ActiveContext);
+
     return (
+        <>
         <section className='bancos-main'>
-            <section className="bancos-container">
+            <section className="bancos-container" data-aos="fade-up" data-aos-duration="1100">
                 <h3>Contamos con los mejores <span>bancos de Colombia</span></h3>
                 <section className="bancos-aliados">
                     <img src="./img/entidades/davivienda.webp" alt="casa en colombia con davivienda" />
@@ -24,8 +29,7 @@ export const Bancos = () => {
                     </ul>
                     <p>¿No cumples todos los requisitos?</p>
                     <span>No te preocupes</span>
-                    {/* <button>Nosotros te guiaremos para encontrar tu mejor opción</button> */}
-                    <button>Encuentra tu mejor opción</button>
+                    <button onClick={apiW}>Encuentra tu mejor opción</button>
                 </div>
 
                 <div className="content-beneficios">
@@ -37,9 +41,11 @@ export const Bancos = () => {
                         <li>Si tienes la disponibilidad, podrás hacer abonos a capital y reducir tu cuota o el plazo del crédito.</li>
                         <li>Desde el exterior, puedes aplicar a los subsidios del gobierno, para comprar casa o para reducir la cuota de tu crédito, que se ajusten a tu situación.</li>
                     </ul>
-                    <button>Conoce más beneficios</button>
+                    <button onClick={() => activarModalForm()}>Conoce más beneficios</button>
                 </div>
             </section>
         </section>
+        <Formulario />
+        </>
     )
 }

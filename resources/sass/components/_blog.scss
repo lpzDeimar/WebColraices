@@ -33,7 +33,7 @@
         border-radius: 2rem;
         @include tabletinvert{
             width: 95%;
-            padding: 3rem 2rem;
+            padding: 3rem;
         }
 
         .paragraf {
@@ -66,7 +66,6 @@
                 }
                 border-radius: 1rem;
                 border: 0.2rem solid $secundario;
-                outline: 0.3rem solid $blanco;
                 box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
             }
 

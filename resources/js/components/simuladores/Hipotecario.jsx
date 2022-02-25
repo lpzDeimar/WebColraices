@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { plazosCredito, plazosInicial, formatoPeso } from "../../data/plazos";
+import { ActiveContext } from "../ActiveContext";
 
 const plazosI = plazosInicial;
 const plazosC = plazosCredito;
 const peso = formatoPeso;
 
 export const Hipotecario = () => {
+    const { apiW } = useContext(ActiveContext);
+
     const [number, setNumber] = useState({
         valorInmueble: "",
         cuotaInicial: 0,
@@ -140,7 +143,7 @@ export const Hipotecario = () => {
             </section>
 
             <div className="botones">
-                <button>¡Solicita tu crédito!</button>
+                <button onClick={apiW}>¡Solicita tu crédito!</button>
                 <Link to="/leasing-habitacional">
                     Financia aquí hasta un 80%
                 </Link>

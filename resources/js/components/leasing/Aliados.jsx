@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Aliados = () => {
     return (
-        <section className='aliados-main'>
+        <section className='aliados-main' >
             <section className="aliados-container">
                 <h3>Contamos con los mejores <span>bancos de Colombia</span></h3>
                 <section className="aliados-aliados">
@@ -13,7 +13,7 @@ export const Aliados = () => {
                 </section>
             </section>
             <section className="aliados-content">
-                <div className="content-aliados-beneficios">
+                <div className="content-aliados-beneficios" data-aos="fade-up" data-aos-duration="1000">
                     <h4>Beneficios</h4>
                     <hr />
                     <ul className="beneficios">
@@ -24,7 +24,7 @@ export const Aliados = () => {
                     </ul>
                 </div>
 
-                <div className="content-aliados-requisitos">
+                <div className="content-aliados-requisitos" data-aos="fade-up" data-aos-duration="1200">
                     <h4><span>Requisitos</span></h4>
                     <hr />
                     <ul className="requisitos">

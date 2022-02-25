@@ -1,14 +1,15 @@
-import React, { useContext } from 'react'
-import { ActiveContext } from '../ActiveContext'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ActiveContext } from "../ActiveContext";
 
 export const Banner = () => {
 
-    const {contr} = useContext(ActiveContext)
+    const {contr, apiW} = useContext(ActiveContext)
     const NombrePaís = contr.contry;
 
     return (
         <section className='banner-main-home'>
-            <article className='banner-text'>
+            <article className='banner-text' data-aos="fade-down" data-aos-duration="1100">
                 <h1>
                     <span>¡Sí</span>, puedes comprar <br /> casa en Colombia
                     <br /> desde <span>{NombrePaís}!</span>
@@ -20,15 +21,14 @@ export const Banner = () => {
                 </div>
 
                 <div className='banner-botons'>
-                    <button type='button'>Voy por mi crédito</button>
-                    <button type='button'>Voy por mi casa y crédito</button>
+                    <Link to="/credito"><button type='button'>Voy por mi crédito</button></Link>
+                    <button type='button' onClick={apiW}>Voy por mi casa y crédito</button>
                 </div>
 
             </article>
             <section className='banner-img'>
                 <img src="./img/bn1.webp" alt="Comprar casa en colombia" />
             </section>
-
         </section>
     )
 }

@@ -10,7 +10,7 @@ import Historyss from '../../historias.js';
 export const Historys = () => {
 
     return (
-        <section className='historys-main'>
+        <section className='historys-main' data-aos="fade-up" data-aos-duration="1000">
             <h3>¡Historias que <span>inspiran!</span></h3>
             <div className='historys-content'>
                 <p className='keys' >{"{"}</p>

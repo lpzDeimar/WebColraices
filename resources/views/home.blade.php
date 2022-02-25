@@ -9,7 +9,7 @@
     <meta name="robots" content="index, all, follow">
     <meta name="googlebot" content="index, all, follow">
     <meta name="google" content="translete">
-    <meta name="description" content="¿Buscas invertir en una casa en Colombia? Ahora es más fácil comprarla desde el exterior. Ingresa y conoce más información." />
+    <meta name="description" content="¿Buscas invertir en una casa en Colombia? Ahora es más fácil comprarla desde el exterior. Ingresa al nuevo sitio web Colraices y conoce más información." />
     <meta name="keywords" content="Casa en Colombia | Comprar casa en Colombia | Invertir en Colombia desde el exterior | Crédito hipotecario | Crédito hipotecario en Colombia | Consultoría financiera | Requisitos para el crédito | Envio de dinero a Colombia" />
     <meta name="copyright" content="momentumdigital.com.co">
     <meta name="author" content="Deimar Lopez | Cristian Orrego" />

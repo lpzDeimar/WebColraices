@@ -24,8 +24,9 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
-        "react-hot-toast": "^2.2.0",
         "animate.css": "^4.1.1",
+        "aos": "^2.3.4",
+        "react-hot-toast": "^2.2.0",
         "react-router-dom": "^6.2.1",
         "swiper": "^8.0.3"
     }

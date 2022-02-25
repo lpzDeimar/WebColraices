@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { plazosCredito, plazosInicial, formatoPeso } from "../../data/plazos";
+import { ActiveContext } from "../ActiveContext";
 
 const plazosI = plazosInicial;
 const plazosC = plazosCredito;
 const peso = formatoPeso;
 
 export const Leasing = () => {
+    const { apiW } = useContext(ActiveContext);
+
     const [number, setNumber] = useState({
         valorInmueble: "",
         cuotaInicial: 0,
@@ -138,7 +141,7 @@ export const Leasing = () => {
                 </section>
             </section>
 
-            <button>¡Solicita tu crédito!</button>
+            <button onClick={apiW}>¡Solicita tu crédito!</button>
         </>
     );
 };

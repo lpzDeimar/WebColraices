@@ -5,7 +5,7 @@ export const Banner = () => {
 
     return (
         <section className='banner-credito'>
-            <article className='banner-credito-text'>
+            <article className='banner-credito-text' data-aos="fade-down" data-aos-duration="1100" >
                 <h1>
                     Crédito para comprar <span>casa en Colombia</span>
                 </h1>

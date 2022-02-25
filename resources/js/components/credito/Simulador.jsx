@@ -13,7 +13,7 @@ export const Simulador = () => {
                     <h1>Simulador crédito hipotecario</h1>
                 </div>
                 <div className="simulador-content">
-                    <article className="paso-item">
+                    <article className="paso-item" data-aos="fade-up" data-aos-duration="1100" >
                         <ul>
                             <li>
                                 <p>

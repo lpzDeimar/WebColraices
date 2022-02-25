@@ -4,7 +4,7 @@ export const Banner = () => {
 
     return (
         <section className="banner-leasing">
-            <article className='banner-leasing-text'>
+            <article className='banner-leasing-text' data-aos="fade-up" data-aos-duration="1100" >
                 <h1>
                     <span>Leasing habitacional</span> para comprar casa <span>en Colombia</span>
                 </h1>

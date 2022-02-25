@@ -40,7 +40,7 @@ export const Formulario = () => {
     };
 
     return (
-        <section className="contact-main">
+        <section className="contact-main" data-aos="fade-up" data-aos-duration="1120" >
             <Toaster
                 containerStyle={{ zIndex: 10000000 }}
                 position="top-right"
