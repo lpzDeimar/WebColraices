@@ -1,0 +1,128 @@
+.pasos-main {
+    @include tablet {
+        margin-top: -15rem;
+    }
+    padding-top: 2rem;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blanco2;
+
+    h3 {
+        color: $primario;
+        font-size: 3.5rem;
+        font-weight: 400;
+        span {
+            font-weight: 600;
+            font-size: 3.6rem;
+            transition: color 400ms;
+            &:hover {
+                color: $primario;
+            }
+        }
+        text-align: center;
+        margin: 5rem 0;
+        @include tablet {
+            font-size: 4rem;
+            margin: 8rem 0 7rem;
+        }
+
+        span {
+            color: $secundario;
+            font-size: 4rem;
+            @include tablet {
+                font-size: 5.5rem;
+            }
+            display: block;
+        }
+    }
+
+    .pasos-credito {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+
+        .paso-container {
+            display: flex;
+            align-items: center;
+
+            .paso {
+                height: 22rem;
+                max-width: 50rem;
+                padding: 0 1rem 4rem;
+                border-radius: 2rem;
+                box-shadow: -5px -6px 3px -1px #ffffff inset,
+                    2px 2px 7px 0px #38383893 inset;
+                margin: 1rem;
+
+                h4 {
+                    color: $secundario;
+                    font-size: 8rem;
+                    margin: 1rem 0;
+                    text-shadow: 3px 3px 3px #30303096, -3px -3px 3px #ffffff;
+                    @include tablet {
+                        padding: 0 1.5rem;
+                    }
+                    text-align: center;
+                }
+
+                .line {
+                    margin: 0.2rem auto;
+                    background-color: $blanco2;
+                    border-radius: 0.5rem;
+                    box-shadow: 0px 1px 3px -1px #38383893,
+                        -2px -2px 3px 0px #ffffff;
+                    min-height: 0.7rem;
+                    width: 90%;
+                }
+
+                p {
+                    color: $primario;
+                    font-size: 1.6rem;
+                    display: block;
+                    text-align: center;
+                    max-width: 15rem;
+                    margin-top: 3rem;
+
+                    span {
+                        color: $secundario;
+                    }
+                }
+            }
+            figure {
+                display: none;
+                @include tablet {
+                    display: inline;
+                    margin: 0;
+                    width: 4rem;
+                }
+            }
+        }
+    }
+
+    button {
+        @include tabletinvert {
+            width: 90%;
+        }
+        margin: 3rem 0 10rem;
+        display: inline-block;
+        color: $primario;
+        font-size: 1.6rem;
+        background-color: $blanco;
+        font-weight: 600;
+        padding: 1.5rem 2rem;
+        border-radius: 1.7rem;
+        outline: 1px $blanco2 solid;
+        box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+        transition: box-shadow 500ms;
+        border: 1px solid $secundario;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+                7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+        }
+    }
+}

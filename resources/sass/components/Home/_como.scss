@@ -1,0 +1,98 @@
+.como-main {
+    margin: 1rem 0;
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .como-img {
+        margin: 1rem;
+
+        @include tablet {
+            position: relative;
+            left: -20rem;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: .5rem solid $blanco;
+            box-shadow: 0px 0px 5px 0px #30303096;
+        }
+    }
+    .como-text {
+        margin: auto 0;
+        @include tablet {
+            padding: 10rem 0;
+            position: relative;
+            left: -14rem;
+        }
+        h3 {
+            padding: 1rem;
+            color: $primario;
+            text-align: center;
+            font-size: 3rem;
+            @include tablet {
+                font-size: 3.3rem;
+            }
+            font-weight: 500;
+            span {
+                color: $secundario;
+                font-size: 4.5rem;
+                @include tablet {
+                    font-size: 6rem;
+                }
+                font-weight: 700;
+                display: block;
+            }
+        }
+
+        .como-content {
+            margin: 1rem;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 2rem;
+            border: 0.2rem solid $secundario;
+            margin: 5rem 1rem;
+            span {
+                color: $primario;
+                display: block;
+                font-weight: 600;
+            }
+            p{
+                line-height: 2.4rem;
+                &:nth-child(2){
+                    padding: 2rem 0;
+                }
+            }
+
+            .como-botones {
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: -3.9rem;
+                button {
+                    @include tabletinvert {
+                        width: 100%;
+                    }
+                    display: inline-block;
+                    color: $primario;
+                    font-size: 1.6rem;
+                    background-color: $blanco;
+                    font-weight: 600;
+                    padding: 1.5rem 2rem;
+                    border-radius: 1.7rem;
+                    outline: 1px $blanco2 solid;
+                    box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+                     transition: box-shadow 500ms;
+                    border: 1px solid $secundario;
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                            4px 4px 5px 0px #0001;
+                    }
+                }
+            }
+        }
+    }
+}

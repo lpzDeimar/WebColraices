@@ -1,0 +1,62 @@
+.soluciones-main {
+    min-height: 65vh;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+    h3{
+        color: $secundario;
+        padding: 2rem;
+        text-align: center;
+        font-weight: 500;
+        @include tablet {
+            font-size: 3rem;
+        }
+        span{
+            color: $primario;
+            font-size: 3rem;
+            @include tablet{
+                font-size: 5rem;
+            }
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    .soluciones-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 6rem;
+
+        .soluciones-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 16rem;
+            margin-top: 2.8rem;
+            @include tablet{
+                width: 20rem;
+                margin-top: 0;
+            }
+
+            p{
+                text-align: center;
+                max-width: 12rem;
+                font-size: 1.8rem;
+                color: $primario;
+                margin: 0.5rem 0;
+                font-weight: 700;
+            }
+            a{
+                color: $secundario;
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+    }
+}

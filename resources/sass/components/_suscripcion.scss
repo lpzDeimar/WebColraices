@@ -1,0 +1,120 @@
+.suscripcion-modal-main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200000;
+
+    section {
+        max-width: 90vw;
+        height: 50rem;
+        background-color: $blanco2;
+        border-radius: 2rem;
+        box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+        padding: 3rem;
+        position: relative;
+        @include tablet {
+            max-width: 50rem;
+        }
+        .line {
+            margin: 2rem auto 2.5rem;
+            background-color: $blanco2;
+            border-radius: 0.5rem;
+            box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+            min-height: 0.7rem;
+            width: 90%;
+        }
+
+        .header-modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem;
+
+            h3 {
+                color: $primario;
+                font-size: 2.4rem;
+                text-align: center;
+            }
+        }
+        button.cerrar {
+            width: 3rem;
+            height: 3rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px 0px #30303096, -3px -3px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+            border-radius: 1rem;
+            color: $secundario;
+            font-weight: 600;
+
+            &:hover {
+                box-shadow: -5px -5px 20px 0px #fff9, -2px -2px 5px 0px #fff9,
+                    5px 5px 20px 0px #0002, 2px 2px 5px 0px #0001;
+            }
+            position: absolute;
+            top: 1.8rem;
+            right: 1.8rem;
+        }
+
+        .form-suscripcion {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-bottom: 2rem;
+                text-align: center;
+                color: $secundario;
+                font-size: 1.8rem;
+
+                input {
+                    font-size: 1.6rem;
+                    @include tablet {
+                        font-size: 2rem;
+                    }
+                    min-height: 2.5rem;
+                    padding: 0.8rem 1.5rem;
+                    border: none;
+                    border-radius: 2rem;
+                    box-shadow: inset -3px -3px 7px $blanco2,
+                        inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+                    text-align: center;
+                    min-width: 25rem;
+                    margin-top: 1rem;
+                    outline-color: $secundario;
+                }
+            }
+
+            button {
+                margin: 2rem auto;
+                min-width: 100%;
+                display: inline-block;
+                color: $blanco;
+                font-size: 1.6rem;
+                background-color: $primario;
+                font-weight: 600;
+                padding: 1.5rem 2rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9,
+                        -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+        }
+    }
+}

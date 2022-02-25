@@ -1,0 +1,300 @@
+.simulador-main {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    justify-content: space-around;
+    align-items: center;
+    background-color: $blanco2;
+
+    div.simulador-container {
+        display: flex;
+        flex-direction: column;
+        article {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+
+            @include tablet {
+                max-width: 56rem;
+                margin: 2rem;
+            }
+            background-color: $blanco2;
+            border-radius: 2.5rem;
+            box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+            .simulador-title {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                h4 {
+                    width: 50%;
+                    margin: 0;
+                    font-size: 1.6rem;
+                    @include tablet {
+                        font-size: 1.8rem;
+                    }
+                    color: $primario;
+                    text-align: center;
+
+                    font-weight: 600;
+
+                    span {
+                        font-weight: 800;
+                    }
+                }
+
+                p {
+                    font-weight: 700;
+                    margin: 0;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    color: $negro;
+                    @include tablet {
+                        text-align: left;
+                        font-size: 1.8rem;
+                    }
+                    padding-bottom: 1rem;
+                    border-bottom: solid 1px $negro;
+                }
+            }
+
+            .input-group {
+                width: 100%;
+                border-radius: 1rem;
+                padding: 0.5rem 1rem;
+                @include tablet {
+                    padding: 0 1rem;
+                }
+                margin: 0 0 2rem;
+                box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0.5rem;
+                    @include tablet {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    color: $primario;
+
+                    label {
+                        margin: 0.5rem 0;
+                        @include tablet {
+                            margin: 0.8rem 0 0;
+                            align-self: flex-start;
+                        }
+                    }
+
+                    input,
+                    select {
+                        font-size: 1.5rem;
+                        min-height: 2rem;
+                        padding: 0.8rem 1.5rem;
+                        border: none;
+                        border-radius: 2rem;
+                        box-shadow: -5px -6px 3px -1px #ffffff inset,
+                            2px 2px 7px 0px #38383893 inset;
+                        text-align: center;
+                        width: 25rem;
+                        outline-color: $secundario;
+                        @include tablet {
+                            text-align: right;
+                            width: 50%;
+                            font-size: 1.6rem;
+                            min-height: 3rem;
+                        }
+                    }
+
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    input[type="number"] {
+                        appearance: textfield;
+                        -moz-appearance: textfield;
+                    }
+
+                    div.range {
+                        width: 25rem;
+                        display: flex;
+                        flex-direction: column;
+                        @include tablet {
+                            width: 50%;
+                        }
+
+                        input[type="range"] {
+                            appearance: none;
+                            width: 100%;
+                            min-height: 1rem;
+                            font-size: 1rem;
+                            padding: 0;
+                            background: none;
+                            box-shadow: none;
+                        }
+
+                        input[type="range"]:focus {
+                            outline: none;
+                        }
+
+                        input[type="range"],
+                        input[type="range"]::-webkit-slider-runnable-track,
+                        input[type="range"]::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                        }
+
+                        input[type="range"]::-webkit-slider-thumb {
+                            background-color: $primario;
+                            width: 20px;
+                            height: 20px;
+                            border: 3px solid $primario2;
+                            border-radius: 50%;
+                            margin-top: -9px;
+                        }
+
+                        input[type="range"]::-moz-range-thumb {
+                            background-color: $primario;
+                            width: 15px;
+                            height: 15px;
+                            border: 3px solid $primario2;
+                            border-radius: 50%;
+                        }
+
+                        input[type="range"]::-ms-thumb {
+                            background-color: $primario;
+                            width: 20px;
+                            height: 20px;
+                            border: 3px solid $primario2;
+                            border-radius: 50%;
+                        }
+
+                        input[type="range"]::-webkit-slider-runnable-track {
+                            background-color: $primario;
+                            height: 3px;
+                        }
+
+                        input[type="range"]:focus::-webkit-slider-runnable-track {
+                            outline: none;
+                        }
+
+                        input[type="range"]::-moz-range-track {
+                            background-color: $primario;
+                            height: 3px;
+                        }
+
+                        input[type="range"]::-ms-track {
+                            background-color: $primario;
+                            height: 3px;
+                        }
+
+                        input[type="range"]::-ms-fill-lower {
+                            background-color: HotPink;
+                        }
+
+                        input[type="range"]::-ms-fill-upper {
+                            background-color: $primario;
+                        }
+                        p {
+                            margin: 0;
+                            font-size: 1.6rem;
+                            @include tablet {
+                                align-self: flex-end;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                section {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 1rem 0.5rem;
+                    font-weight: 700;
+                    @include tablet {
+                        justify-content: space-between;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 1.6rem;
+                        @include tablet {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+
+            button {
+                @include tabletinvert {
+                    width: 100%;
+                }
+                margin: 0 0 1.4rem;
+                width: 28rem;
+                display: inline-block;
+                color: $blanco;
+                font-size: 1.6rem;
+                background-color: $primario;
+                font-weight: 600;
+                padding: 1.5rem 2rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9,
+                        -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+
+            a {
+                @include tabletinvert {
+                    width: 100%;
+                }
+                width: 18rem;
+                display: inline-block;
+                color: $primario;
+                font-size: 1.6rem;
+                background-color: $blanco;
+                font-weight: 600;
+                padding: 1.5rem 2rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                text-align: center;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9,
+                        -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+        }
+
+        small {
+            font-style: italic;
+            text-align: center;
+            font-size: 1rem;
+            margin: 1rem auto 3rem;
+            @include tablet {
+                max-width: 56rem;
+                margin: 1rem 0 3rem 1.8rem;
+            }
+        }
+    }
+}

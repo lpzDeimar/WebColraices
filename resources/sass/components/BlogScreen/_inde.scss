@@ -1,0 +1,55 @@
+.inde-main{
+    background-color: $blanco2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -9rem;
+
+    button{
+        @include tabletinvert {
+            width: 100%;
+        }
+        margin: 12rem 1rem 0 1rem;
+        max-width: 27rem;
+        display: inline-block;
+        color: $blanco;
+        font-size: 1.6rem;
+        background-color: $primario;
+        font-weight: 600;
+        padding: 1.4rem 1.9rem;
+        border-radius: 1.7rem;
+        outline: 1px $blanco2 solid;
+        box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+         transition: box-shadow 500ms;
+        border: 1px solid $secundario;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001;
+        }
+    }
+
+    .inde-content{
+        margin: 5rem auto 7rem auto;
+        width: 95%;
+        max-width: 120rem;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include tabletinvert{
+                flex-direction: column;
+                row-gap: 2.5rem;
+            }
+            a{
+                color: $primario;
+                font-weight: 600;
+                font-size: 2rem;
+                @include tablet{
+                    border-bottom: .2rem solid $secundario;
+                }
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}

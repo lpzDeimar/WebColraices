@@ -1,0 +1,63 @@
+.banner-leasing {
+    padding-top: 3rem;
+    @include tablet {
+        display: grid;
+        padding-top: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-leasing-text {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 3rem 0;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+
+        h1 {
+            color: $primario;
+            font-size: 3.6rem;
+            span {
+                &:last-child{
+                    color: $secundario;
+                }
+                color: $primario;
+                display: block;
+            }
+        }
+
+        .banner-leasing-content {
+            margin: 3rem 0;
+            p {
+                font-size: 1.7rem;
+                margin: 1rem;
+                max-width: 50rem;
+            }
+
+        }
+
+    }
+
+    .banner-leasing-img {
+        overflow: hidden;
+        img {
+            position: relative;
+            width: 88%;
+            right: -1rem;
+            margin: 1rem;
+            border: .5rem solid $blanco2;
+            outline: $blanco solid;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 0px #ffffff;
+
+            @include tablet {
+                top: -8rem;
+                right: -7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.riqueza-main{
+    background-color: $blanco2;
+    margin-top: -4rem;
+    @include tablet{
+        margin-top: -7rem;
+    }
+    h3{
+        padding-top: 7rem;
+        text-align: center;
+        font-weight: 400;
+        color: $primario;
+        font-size: 3rem;
+        @include tablet{
+            font-size: 3.3rem;
+        }
+        span{
+            display: block;
+            font-weight: 700;
+            color: $secundario;
+            font-size: 4rem;
+            @include tablet{
+                font-size: 6rem;
+            }
+        }
+    }
+    .riqueza-content{
+        padding-bottom: 7rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 110rem;
+
+        .riqueza-item{
+            display: flex;
+            margin: 1rem 1.8rem;
+            padding: .7rem 1rem;
+            align-items: center;
+            justify-content: center;
+            max-width: 22rem;
+            border-radius: 2rem;
+            border: .2rem solid $secundario;
+            outline: .2rem solid $blanco;
+            box-shadow: 4px 4px 4px 0px #30303096, -6px -6px 3px 0px #ffffff,-5px -6px 3px -1px #ffffff inset, 2px 2px 3px 0px #38383893 inset;
+
+            p{
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+                color: $primario;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}

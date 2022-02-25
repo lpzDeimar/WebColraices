@@ -1,0 +1,106 @@
+.remesa-main{
+    padding-top: 3rem;
+    display: grid;
+    margin: 0 1rem;
+    background-color: $blanco2;
+    @include tablet {
+        padding-top: 0;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .remesa-content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4{
+            color: $primario;
+            font-size: 2.4rem;
+            font-weight: 500;
+            @include tablet {
+                font-size: 3rem;
+            }
+            span {
+                display: block;
+                color: $secundario;
+                font-size: 4rem;
+                @include tablet {
+                    font-size: 5rem;
+                }
+                font-weight: 700;
+            }
+        }
+        p{
+            @include tablet{
+                font-size: 1.9rem;
+                max-width: 70rem;
+            }
+        }
+        .remesa-items{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .remasa-item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 20rem;
+                margin: 1rem 2rem;
+                padding: 1rem;
+                border-radius: 2rem;
+                box-shadow:-5px -6px 3px -1px #ffffff inset, 2px 2px 3px 0px #38383893 inset;
+                p{
+                    font-size: 1.5rem;
+                    color: $primario;
+                    font-weight: 600;
+                    span{
+                        color: $secundario;
+                    }
+                }
+            }
+        }
+        .beneficios{
+            font-size: 4rem;
+            color: $secundario;
+            font-weight: 600;
+            text-shadow: 2px 2px 2px #30303096, -3px -3px 3px #ffffff;
+        }
+
+        button {
+            @include tabletinvert{
+                width: 90%
+            }
+            margin: 1rem 0 3rem 0;
+            display: inline-block;
+            color: $primario;
+            font-size: 1.8rem;
+            background-color: $blanco2;
+            font-weight: 600;
+            padding: 1.5rem 0.9rem;
+            border-radius: 1.2rem;
+            border: 0.12rem solid $secundario;
+            outline: $blanco2 solid 0.3rem;
+            box-shadow: 4px 4px 4px 0px #30303096, -7px -7px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+
+            &:hover {
+                box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                    4px 4px 5px 0px #0001;
+                cursor: pointer;
+            }
+        }
+    }
+    .remesa-img{
+        padding: 4rem 0;
+        overflow: hidden;
+        img{
+            width: 100%;
+            position: relative;
+            right: -8rem;
+            border-radius: 50%;
+            border: 0.5rem solid $blanco2;
+            outline: $blanco solid;
+            box-shadow: 0px 0px 13px 0px #ffffff;
+        }
+    }
+}

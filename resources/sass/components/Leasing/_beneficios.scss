@@ -1,0 +1,152 @@
+.beneficios-main {
+    margin: 4rem 0;
+    background-color: $blanco2;
+    @include tablet {
+        margin-top: -13rem;
+    }
+    padding-top: 5rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $primario;
+        font-size: 3.6rem;
+        text-align: center;
+        margin: 8rem 0 4rem;
+        @include tablet {
+            font-size: 5rem;
+            margin: 5rem 0 5rem;
+        }
+
+        span {
+            color: $secundario;
+            font-size: 4rem;
+            display: block;
+            font-weight: 400;
+            transition: color 400ms;
+            &:hover {
+                color: $primario;
+            }
+        }
+    }
+
+    .beneficios-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+
+        .beneficio-container {
+            display: flex;
+            align-items: center;
+
+            .beneficio {
+                display: flex;
+                width: 14.8rem;
+                @include tablet {
+                    width: 18rem;
+                }
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 22rem;
+                padding: 0 1rem;
+                border-radius: 2rem;
+                box-shadow: -5px -6px 3px -1px #ffffff inset,
+                    2px 2px 7px 0px #38383893 inset;
+
+                margin: 1rem;
+
+                p {
+                    color: $primario;
+                    font-size: 2rem;
+                    display: block;
+                    text-align: center;
+                    max-width: 15rem;
+                    margin: 2rem auto 0;
+
+                    span {
+                        color: $secundario;
+                        display: block;
+                    }
+                }
+
+                .line {
+                    margin: 1rem auto;
+                    background-color: $blanco2;
+                    border-radius: 0.5rem;
+                    box-shadow: 0px 1px 3px -1px #38383893,
+                        -2px -2px 3px 0px #ffffff;
+                    min-height: 0.7rem;
+                    width: 90%;
+                }
+
+                h4 {
+                    text-shadow: 2px 2px 2px #30303096, -3px -3px 3px #ffffff;
+                    color: $secundario;
+                    margin: 1rem 0;
+                    @include tablet {
+                        padding: 0 1rem;
+                    }
+                    span {
+                        display: block;
+                        font-size: 3.5rem;
+                    }
+                    text-align: center;
+                    font-size: 4.8rem;
+                    @include tablet {
+                        font-size: 5rem;
+                    }
+
+                    &.moneda {
+                        font-size: 3.8rem;
+                        @include tablet {
+                            font-size: 4rem;
+                        }
+                    }
+
+                    &.interes {
+                        font-size: 3.7rem;
+                        @include tablet {
+                            font-size: 3.8rem;
+                        }
+                    }
+                }
+            }
+            figure {
+                display: none;
+                @include tablet {
+                    display: inline;
+                    margin: 0;
+                    width: 4rem;
+                }
+            }
+        }
+    }
+
+    button {
+        @include tabletinvert {
+            width: 90%;
+        }
+        margin: 3rem 0 10rem;
+        display: inline-block;
+        color: $primario;
+        font-size: 1.6rem;
+        background-color: $blanco;
+        font-weight: 600;
+        padding: 1.5rem 2rem;
+        border-radius: 1.7rem;
+        outline: 1px $blanco2 solid;
+        box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+        transition: box-shadow 500ms;
+        border: 1px solid $secundario;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+                7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+        }
+    }
+}

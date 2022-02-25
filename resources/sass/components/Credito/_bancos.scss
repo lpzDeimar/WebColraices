@@ -1,0 +1,183 @@
+.bancos-main {
+    min-height: 90vh;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .bancos-container {
+        width: 95%;
+        min-height: 12rem;
+        margin: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include tablet {
+            border: 0.4rem solid $secundario;
+            border-radius: 3rem;
+            width: 80%;
+            margin: 10rem 0;
+
+        }
+
+        h3{
+
+            color: $primario;
+            padding: 0;
+            margin: 0 1rem;
+            text-align: center;
+            font-weight: 500;
+            @include tablet {
+                font-size: 3rem;
+                position: absolute;
+                background-color: #F5F5F5;
+                top: -6rem;
+            }
+            span{
+                color: $secundario;
+                font-size: 3rem;
+                @include tablet{
+                    font-size: 5rem;
+                }
+                font-weight: 700;
+                display: block;
+            }
+        }
+
+
+        .bancos-aliados{
+
+            margin: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 3rem;
+            margin: 5rem 0;
+            @include tablet{
+                padding: 0 2rem;
+                position: absolute;
+                background-color: #F5F5F5;
+                bottom: -8rem;
+            }
+            row-gap: 5rem;
+            justify-content: center;
+            img{
+                max-width: 15rem;
+                object-fit: scale-down;
+            }
+        }
+    }
+
+    .bancos-content{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        @include tablet {
+            width: 80%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        background-color: $blanco2;
+        border-radius: 2rem;
+        padding: 1rem 1.5rem;
+        @include tablet{
+            padding: 2rem 3rem;
+        }
+        box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+        margin-bottom: 3rem;
+
+
+
+        .content-requisitos,
+        .content-beneficios{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                color: $primario;
+                text-align: center;
+                font-size: 2rem;
+                @include tablet{
+                    font-size: 2.2rem;
+                }
+                padding:1rem 1rem 0;
+                margin: 0;
+
+                span {
+                    color: $secundario;
+                    @include tablet {
+                        font-size: 2.4rem;
+                    }
+                }
+
+            }
+            .line {
+                margin: 2rem auto;
+                background-color: $blanco2;
+                border-radius: 0.5rem;
+                box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+                min-height: 0.7rem;
+                width: 90%;
+            }
+            ul {
+                padding: 0 2rem 0 3rem;
+                list-style-image: url('/img/credito/button-gray.webp');
+                color: $primario;
+                text-align: justify;
+            }
+
+            ul li {
+                line-height: 2.5rem;
+            }
+
+            p {
+                color: $secundario;
+                margin: 2.5rem 0 0.5rem;
+                font-weight: 600;
+                text-align: center;
+            }
+            span {
+                font-size: 2rem;
+                color: $primario;
+                font-weight: bold;
+            }
+
+
+            button {
+                @include tabletinvert {
+                    width: 90%;
+                }
+                margin: 3rem auto 2rem auto;
+                display: inline-block;
+                color: $primario;
+                font-size: 1.6rem;
+                background-color: $blanco;
+                font-weight: 600;
+                padding: 1.5rem 2rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+                 transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+        }
+
+        .content-requisitos {
+            @include tablet {
+                width: 90%;
+                ul li{
+                    width: 85%;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,64 @@
+.inversion-main {
+    min-height: 65vh;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h4 {
+        margin-top: 4rem;
+        margin-bottom: 0;
+        text-align: center;
+        color:$primario;
+        font-size: 2.8rem;
+        font-weight: 500;
+        @include tablet{
+            font-size: 3rem;
+        }
+        span {
+            color: $secundario;
+            font-size: 4rem;
+            @include tablet{
+                font-size: 5rem;
+            }
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    .inversion-content {
+        max-width: 50rem;
+        margin: 3rem 0;
+        p {
+            text-align: center;
+            &:nth-child(2){
+                color: $primario;
+                font-weight: 600;
+                margin: 3rem 0;
+            }
+        }
+    }
+
+    button {
+        margin-bottom: 2rem;
+        @include tabletinvert{
+            width: 90%
+        }
+        display: inline-block;
+        color: $primario;
+        font-size: 1.6rem;
+        background-color: $blanco2;
+        font-weight: 600;
+        padding: 1.5rem 0.9rem;
+        border-radius: 1.2rem;
+        border: 0.12rem solid $secundario;
+        outline: $blanco2 solid 0.3rem;
+        box-shadow: 4px 4px 4px 0px #30303096, -7px -7px 3px 0px #ffffff;
+        transition: box-shadow 500ms;
+
+        &:hover {
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+            cursor: pointer;
+        }
+    }
+}

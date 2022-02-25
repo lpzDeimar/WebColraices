@@ -1,0 +1,96 @@
+.finanzas-main {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h4 {
+        text-align: center;
+        color: $primario;
+        font-size: 2.8rem;
+        font-weight: 500;
+        @include tablet {
+            font-size: 3rem;
+        }
+        span {
+            display: block;
+            color: $secundario;
+            font-size: 4rem;
+            @include tablet {
+                font-size: 5rem;
+            }
+            font-weight: 700;
+        }
+    }
+    .finanzas-text {
+        p {
+            max-width: 100rem;
+            font-size: 2rem;
+            text-align: center;
+            &:nth-child(2) {
+                font-size: 2.3;
+                color: $primario;
+                font-weight: 600;
+            }
+        }
+    }
+    .finanzas-content {
+        margin: 4rem 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .finanzas-item {
+            margin: 1rem 2rem;
+            box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 3px 0px #38383893 inset;
+            border-radius: 2rem;
+            p {
+                color: $secundario;
+                padding: 1rem 2.5rem;
+                font-size: 2rem;
+                margin: 0.8rem 0;
+                &:nth-child(3) {
+                    font-size: 5rem;
+                    padding-top: 0.5rem;
+                    font-weight: 600;
+                }
+                span {
+                    display: block;
+                    color: $primario;
+                    font-size: 2.3rem;
+                }
+            }
+            .line {
+                margin: .3rem auto;
+                background-color: $blanco2;
+                border-radius: 0.5rem;
+                box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+                min-height: 0.7rem;
+                width: 90%;
+            }
+        }
+    }
+    button {
+        @include tabletinvert{
+            width: 90%
+        }
+        margin: 1rem 0;
+        display: inline-block;
+        color: $primario;
+        font-size: 1.8rem;
+        background-color: $blanco2;
+        font-weight: 600;
+        padding: 1.5rem 0.9rem;
+        border-radius: 1.2rem;
+        border: 0.12rem solid $secundario;
+        outline: $blanco2 solid 0.3rem;
+        box-shadow: 4px 4px 4px 0px #30303096, -7px -7px 3px 0px #ffffff;
+        transition: box-shadow 500ms;
+
+        &:hover {
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001;
+            cursor: pointer;
+        }
+    }
+}

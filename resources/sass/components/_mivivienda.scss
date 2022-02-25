@@ -1,0 +1,148 @@
+article.vivienda-modal-main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200000;
+    backdrop-filter: blur(1rem);
+
+    div.header-modal-vivienda {
+        position: relative;
+        width: 36rem;
+        max-width: 50rem;
+        @include tablet {
+            min-width: 50rem;
+        }
+
+        h3.vivienda-modal-title {
+            color: $primario;
+            font-size: 2.4rem;
+            text-align: center;
+            margin: 0 auto 2rem;
+            padding: 0;
+            span {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+        }
+
+        button.cerrar {
+            width: 3rem;
+            height: 3rem;
+            border: none;
+            background: $blanco;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px 0px #30303096, -1px -1px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+            border-radius: 1rem;
+            color: $secundario;
+            font-weight: 600;
+
+            &:hover {
+                box-shadow: -5px -5px 20px 0px #fff9, -2px -2px 5px 0px #fff9,
+                    5px 5px 20px 0px #0002, 2px 2px 5px 0px #0001;
+            }
+            position: absolute;
+            top: 2rem;
+            right: 0;
+        }
+    }
+
+    section {
+        max-width: 90vw;
+        height: 50rem;
+        background-color: $blanco2;
+        border-radius: 2rem;
+        box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+        padding: 1rem 2rem;
+        position: relative;
+        @include tablet {
+            max-width: 45rem;
+        }
+
+        .form-vivienda {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label.info-contacto {
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+                color: $secundario;
+                font-size: 1.6rem;
+
+                input {
+                    font-size: 1.4rem;
+                    @include tablet {
+                        font-size: 1.6rem;
+                    }
+                    min-height: 2rem;
+                    padding: 0.8rem 1.5rem;
+                    border: none;
+                    border-radius: 2rem;
+                    box-shadow: inset -3px -3px 7px $blanco2,
+                        inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+                    text-align: left;
+                    min-width: 25rem;
+                    margin-top: 1rem;
+                    outline-color: $secundario;
+                }
+            }
+
+            fieldset {
+                border: none;
+                text-align: center;
+                font-size: 1.4rem;
+                margin: 2.2rem 0 0;
+                min-width: 90%;
+                padding: 0;
+                color: $gris;
+
+                legend {
+                    margin-bottom: 0.5rem;
+                    max-width: 50rem;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 0.5rem;
+                    }
+                }
+            }
+
+            button {
+                margin: 3rem auto 1rem;
+                min-width: 100%;
+                display: inline-block;
+                color: $blanco;
+                font-size: 1.6rem;
+                background-color: $primario;
+                font-weight: 600;
+                padding: 1.5rem 2rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9,
+                        -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+        }
+    }
+}

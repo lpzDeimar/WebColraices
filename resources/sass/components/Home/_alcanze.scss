@@ -1,0 +1,97 @@
+.alcanze-main{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blanco2;
+
+    h3{
+        color: $primario;
+        font-size: 3.3rem;
+        @include tablet{
+            font-size: 3.9rem;
+        }
+        font-weight: 500;
+        padding: 2rem;
+        text-align: center;
+        span{
+            color: $secundario;
+            font-size: 4rem;
+            @include tablet{
+                font-size: 6.2rem;
+            }
+            font-weight: 700;
+            display: block;
+        }
+    }
+
+    .alcanze-counter{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        @include tablet{
+            column-gap: 10rem;
+        }
+        row-gap: 1rem;
+        justify-content: center;
+        margin: 0 2rem;
+
+        article{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            h4{
+                font-size: 5rem;
+                color: $primario;
+                padding: 2rem 1rem;
+                border: 5px solid white;
+                border-radius: 2rem;
+                box-shadow: 0px 0px 6px -1px #ffffff;
+                span{
+                    font-size:1.6rem;
+                    display: block;
+                    margin-bottom: .5rem;
+                    color: $gris;
+                }
+            }
+            p{
+                margin-top: -2rem;
+                font-size:1.6rem;
+                max-width: 12rem;
+                color: $gris;
+            }
+
+            &:nth-child(2){
+                h4{
+                    margin-bottom: 4.6rem;
+                    padding-bottom: .7rem;
+                }
+            }
+
+            .cuadrado{
+                position: absolute;
+                top: 15rem;
+                left: -.1rem;
+                height: 3.5rem;
+                width: 3.4rem;
+                background-color: $blanco2;
+                border-radius: 0 70% 0 0;
+            }
+        }
+    }
+
+    h4{
+        font-size: 2rem;
+        color: $primario;
+        padding: 2rem ;
+        text-align: center;
+        span{
+            color: $secundario;
+            display: block;
+        }
+    }
+}

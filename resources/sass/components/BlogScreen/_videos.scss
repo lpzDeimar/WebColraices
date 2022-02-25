@@ -1,0 +1,67 @@
+.blogscreen-video {
+    background-color: $blanco2;
+    background-image: url("/img/fondometas.webp");
+    .video-content {
+        max-width: 140rem;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            text-align: center;
+            color: $primario;
+            font-size: 2.5rem;
+            margin: 7rem auto;
+            @include tablet {
+                font-size: 3.5rem;
+            }
+            span {
+                display: block;
+                color: $secundario;
+                font-size: 3.5rem;
+                @include tablet {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+
+        div.videos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+            article {
+                min-height: 18rem;
+                max-width: 35rem;
+                margin: 1rem;
+
+                iframe {
+                    width: 100%;
+                    min-height: 20rem;
+                    border-radius: 2rem;
+                }
+                p {
+                    text-align: center;
+                    color: $primario;
+                    margin: 0.6rem 0 0;
+                }
+            }
+        }
+
+        a {
+            text-align: center;
+            color: $primario;
+            border: none;
+            background: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 5rem auto;
+            border-bottom: solid 0.2rem $secundario;
+            padding-bottom: 0.4rem;
+        }
+    }
+}

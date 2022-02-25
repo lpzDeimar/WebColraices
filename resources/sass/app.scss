@@ -1,0 +1,56 @@
+
+
+// Globales
+@import 'base/nomalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/utilidades';
+@import 'base/globales';
+
+
+//Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/blogmin';
+@import 'components/soluciones';
+@import 'components/blog';
+@import 'components/simulador';
+@import 'components/suscripcion';
+@import 'components/mivivienda';
+
+//Home
+@import 'components/Home/banner';
+@import 'components/Home/alcanze';
+@import 'components/Home/como';
+@import 'components/Home/metas';
+@import 'components/Home/mision';
+@import 'components/Home/historys';
+
+//Ahorro
+@import 'components/Ahorro/banner';
+@import 'components/Ahorro/riqueza';
+@import 'components/Ahorro/inversion';
+@import 'components/Ahorro/remesa';
+@import 'components/Ahorro/finanzas';
+
+//Credito
+@import 'components/Credito/bannerCredito';
+@import 'components/Credito/pasos';
+@import 'components/Credito/bancos';
+@import 'components/Credito/simulador';
+
+//Leasing
+@import 'components/Leasing/bannerLeasing';
+@import 'components/Leasing/beneficios';
+@import 'components/Leasing/aliados';
+
+//blog
+@import 'components/BlogScreen/banner';
+@import 'components/BlogScreen/inde';
+@import 'components/BlogScreen/blogs';
+@import 'components/BlogScreen/videos';
+
+//contacto
+@import 'components/Contacto/formulario';
+
+

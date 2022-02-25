@@ -1,0 +1,90 @@
+.metas-main {
+    min-height: 100vh;
+    background-image: url("/img/fondometas.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+
+    .metas-content {
+        max-width: 90rem;
+        background-color: $blanco2;
+        box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 7px 0px #38383893 inset;
+        padding: 2rem;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            padding: 5rem;
+        }
+        .metas-title {
+            text-shadow: 2px 2px 2px #3030305e, -3px -3px 3px #ffffff;
+            color: $primario;
+            text-align: center;
+            font-size: 3.4rem;
+            font-weight: 500;
+
+            span {
+                color: $secundario;
+                display: block;
+                font-size: 4rem;
+                font-weight: 600;
+                @include tablet {
+                    font-size: 5.7rem;
+                }
+            }
+        }
+        .line {
+            margin: 3rem auto;
+            background-color: $blanco2;
+            border-radius: 0.5rem;
+            box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+            min-height: 0.7rem;
+            width: 90%;
+        }
+        .metas-text {
+            text-align: center;
+            p {
+                margin: 3rem 0;
+
+                &:nth-child(2) {
+                    color: $secundario;
+                    font-weight: 600;
+                }
+
+                span {
+                    color: $primario;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        button {
+            @include tabletinvert {
+                width: 100%;
+                margin-bottom: -5rem;
+            }
+            display: inline-block;
+            color: $primario;
+            font-size: 1.8rem;
+            background-color: $blanco;
+            font-weight: 600;
+            padding: 1.5rem 0.9rem;
+            border-radius: 1.2rem;
+            border: 1.2px solid $secundario;
+            outline: 2px $blanco2 solid;
+            box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+            margin-top: 3rem;
+            margin-bottom: -8rem;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                    4px 4px 5px 0px #0001;
+            }
+        }
+    }
+}

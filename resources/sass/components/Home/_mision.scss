@@ -1,0 +1,133 @@
+.mision-main{
+    margin: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        text-shadow: 2px 2px 2px #3030305e, -3px -3px 3px #ffffff;
+        text-align: center;
+        color: $primario;
+        @include tablet{
+            font-size: 5rem;
+        }
+    }
+    p{
+        text-shadow: 2px 2px 2px #3030305e, -3px -3px 3px #ffffff;
+        text-align: center;
+        color: $secundario;
+        font-size: 3rem;
+        margin-top: .5rem;
+        font-weight: 400;
+        @include tablet{
+            font-size: 4.4rem;
+        }
+    }
+
+    button{
+        @include tabletinvert {
+            width: 98%;
+        }
+        margin: 2rem auto;
+        width: 60rem;
+        display: inline-block;
+        color: $primario;
+        font-size: 3rem;
+        font-weight: 500;
+        @include tablet{
+            font-size: 2.6rem;
+        }
+        background-color: $blanco;
+        padding: 1.4rem 1.9rem;
+        border-radius: 1.7rem;
+        outline: 1px $blanco2 solid;
+        box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+         transition: box-shadow 500ms;
+        border: 1px solid $secundario;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001;
+        }
+    }
+
+    .line {
+        margin: 3rem auto;
+        background-color: $blanco2;
+        border-radius: 0.5rem;
+        box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+        min-height: 0.7rem;
+        width: 90%;
+        max-width: 140rem;
+    }
+
+    .mision-items{
+        margin: 1rem auto;
+        @include tabletinvert{
+            margin: 1rem ;
+        }
+        width: 95%;
+        max-width: 110rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:wrap;
+
+        img{
+            width: 15rem;
+        }
+
+        .mision-item{
+            margin: 3rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 43rem;
+            p{
+                color: $gris;
+                margin-top: 4rem;
+                font-size: 1.7rem;
+                text-align: center;
+                font-weight: 400;
+                span{
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .aliados{
+        margin: 3rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        @include tablet{
+            column-gap: 10rem;
+        }
+        row-gap: 5rem;
+        justify-content: center;
+        img{
+            max-width: 15rem;
+            object-fit: scale-down;
+        }
+    }
+    h4{
+        text-align: center;
+        color: $primario;
+        font-size: 2.5rem;
+        margin: 1rem auto;
+        @include tablet{
+            font-size: 3rem;
+        }
+    }
+    .foot{
+        @include tablet{
+            font-size: 2.8rem;
+        }
+    }
+}
+

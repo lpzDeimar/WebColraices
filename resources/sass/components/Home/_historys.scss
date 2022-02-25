@@ -1,0 +1,89 @@
+.historys-main {
+    min-height: 70vh;
+    margin: 7rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+        color: $primario;
+        font-weight: 500;
+        @include tabletinvert {
+            margin: 7rem;
+            margin-bottom: 4rem;
+        }
+        margin: 2rem;
+        font-size: 3rem;
+        @include tablet {
+            font-size: 4rem;
+        }
+        span {
+            color: $secundario;
+            display: block;
+            font-size: 4rem;
+            font-weight: 700;
+            @include tablet {
+                font-size: 7rem;
+            }
+        }
+    }
+    .historys-content {
+        max-width: 120rem;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        .keys {
+            @include tabletinvert {
+                display: none;
+            }
+            font-size: 35rem;
+            color: $blanco2;
+            text-shadow: 2px 0px 6px #30303096;
+            margin: 0;
+        }
+        .history {
+            width: 99%;
+            .history-item {
+                article {
+                    padding: 1rem;
+                    padding-bottom: 3rem;
+                    @include tablet {
+                        padding: 2rem;
+                    }
+                    img {
+                        width: 12rem;
+                        height: 12rem;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 9px 0px #30303096;
+                        border: 0.1rem solid $secundario;
+                        outline: solid $blanco 0.3rem;
+                    }
+                    .history-text {
+                        margin: 2rem auto;
+                        max-width: 80rem;
+                        @include tabletinvert {
+                            text-align: justify;
+                        }
+                    }
+                    .history-name {
+                        text-align: end;
+                        color: $primario;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            padding: 0.7rem;
+            background-color: #30303096;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: $primario;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.banner-credito {
+    padding-top: 3rem;
+    @include tablet {
+        display: grid;
+        padding-top: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include tabletinvert{
+        margin-top: 6rem;
+    }
+
+    .banner-credito-text {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+
+        h1 {
+            color: $primario;
+            font-size: 3.5rem;
+            span {
+                color: $secundario;
+                font-size: 3.3rem;
+                display: block;
+            }
+        }
+
+        .banner-credito-content {
+            margin: 3rem 0;
+
+            p {
+                font-size: 1.8rem;
+                margin: 1rem;
+                @include tablet {
+                    font-size: 2rem;
+                }
+            }
+
+            h2 {
+                color: $gris;
+                span{
+                    color: $primario;
+                    font-weight: 600;
+                }
+                font-weight: 400;
+                font-size: 2rem;
+                margin-top: 5rem;
+                @include tablet {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+    }
+
+    .banner-credito-img {
+        overflow: hidden;
+        img {
+            position: relative;
+            width: 88%;
+            right: -1rem;
+            margin: 1rem;
+            border: .2rem solid $secundario;
+            outline: .5rem $blanco solid;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 0px #ffffff;
+
+            @include tablet {
+                top: -8rem;
+                right: -7rem;
+
+            }
+        }
+    }
+}

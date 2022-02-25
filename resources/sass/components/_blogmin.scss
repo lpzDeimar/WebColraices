@@ -1,0 +1,123 @@
+.blogmin-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $blanco2;
+    h4{
+        text-align: center;
+        color: $primario;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 7rem auto;
+        @include tablet{
+            font-size: 3.5rem;
+        }
+        span{
+            display: block;
+            color: $secundario;
+            font-size: 3.7rem;
+            font-weight: 700;
+            @include tablet{
+                font-size: 5.4rem;
+            }
+        }
+    }
+    .blog-content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .blog-item{
+            min-height: 18rem;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            column-gap: 2rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 7px 0px #38383893 inset;
+            margin: 1rem;
+            max-width: 40rem;
+            @include tablet{
+                margin: 4rem 0;
+            }
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+             align-items: flex-end;
+            h3{
+                font-size: 1.7rem;
+                margin-top: 1.5rem;
+                margin-right: 1rem;
+                max-height: 9rem;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                color: $primario;
+            }
+            a{
+                @include tabletinvert {
+                    margin: 0 1.5rem 1rem 0;
+                }
+                margin: 0 .5rem .5rem 0;
+            }
+            button{
+                @include tabletinvert {
+                    width: 100%;
+                }
+                margin: 0 1.4rem 1.4rem 0;
+                width: 10rem;
+                display: inline-block;
+                color: $primario;
+                font-size: 1.6rem;
+                background-color: $blanco;
+                font-weight: 600;
+                padding: 1.4rem 1.9rem;
+                border-radius: 1.7rem;
+                outline: 1px $blanco2 solid;
+                box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+                 transition: box-shadow 500ms;
+                border: 1px solid $secundario;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                }
+            }
+        }
+    }
+    .suscript{
+        margin: 8rem 1.4rem;
+        @include tabletinvert {
+            width: 95%;
+            margin: 5rem auto;
+        }
+        display: inline-block;
+        color: $blanco;
+        font-size: 1.6rem;
+        background-color: $primario;
+        font-weight: 600;
+        padding: 1.5rem 2rem;
+        border-radius: 1.7rem;
+        outline: 1px $blanco2 solid;
+        box-shadow: 4px 4px 4px 0px #30303096,-5px -5px 3px 0px #ffffff;
+         transition: box-shadow 500ms;
+        border: 1px solid $secundario;
+        &:hover {
+            cursor: pointer;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001;
+        }
+    }
+}
