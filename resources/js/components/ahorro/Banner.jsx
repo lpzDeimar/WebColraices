@@ -14,7 +14,7 @@ export const Banner = () => {
                 </button>
             </article>
             <section className='banner-img'>
-                <img src="/img/ah1.webp" alt="plan de ahorro en Colombia" />
+                <img src="/img/ah1.webp" alt="Plan de ahorro en Colombia para adquirir vivienda desde el exterior" />
             </section>
         </section>
     )

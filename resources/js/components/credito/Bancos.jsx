@@ -11,10 +11,10 @@ export const Bancos = () => {
             <section className="bancos-container" data-aos="fade-up" data-aos-duration="1100">
                 <h3>Contamos con los mejores <span>bancos de Colombia</span></h3>
                 <section className="bancos-aliados">
-                    <img src="./img/entidades/davivienda.webp" alt="casa en colombia con davivienda" />
-                    <img src="./img/entidades/bbva.webp" alt="casa en colombia con bbva" />
-                    <img src="./img/entidades/bancolombia.webp" alt="casa en colombia con bancolombia" />
-                    <img src="./img/entidades/girosyfinanzas.webp" alt="casa en colombia con giros y finanzas" />
+                    <img src="./img/entidades/davivienda.webp" alt="Credito hipotecario Colombianos en el exterior" />
+                    <img src="./img/entidades/bbva.webp" alt="Créditos para comprar vivienda en Colombia desde el exterior" />
+                    <img src="./img/entidades/bancolombia.webp" alt="Calcula tu cuota en tiempo real" />
+                    <img src="./img/entidades/girosyfinanzas.webp" alt="Crédito para remodelar tu casa" />
                 </section>
             </section>
             <section className="bancos-content">

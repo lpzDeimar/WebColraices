@@ -103,7 +103,12 @@ export const Hipotecario = () => {
                 </div>
                 <section>
                     <p>Valor cuota mensual</p>{" "}
-                    <span>{peso.format(cuotaMensualInicial || 0)}</span>
+                    <span>
+                        {peso.format(
+                            cuotaMensualInicial ||
+                                treitaPorCiento / Number(plazoInicial)
+                        )}
+                    </span>
                 </section>
             </section>
 

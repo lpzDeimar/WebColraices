@@ -102,7 +102,12 @@ export const Leasing = () => {
                 </div>
                 <section className="resultado">
                     <p> Valor cuota mensual</p>{" "}
-                    <span>{peso.format(cuotaMensualInicial || 0)}</span>
+                    <span>
+                        {peso.format(
+                            cuotaMensualInicial ||
+                                veintePorCiento / Number(plazoInicial)
+                        )}
+                    </span>
                 </section>
             </section>
 

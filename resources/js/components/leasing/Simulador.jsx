@@ -24,7 +24,7 @@ export const Simulador = () => {
                             <li>
                                 <p>
                                     <span>2.</span> Selecciona el valor de tu
-                                    cuota inicial, recuerda que es máximo del
+                                    cuota inicial, recuerda que es mínimo del
                                     20%
                                 </p>
                             </li>
@@ -54,7 +54,10 @@ export const Simulador = () => {
                 <small>
                     *Los valores de Cuota inicial (mínimo 20%), Plazo (60 a 240
                     meses) y Amortización (ﬁja en pesos o UVR) pueden ajustarse
-                    según la necesidad e interés del cliente.
+                    según la necesidad e interés del cliente. El valor de la
+                    cuota del leasing habitacional es aproximada, corresponde a
+                    una estimación. La tasa de interés será la vigente al
+                    momento del desembolso.
                 </small>
             </div>
         </article>

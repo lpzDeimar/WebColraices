@@ -21,7 +21,7 @@ export const Banner = memo(() => {
         blogs();
     }, [])
 
-    const { titulo, extracto, imagen, slug } = lastBlog.data ?? {};
+    const { titulo, extracto, imagen, slug,alt } = lastBlog.data ?? {};
 
     return (
         <>
@@ -30,7 +30,7 @@ export const Banner = memo(() => {
                     <h2>El blog para colombianos <span>en el exterior</span></h2>
                     <div className='border'></div>
                     <article className='blogscreen-item'>
-                        <img src={imagen} alt={titulo} />
+                        <img src={imagen} alt={alt} />
                         <article className='blogscreen-text'>
                             <h1>{titulo}</h1>
                             <div dangerouslySetInnerHTML={{ __html: extracto }} />

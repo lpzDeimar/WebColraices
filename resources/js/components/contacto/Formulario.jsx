@@ -7,11 +7,12 @@ const scriptURL =
 export const Formulario = () => {
     const [contactoInfo, setContactoInfo] = useState({
         nombre: "",
+        apellido: "",
         correo: "",
-        whatsapp: "",
+        telefono: "",
         mensaje: "",
     });
-
+    console.log(JSON.stringify(contactoInfo));
     const handleInput = (e) => {
         const { name, value } = e.target;
         setContactoInfo((prevState) => ({
@@ -19,34 +20,52 @@ export const Formulario = () => {
             [name]: value,
         }));
     };
-    console.log(contactoInfo);
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("nombre", contactoInfo.nombre);
-        formData.append("correo", contactoInfo.correo);
-        formData.append("whatsapp", contactoInfo.whatsapp);
-        formData.append("mensaje", contactoInfo.mensaje);
-
-        fetch(scriptURL, { method: "POST", body: formData }).then(
-            (response) => {
-                const r = response;
-                if (r.status === 200) {
-                    toast("!Hemos recibido tu solicitud!", { icon: "🏠" });
-                    e.target.reset();
-                }
-            }
+        formData.append(
+            "arguments",
+            JSON.stringify({
+                nombre: contactoInfo.nombre,
+                apellido: contactoInfo.apellido,
+                telefono: contactoInfo.telefono,
+                correo: contactoInfo.correo,
+                mensaje: contactoInfo.mensaje,
+                utm_source: "SitioWeb",
+                utm_medium: "FormularioContacto",
+            })
         );
+        console.log(formData);
+
+        fetch(
+            "https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28",
+            {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                },
+                body: formData,
+            }
+        )
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.log("error", error));
     };
 
     return (
-        <section className="contact-main" data-aos="fade-up" data-aos-duration="1120" >
+        <section
+            className="contact-main"
+            data-aos="fade-up"
+            data-aos-duration="1120"
+        >
             <Toaster
                 containerStyle={{ zIndex: 10000000 }}
                 position="top-right"
             />
             <h1>
-                 Háblemos
+                Háblemos
                 <span>Un experto se pondrá en contacto </span>
             </h1>
             <article className="formulario-contacto-main">
@@ -117,12 +136,23 @@ export const Formulario = () => {
                     <h2>Ponerme en contacto</h2>
                     <form onSubmit={sendData}>
                         <label>
-                            <span>Tu nombre</span>
+                            <span>Nombre</span>
                             <input
                                 type="text"
                                 name="nombre"
                                 onChange={handleInput}
-                                placeholder="Nombre completo"
+                                placeholder="Nombre"
+                                required
+                                autoComplete="off"
+                            />
+                        </label>
+                        <label>
+                            <span>Apellido</span>
+                            <input
+                                type="text"
+                                name="apellido"
+                                onChange={handleInput}
+                                placeholder="Apellido"
                                 required
                                 autoComplete="off"
                             />
@@ -142,7 +172,7 @@ export const Formulario = () => {
                             <span>WhatsApp</span>
                             <input
                                 type="text"
-                                name="whatsapp"
+                                name="telefono"
                                 onChange={handleInput}
                                 placeholder="Tu numero de contacto"
                                 required
@@ -151,13 +181,38 @@ export const Formulario = () => {
                         </label>
                         <label>
                             <span>Solicitud</span>
-                            <textarea
+                            <select
+                                name="mensaje"
+                                placeholder="Seleccione una opcion"
+                                onChange={handleInput}
+                            >
+                                <option value="">Seleccione una opción</option>
+                                <option value="Crédito de vivienda">
+                                    Crédito de vivienda
+                                </option>
+                                <option value="Crédito de libre inversión">
+                                    Crédito de libre inversión
+                                </option>
+                                <option value="Comprar inmueble">
+                                    Comprar inmueble
+                                </option>
+                                <option value="Vender un inmueble">
+                                    Vender un inmueble
+                                </option>
+                                <option value="Monetización">
+                                    Monetización
+                                </option>
+                                <option value="Cuenta de ahorro">
+                                    Cuenta de ahorro
+                                </option>
+                            </select>
+                            {/* <textarea
                                 name="mensaje"
                                 onChange={handleInput}
                                 placeholder="Escribe aquí tu solicitud..."
                                 required
                                 autoComplete="off"
-                            ></textarea>
+                            ></textarea> */}
                         </label>
 
                         <button type="submit">Envíanos tu solicitud</button>

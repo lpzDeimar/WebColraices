@@ -18,7 +18,7 @@ export const Remesa = () => {
                 <button onClick={apiW}>Abre tu cuenta de ahorro</button>
             </article>
             <section className='remesa-img'>
-                <img src="/img/ah2.webp" alt="remesa en colombia" />
+                <img src="/img/ah2.webp" alt="Remesa en colombia" />
             </section>
         </section>
     )

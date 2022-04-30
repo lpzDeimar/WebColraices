@@ -18,7 +18,7 @@ export const Banner = () => {
 
             </article>
             <section className='banner-credito-img'>
-                <img src="./img/credito/cre1.webp" alt="Crédito para comprar casa en Colombia" />
+                <img src="./img/credito/cre1.webp" alt="Credito de vivienda para colombianos en el exterior" />
             </section>
 
         </section>

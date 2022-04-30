@@ -10,6 +10,9 @@ export const BlogScreen = () => {
     useEffect(() => {
         scrollTo(0, 0);
         titleReact('El blog de los colombianos en el exterior  - Colraices');
+        /*
+        <link rel="canonical" href="https://colraices.com/blog">
+        */
     }, [])
 
     return (

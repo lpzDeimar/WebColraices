@@ -29,9 +29,10 @@
         margin: 2rem auto 12rem auto;
         max-width: 120rem;
         padding: 3rem 3.5rem;
-        box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 7px 0px #38383893 inset;
+        box-shadow: -5px -6px 3px -1px #ffffff inset,
+            2px 2px 7px 0px #38383893 inset;
         border-radius: 2rem;
-        @include tabletinvert{
+        @include tabletinvert {
             width: 95%;
             padding: 3rem;
         }
@@ -42,8 +43,8 @@
             }
             text-align: justify;
             strong {
-                display: inherit;
-                font-size: 1.9rem;
+                display: inline;
+                font-size: 1.6rem;
                 color: $primario;
                 margin-top: 3.6rem;
             }
@@ -88,7 +89,7 @@
                     }
                 }
                 h1 {
-                    @include tabletinvert{
+                    @include tabletinvert {
                         font-size: 2.5rem;
                     }
                     color: $primario;
@@ -99,7 +100,8 @@
                     margin: 3rem auto;
                     background-color: $blanco2;
                     border-radius: 0.5rem;
-                    box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+                    box-shadow: 0px 1px 3px -1px #38383893,
+                        -2px -2px 3px 0px #ffffff;
                     min-height: 0.7rem;
                     width: 99%;
                 }
@@ -147,12 +149,14 @@
                     padding: 1.2rem 1.7rem;
                     border-radius: 1.4rem;
                     outline: 1px $blanco2 solid;
-                    box-shadow: 4px 4px 4px 0px #30303096, -5px -5px 3px 0px #ffffff;
+                    box-shadow: 4px 4px 4px 0px #30303096,
+                        -5px -5px 3px 0px #ffffff;
                     transition: box-shadow 500ms;
                     border: 1px solid $secundario;
                     &:hover {
                         cursor: pointer;
-                        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        box-shadow: -7px -7px 20px 0px #fff9,
+                            -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
                             4px 4px 5px 0px #0001;
                     }
                 }

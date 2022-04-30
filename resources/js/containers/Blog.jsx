@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Blogs } from '../components/blogscreen/blogs';
+import { metaReact } from '../metaReact';
 import { titleReact } from '../titleReact';
 
 export const Blog = () => {
@@ -20,16 +21,21 @@ export const Blog = () => {
             setLoading(true);
         }
         blog();
-    }, [blogSlug])
+    }, [blogSlug]);
 
+    const datos = async () =>{
+        const {description,meta_title } = await blog.data ?? {};
+        titleReact(meta_title);
+        metaReact(description);
+    }
+    datos();
 
-    const { titulo, extracto, imagen, id, contenido, categoria, autor, creacion } = blog.data ?? {};
+    const { titulo, extracto, imagen, contenido, categoria, autor, creacion,alt} = blog.data ?? {};
 
     const navigate = useNavigate();
 
     useEffect(() => {
         scrollTo(0, 0);
-        titleReact('El blog de los colombianos en el exterior  - Colraices');
     }, [blogSlug])
 
     return (
@@ -39,7 +45,7 @@ export const Blog = () => {
                 {loading ?
                     <article className='blog-content'>
                         <div className='blog-head'>
-                            <img src={imagen} alt="titulo" />
+                            <img src={imagen} alt={alt} />
                             <section className='blog-img'>
                                 <div className='blog-cred'>
                                     <p><span>Creado</span> {creacion}</p>

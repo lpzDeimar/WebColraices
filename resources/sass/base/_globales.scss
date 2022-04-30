@@ -61,12 +61,15 @@ li {
     padding: 0;
     margin: 0;
 }
-
-.shodow_top{
+strong {
+    display: inline;
+    font-size: 1.6rem;
+}
+.shodow_top {
     filter: drop-shadow(0px -1px 8px rgba(0, 0, 0, 0.75));
 }
 
-.shodow_bottom{
+.shodow_bottom {
     filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.75));
 }
 

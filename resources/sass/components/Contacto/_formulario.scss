@@ -178,6 +178,22 @@
                             min-height: 14rem;
                         }
                     }
+                    select {
+                        font-size: 1.5rem;
+                        min-height: 2rem;
+                        padding: 0.8rem 1.5rem;
+                        border: none;
+                        border-radius: 2rem;
+                        box-shadow: inset -3px -3px 7px $blanco2,
+                            inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+                        text-align: center;
+                        width: 100%;
+                        @include tablet {
+                            text-align: left;
+                            font-size: 1.6rem;
+                            min-height: 3rem;
+                        }
+                    }
                 }
 
                 button {

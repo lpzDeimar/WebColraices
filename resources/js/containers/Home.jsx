@@ -6,13 +6,18 @@ import { Como } from '../components/home/Como'
 import { Historys } from '../components/home/Historys'
 import { Metas } from '../components/home/Metas'
 import { Mision } from '../components/home/Mision'
+import { metaReact } from '../metaReact'
 import { titleReact } from '../titleReact'
 
 export const Home = () => {
 
     useEffect(() => {
         scrollTo(0, 0);
-        titleReact('Compra tu casa en Colombia desde el exterior - Colraices');
+        titleReact('Comprar casa en Colombia desde el exterior ▷ Colraices');
+        metaReact("Compra de vivienda en Colombia desde el exterior | Compra tu casa en Colombia desde cualquier parte del mundo | colombianos en el exterior | Colraices");
+        /*
+        <link rel="canonical" href="https://colraices.com">
+        */
     }, [])
 
     return (

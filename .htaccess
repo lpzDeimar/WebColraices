@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteRule ^franquicias\/?(.*)$ "https\:\/\/franquicias\.colraices\.com\/$1" [R=301,L]
+
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+ #First rewrite any request to the wrong domain to use the correct one (here www.)
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule ^(.*)$ https://colraices.com/$1 [L,R=301]
+
+#Now, rewrite to HTTPS:
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://colraices.com/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^public
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ public/$1 [L]

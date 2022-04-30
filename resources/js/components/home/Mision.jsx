@@ -12,23 +12,23 @@ export const Mision = () => {
             <div className='line'></div>
             <section className='mision-items'>
                 <article className='mision-item' data-aos="fade-up" data-aos-duration="1200" >
-                    <img src="./img/home.webp" alt="" />
+                    <img src="./img/home.webp" alt="Comprar casa en colombia desde Estados Unidos" />
                     <p><span>Contamos con los mejores aliados </span>
                         para que encuentres tu casa ideal con la
                         mejor financiación.</p>
                 </article>
                 <article className='mision-item' data-aos="fade-up" data-aos-duration="1300">
-                    <img src="./img/global.webp" alt="" />
+                    <img src="./img/global.webp" alt="Comprar vivienda en colombia desde España" />
                     <p><span>Sin viajar a Colombia, compras tu casa desde
                         el exterior.</span> Te acompañamos en todo el
                         proceso, desde la búsqueda hasta la entrega.</p>
                 </article>
             </section>
             <section className='aliados'>
-                <img data-aos="zoom-in" src="./img/entidades/davivienda.webp" alt="casa en colombia con davivienda" />
-                <img data-aos="zoom-in" src="./img/entidades/bbva.webp" alt="casa en colombia con bbva" />
-                <img data-aos="zoom-in" src="./img/entidades/bancolombia.webp" alt="casa en colombia con bancolombia" />
-                <img data-aos="zoom-in" src="./img/entidades/girosyfinanzas.webp" alt="casa en colombia con giros y finanzas" />
+                <img data-aos="zoom-in" src="./img/entidades/davivienda.webp" alt="Comprar casa desde el exterior en Colombia con Davivienda" />
+                <img data-aos="zoom-in" src="./img/entidades/bbva.webp" alt="Comprar casa desde el exterior en Colombia BBVA" />
+                <img data-aos="zoom-in" src="./img/entidades/bancolombia.webp" alt="Comprar casa desde el exterior en Colombia con Bancolombia" />
+                <img data-aos="zoom-in" src="./img/entidades/girosyfinanzas.webp" alt="Comprar casa desde el exterior en Colombia con Giros y finanzas" />
             </section>
             <div className='line'></div>
             <h4>Nos llena de orgullo contar una historia de 16 años</h4>

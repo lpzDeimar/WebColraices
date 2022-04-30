@@ -7,8 +7,10 @@ export const NotFound = () => {
     }, [])
 
     return (
-        <div>
-            <h1>404</h1>
-        </div>
+        <section className='fotFound'>
+            <article>
+                <img src="/img/404.png" alt="pagina no encontrada" />
+            </article>
+        </section>
     )
 }

@@ -6,10 +6,10 @@ export const Aliados = () => {
             <section className="aliados-container">
                 <h3>Contamos con los mejores <span>bancos de Colombia</span></h3>
                 <section className="aliados-aliados">
-                    <img src="./img/entidades/davivienda.webp" alt="casa en colombia con davivienda" />
-                    <img src="./img/entidades/bbva.webp" alt="casa en colombia con bbva" />
-                    <img src="./img/entidades/bancolombia.webp" alt="casa en colombia con bancolombia" />
-                    <img src="./img/entidades/girosyfinanzas.webp" alt="casa en colombia con giros y finanzas" />
+                    <img src="./img/entidades/davivienda.webp" alt="Compra tu casa con el arriendo que pagas mes a mes" />
+                    <img src="./img/entidades/bbva.webp" alt="Simulador crédito leasing habitacional" />
+                    <img src="./img/entidades/bancolombia.webp" alt="Leasing habitacional" />
+                    <img src="./img/entidades/girosyfinanzas.webp" alt="Beneficios Leasing Habitacional" />
                 </section>
             </section>
             <section className="aliados-content">

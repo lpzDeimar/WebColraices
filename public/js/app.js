@@ -83,7 +83,7 @@ var BlogItem = function BlogItem(_ref) {
     className: "blog-item",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
       src: blogmin.imagen,
-      alt: blogmin.titulo
+      alt: blogmin.alt
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
         children: blogmin.titulo
@@ -1237,7 +1237,7 @@ var Banner = function Banner() {
       className: "banner-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/img/ah1.webp",
-        alt: "plan de ahorro en Colombia"
+        alt: "Plan de ahorro en Colombia para adquirir vivienda desde el exterior"
       })
     })]
   });
@@ -1470,7 +1470,7 @@ var Remesa = function Remesa() {
       className: "remesa-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/img/ah2.webp",
-        alt: "remesa en colombia"
+        alt: "Remesa en colombia"
       })
     })]
   });
@@ -1631,7 +1631,8 @@ var Banner = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function (
       titulo = _ref2.titulo,
       extracto = _ref2.extracto,
       imagen = _ref2.imagen,
-      slug = _ref2.slug;
+      slug = _ref2.slug,
+      alt = _ref2.alt;
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("section", {
@@ -1648,7 +1649,7 @@ var Banner = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function (
         className: "blogscreen-item",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
           src: imagen,
-          alt: titulo
+          alt: alt
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
           className: "blogscreen-text",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
@@ -1850,6 +1851,11 @@ var Blogs = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function ()
       meta = _useState6[0],
       setMeta = _useState6[1];
 
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      loader = _useState8[0],
+      setLoader = _useState8[1];
+
   var api = "https://blog.colraices.com/api/v1/all?page=".concat(page);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     var blog = /*#__PURE__*/function () {
@@ -1871,8 +1877,9 @@ var Blogs = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function ()
                 blog = _context.sent;
                 setBlogs(blog.data);
                 setMeta(blog.meta);
+                setLoader(true);
 
-              case 8:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -1892,48 +1899,50 @@ var Blogs = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function ()
   var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_ActiveContext__WEBPACK_IMPORTED_MODULE_2__.ActiveContext),
       activarModalBlog = _useContext.activarModalBlog;
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("section", {
-      className: "blogmin-main blogs",
-      id: "articulos",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h4", {
-        children: ["Lee nuestros ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-          children: "art\xEDculos"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
-        className: "blog-content",
-        children: blogs.map(function (blogmin) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_BlogItem__WEBPACK_IMPORTED_MODULE_3__.BlogItem, {
-            blogmin: blogmin
-          }, blogmin.id);
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-        className: "buttons",
-        children: maxPages !== 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-            onClick: function onClick() {
-              page > 1 && setPage(page - 1);
-            },
-            children: "Antarior"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-            children: [page, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-              children: "/"
-            }), " ", maxPages]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-            onClick: function onClick() {
-              page < maxPages && setPage(page + 1);
-            },
-            children: "Seguiente"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: loader && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("section", {
+        className: "blogmin-main blogs",
+        id: "articulos",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h4", {
+          children: ["Lee nuestros ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+            children: "art\xEDculos"
           })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-        onClick: function onClick() {
-          return activarModalBlog();
-        },
-        className: "suscript",
-        children: "\xA1Suscr\xEDbete a nuestro bolet\xEDn!"
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Suscripcion__WEBPACK_IMPORTED_MODULE_4__.Suscripcion, {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
+          className: "blog-content",
+          children: blogs.map(function (blogmin) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_BlogItem__WEBPACK_IMPORTED_MODULE_3__.BlogItem, {
+              blogmin: blogmin
+            }, blogmin.id);
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "buttons",
+          children: maxPages !== 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+              onClick: function onClick() {
+                page > 1 && setPage(page - 1);
+              },
+              children: "Antarior"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+              children: [page, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                children: "/"
+              }), " ", maxPages]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+              onClick: function onClick() {
+                page < maxPages && setPage(page + 1);
+              },
+              children: "Seguiente"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+          onClick: function onClick() {
+            return activarModalBlog();
+          },
+          className: "suscript",
+          children: "\xA1Suscr\xEDbete a nuestro bolet\xEDn!"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Suscripcion__WEBPACK_IMPORTED_MODULE_4__.Suscripcion, {})]
+    })
   });
 });
 
@@ -2044,13 +2053,16 @@ var scriptURL = "https://script.google.com/macros/s/AKfycbx57y419piaWgHTOiCAKMvP
 var Formulario = function Formulario() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     nombre: "",
+    apellido: "",
     correo: "",
-    whatsapp: "",
+    telefono: "",
     mensaje: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       contactoInfo = _useState2[0],
       setContactoInfo = _useState2[1];
+
+  console.log(JSON.stringify(contactoInfo));
 
   var handleInput = function handleInput(e) {
     var _e$target = e.target,
@@ -2061,27 +2073,33 @@ var Formulario = function Formulario() {
     });
   };
 
-  console.log(contactoInfo);
-
   var sendData = function sendData(e) {
     e.preventDefault();
     var formData = new FormData();
-    formData.append("nombre", contactoInfo.nombre);
-    formData.append("correo", contactoInfo.correo);
-    formData.append("whatsapp", contactoInfo.whatsapp);
-    formData.append("mensaje", contactoInfo.mensaje);
-    fetch(scriptURL, {
+    formData.append("arguments", JSON.stringify({
+      nombre: contactoInfo.nombre,
+      apellido: contactoInfo.apellido,
+      telefono: contactoInfo.telefono,
+      correo: contactoInfo.correo,
+      mensaje: contactoInfo.mensaje,
+      utm_source: "SitioWeb",
+      utm_medium: "FormularioContacto"
+    }));
+    console.log(formData);
+    fetch("https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28", {
       method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
       body: formData
     }).then(function (response) {
-      var r = response;
-
-      if (r.status === 200) {
-        (0,react_hot_toast__WEBPACK_IMPORTED_MODULE_2__["default"])("!Hemos recibido tu solicitud!", {
-          icon: "🏠"
-        });
-        e.target.reset();
-      }
+      return response.text();
+    }).then(function (result) {
+      return console.log(result);
+    })["catch"](function (error) {
+      return console.log("error", error);
     });
   };
 
@@ -2172,12 +2190,23 @@ var Formulario = function Formulario() {
           onSubmit: sendData,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              children: "Tu nombre"
+              children: "Nombre"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "text",
               name: "nombre",
               onChange: handleInput,
-              placeholder: "Nombre completo",
+              placeholder: "Nombre",
+              required: true,
+              autoComplete: "off"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              children: "Apellido"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "text",
+              name: "apellido",
+              onChange: handleInput,
+              placeholder: "Apellido",
               required: true,
               autoComplete: "off"
             })]
@@ -2197,7 +2226,7 @@ var Formulario = function Formulario() {
               children: "WhatsApp"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "text",
-              name: "whatsapp",
+              name: "telefono",
               onChange: handleInput,
               placeholder: "Tu numero de contacto",
               required: true,
@@ -2206,12 +2235,32 @@ var Formulario = function Formulario() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               children: "Solicitud"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
               name: "mensaje",
+              placeholder: "Seleccione una opcion",
               onChange: handleInput,
-              placeholder: "Escribe aqu\xED tu solicitud...",
-              required: true,
-              autoComplete: "off"
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "",
+                children: "Seleccione una opci\xF3n"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Cr\xE9dito de vivienda",
+                children: "Cr\xE9dito de vivienda"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Cr\xE9dito de libre inversi\xF3n",
+                children: "Cr\xE9dito de libre inversi\xF3n"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Comprar inmueble",
+                children: "Comprar inmueble"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Vender un inmueble",
+                children: "Vender un inmueble"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Monetizaci\xF3n",
+                children: "Monetizaci\xF3n"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                value: "Cuenta de ahorro",
+                children: "Cuenta de ahorro"
+              })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
             type: "submit",
@@ -2266,16 +2315,16 @@ var Bancos = function Bancos() {
           className: "bancos-aliados",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: "./img/entidades/davivienda.webp",
-            alt: "casa en colombia con davivienda"
+            alt: "Credito hipotecario Colombianos en el exterior"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: "./img/entidades/bbva.webp",
-            alt: "casa en colombia con bbva"
+            alt: "Cr\xE9ditos para comprar vivienda en Colombia desde el exterior"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: "./img/entidades/bancolombia.webp",
-            alt: "casa en colombia con bancolombia"
+            alt: "Calcula tu cuota en tiempo real"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: "./img/entidades/girosyfinanzas.webp",
-            alt: "casa en colombia con giros y finanzas"
+            alt: "Cr\xE9dito para remodelar tu casa"
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
@@ -2379,7 +2428,7 @@ var Banner = function Banner() {
       className: "banner-credito-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
         src: "./img/credito/cre1.webp",
-        alt: "Cr\xE9dito para comprar casa en Colombia"
+        alt: "Credito de vivienda para colombianos en el exterior"
       })
     })]
   });
@@ -2557,7 +2606,7 @@ var Simulador = function Simulador() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                   children: "2."
-                }), " Selecciona el valor de tu cuota inicial, recuerda que es m\xE1ximo del 30%"]
+                }), " Selecciona el valor de tu cuota inicial, recuerda que es m\xEDnimo del 30%"]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
@@ -2582,7 +2631,7 @@ var Simulador = function Simulador() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("article", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_simuladores_Hipotecario__WEBPACK_IMPORTED_MODULE_1__.Hipotecario, {})
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
-        children: "*Los valores de Cuota inicial (m\xEDnimo 30%), Plazo (60 a 240 meses) y Amortizaci\xF3n (\uFB01ja en pesos o UVR) pueden ajustarse seg\xFAn la necesidad e inter\xE9s del cliente."
+        children: "*Los valores de Cuota inicial (m\xEDnimo 30%), Plazo (60 a 240 meses) y Amortizaci\xF3n (\uFB01ja en pesos o UVR) pueden ajustarse seg\xFAn la necesidad e inter\xE9s del cliente. El valor de la cuota del cr\xE9dito hipotecario es aproximada, corresponde a una estimaci\xF3n. La tasa de inter\xE9s ser\xE1 la vigente al momento del desembolso."
       })]
     })]
   });
@@ -2733,7 +2782,7 @@ var Banner = function Banner() {
       className: "banner-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "./img/bn1.webp",
-        alt: "Comprar casa en colombia"
+        alt: "Compra tu casa en Colombia"
       })
     })]
   });
@@ -2995,7 +3044,7 @@ var Mision = function Mision() {
         "data-aos-duration": "1200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
           src: "./img/home.webp",
-          alt: ""
+          alt: "Comprar casa en colombia desde Estados Unidos"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             children: "Contamos con los mejores aliados "
@@ -3007,7 +3056,7 @@ var Mision = function Mision() {
         "data-aos-duration": "1300",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
           src: "./img/global.webp",
-          alt: ""
+          alt: "Comprar vivienda en colombia desde Espa\xF1a"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             children: "Sin viajar a Colombia, compras tu casa desde el exterior."
@@ -3019,19 +3068,19 @@ var Mision = function Mision() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         "data-aos": "zoom-in",
         src: "./img/entidades/davivienda.webp",
-        alt: "casa en colombia con davivienda"
+        alt: "Comprar casa desde el exterior en Colombia con Davivienda"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         "data-aos": "zoom-in",
         src: "./img/entidades/bbva.webp",
-        alt: "casa en colombia con bbva"
+        alt: "Comprar casa desde el exterior en Colombia BBVA"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         "data-aos": "zoom-in",
         src: "./img/entidades/bancolombia.webp",
-        alt: "casa en colombia con bancolombia"
+        alt: "Comprar casa desde el exterior en Colombia con Bancolombia"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         "data-aos": "zoom-in",
         src: "./img/entidades/girosyfinanzas.webp",
-        alt: "casa en colombia con giros y finanzas"
+        alt: "Comprar casa desde el exterior en Colombia con Giros y finanzas"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "line"
@@ -3141,16 +3190,16 @@ var Aliados = function Aliados() {
         className: "aliados-aliados",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "./img/entidades/davivienda.webp",
-          alt: "casa en colombia con davivienda"
+          alt: "Compra tu casa con el arriendo que pagas mes a mes"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "./img/entidades/bbva.webp",
-          alt: "casa en colombia con bbva"
+          alt: "Simulador cr\xE9dito leasing habitacional"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "./img/entidades/bancolombia.webp",
-          alt: "casa en colombia con bancolombia"
+          alt: "Leasing habitacional"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "./img/entidades/girosyfinanzas.webp",
-          alt: "casa en colombia con giros y finanzas"
+          alt: "Beneficios Leasing Habitacional"
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
@@ -3226,20 +3275,20 @@ var Banner = function Banner() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h1", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
           children: "Leasing habitacional"
-        }), " para comprar casa ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        }), " para comprar casa", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
           children: "en Colombia"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "banner-leasing-content",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          children: "Con el leasing habitacional puedes comprar tu casa con el arriendo que pagas mes a mes y disfrutas de intereses m\xE1s bajos que los de un cr\xE9dito hipotecario."
+          children: "Con el leasing habitacional puedes comprar tu casa con el arriendo que pagas mes a mes y accedes a cuotas m\xE1s bajas que las de un un cr\xE9dito hipotecario."
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
       className: "banner-leasing-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
         src: "./img/leasing/lea1.webp",
-        alt: "Leasing habitacional"
+        alt: "Leasing habitacional para comprar casa en Colombia"
       })
     })]
   });
@@ -3358,7 +3407,7 @@ var Beneficios = function Beneficios() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "beneficio",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-              children: ["Intereses", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+              children: ["Cuotas", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                 children: "m\xE1s"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -3431,7 +3480,7 @@ var Simulador = function Simulador() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                   children: "2."
-                }), " Selecciona el valor de tu cuota inicial, recuerda que es m\xE1ximo del 20%"]
+                }), " Selecciona el valor de tu cuota inicial, recuerda que es m\xEDnimo del 20%"]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
@@ -3456,7 +3505,7 @@ var Simulador = function Simulador() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("article", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_simuladores_Leasing__WEBPACK_IMPORTED_MODULE_1__.Leasing, {})
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
-        children: "*Los valores de Cuota inicial (m\xEDnimo 20%), Plazo (60 a 240 meses) y Amortizaci\xF3n (\uFB01ja en pesos o UVR) pueden ajustarse seg\xFAn la necesidad e inter\xE9s del cliente."
+        children: "*Los valores de Cuota inicial (m\xEDnimo 20%), Plazo (60 a 240 meses) y Amortizaci\xF3n (\uFB01ja en pesos o UVR) pueden ajustarse seg\xFAn la necesidad e inter\xE9s del cliente. El valor de la cuota del leasing habitacional es aproximada, corresponde a una estimaci\xF3n. La tasa de inter\xE9s ser\xE1 la vigente al momento del desembolso."
       })]
     })]
   });
@@ -3623,7 +3672,7 @@ var Hipotecario = function Hipotecario() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
           children: "Valor cuota mensual"
         }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          children: peso.format(cuotaMensualInicial || 0)
+          children: peso.format(cuotaMensualInicial || treitaPorCiento / Number(plazoInicial))
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
@@ -3841,7 +3890,7 @@ var Leasing = function Leasing() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
           children: " Valor cuota mensual"
         }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          children: peso.format(cuotaMensualInicial || 0)
+          children: peso.format(cuotaMensualInicial || veintePorCiento / Number(plazoInicial))
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
@@ -3914,7 +3963,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Blogmin__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Blogmin */ "./resources/js/components/Blogmin.jsx");
 /* harmony import */ var _components_ahorro_Finanzas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ahorro/Finanzas */ "./resources/js/components/ahorro/Finanzas.jsx");
 /* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -3928,10 +3979,14 @@ __webpack_require__.r(__webpack_exports__);
 var Ahorro = function Ahorro() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_7__.titleReact)('Como ahorrar para comprar tu casa en Colombia  - Colraices');
+    (0,_titleReact__WEBPACK_IMPORTED_MODULE_7__.titleReact)('Ahorro para vivienda en Colombia para colombianos en el exterior');
+    (0,_metaReact__WEBPACK_IMPORTED_MODULE_8__.metaReact)('Conoce cómo hacer un plan de ahorro en Colombia para adquirir vivienda desde el exterior | Haz que tu remesa sea una inversión | Conoce los beneficios');
+    /*
+    <link rel="canonical" href="https://colraices.com/plan-de-ahorro">
+    */
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ahorro_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ahorro_Riqueza__WEBPACK_IMPORTED_MODULE_3__.Riqueza, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ahorro_Inversion__WEBPACK_IMPORTED_MODULE_2__.Inversion, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ahorro_Remesa__WEBPACK_IMPORTED_MODULE_4__.Remesa, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ahorro_Finanzas__WEBPACK_IMPORTED_MODULE_6__.Finanzas, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_5__.Blogmin, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_ahorro_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_ahorro_Riqueza__WEBPACK_IMPORTED_MODULE_3__.Riqueza, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_ahorro_Inversion__WEBPACK_IMPORTED_MODULE_2__.Inversion, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_ahorro_Remesa__WEBPACK_IMPORTED_MODULE_4__.Remesa, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_ahorro_Finanzas__WEBPACK_IMPORTED_MODULE_6__.Finanzas, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_5__.Blogmin, {})]
   });
 };
 
@@ -3951,10 +4006,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _components_blogscreen_blogs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/blogscreen/blogs */ "./resources/js/components/blogscreen/blogs.jsx");
-/* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3980,10 +4036,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Blog = function Blog() {
   var _blog$data;
 
-  var _useParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)(),
+  var _useParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)(),
       blogSlug = _useParams.blogSlug;
 
   var api = "https://blog.colraices.com/api/v1/posts/".concat(blogSlug);
@@ -4037,85 +4094,143 @@ var Blog = function Blog() {
     blog();
   }, [blogSlug]);
 
-  var _ref2 = (_blog$data = blog.data) !== null && _blog$data !== void 0 ? _blog$data : {},
-      titulo = _ref2.titulo,
-      extracto = _ref2.extracto,
-      imagen = _ref2.imagen,
-      id = _ref2.id,
-      contenido = _ref2.contenido,
-      categoria = _ref2.categoria,
-      autor = _ref2.autor,
-      creacion = _ref2.creacion;
+  var datos = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var _yield$blog$data;
 
-  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
+      var _ref3, description, meta_title;
+
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return blog.data;
+
+            case 2:
+              _context2.t1 = _yield$blog$data = _context2.sent;
+              _context2.t0 = _context2.t1 !== null;
+
+              if (!_context2.t0) {
+                _context2.next = 6;
+                break;
+              }
+
+              _context2.t0 = _yield$blog$data !== void 0;
+
+            case 6:
+              if (!_context2.t0) {
+                _context2.next = 10;
+                break;
+              }
+
+              _context2.t2 = _yield$blog$data;
+              _context2.next = 11;
+              break;
+
+            case 10:
+              _context2.t2 = {};
+
+            case 11:
+              _ref3 = _context2.t2;
+              description = _ref3.description;
+              meta_title = _ref3.meta_title;
+              (0,_titleReact__WEBPACK_IMPORTED_MODULE_4__.titleReact)(meta_title);
+              (0,_metaReact__WEBPACK_IMPORTED_MODULE_3__.metaReact)(description);
+
+            case 16:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function datos() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  datos();
+
+  var _ref4 = (_blog$data = blog.data) !== null && _blog$data !== void 0 ? _blog$data : {},
+      titulo = _ref4.titulo,
+      extracto = _ref4.extracto,
+      imagen = _ref4.imagen,
+      contenido = _ref4.contenido,
+      categoria = _ref4.categoria,
+      autor = _ref4.autor,
+      creacion = _ref4.creacion,
+      alt = _ref4.alt;
+
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_3__.titleReact)('El blog de los colombianos en el exterior  - Colraices');
   }, [blogSlug]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("section", {
       className: "blog-main",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h3", {
-        children: ["El blog para colombianos ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h3", {
+        children: ["El blog para colombianos ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
           children: "en el exterior"
         })]
-      }), loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("article", {
+      }), loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
         className: "blog-content",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "blog-head",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
             src: imagen,
-            alt: "titulo"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
+            alt: alt
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("section", {
             className: "blog-img",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "blog-cred",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                   children: "Creado"
                 }), " ", creacion]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                   children: "Categoria"
                 }), " ", categoria]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
               children: titulo
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "line"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "paragraf",
               dangerouslySetInnerHTML: {
                 __html: extracto
               }
             })]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("article", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
           className: "blog-body",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: "paragraf",
             dangerouslySetInnerHTML: {
               __html: contenido
             }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "blog-footer",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               onClick: function onClick() {
                 navigate(-1);
               },
               children: "Atras"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
               className: "autor",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                 children: "Autor"
               }), " ", autor]
             })]
           })]
         })]
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
         children: "Cargando..."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_blogscreen_blogs__WEBPACK_IMPORTED_MODULE_2__.Blogs, {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_blogscreen_blogs__WEBPACK_IMPORTED_MODULE_2__.Blogs, {})]
   });
 };
 
@@ -4152,6 +4267,9 @@ var BlogScreen = function BlogScreen() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
     (0,_titleReact__WEBPACK_IMPORTED_MODULE_5__.titleReact)('El blog de los colombianos en el exterior  - Colraices');
+    /*
+    <link rel="canonical" href="https://colraices.com/blog">
+    */
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_blogscreen_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_blogscreen_inde__WEBPACK_IMPORTED_MODULE_3__.Inde, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_blogscreen_blogs__WEBPACK_IMPORTED_MODULE_2__.Blogs, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_blogscreen_Videos__WEBPACK_IMPORTED_MODULE_4__.Videos, {})]
@@ -4176,7 +4294,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Blogmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Blogmin */ "./resources/js/components/Blogmin.jsx");
 /* harmony import */ var _components_Soluciones__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Soluciones */ "./resources/js/components/Soluciones.jsx");
 /* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -4188,10 +4308,14 @@ __webpack_require__.r(__webpack_exports__);
 var Contacto = function Contacto() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_4__.titleReact)('Recibe ayuda de un asesor para comprar casa en Colombia - Colraices');
+    (0,_titleReact__WEBPACK_IMPORTED_MODULE_4__.titleReact)('Recibe ayuda de un asesor para comprar casa en Colombia');
+    (0,_metaReact__WEBPACK_IMPORTED_MODULE_5__.metaReact)('¿Buscas invertir en una casa en Colombia? Recibe ayuda de un asesor para comprar casa en Colombia desde el exterior ▷ Alcanza tus metas con nosotros | Colraices');
+    /*
+    <link rel="canonical" href="https://colraices.com/contacto">
+    */
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_contacto_Formulario__WEBPACK_IMPORTED_MODULE_1__.Formulario, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_2__.Blogmin, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_3__.Soluciones, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_contacto_Formulario__WEBPACK_IMPORTED_MODULE_1__.Formulario, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_2__.Blogmin, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_3__.Soluciones, {})]
   });
 };
 
@@ -4215,7 +4339,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_credito_Simulador__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/credito/Simulador */ "./resources/js/components/credito/Simulador.jsx");
 /* harmony import */ var _components_Soluciones__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Soluciones */ "./resources/js/components/Soluciones.jsx");
 /* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -4228,10 +4354,14 @@ __webpack_require__.r(__webpack_exports__);
 var Credito = function Credito() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_6__.titleReact)('Conoce sobre los créditos para compra de casa en Colombia - Colraices');
+    (0,_titleReact__WEBPACK_IMPORTED_MODULE_6__.titleReact)('Crédito para comprar casa en Colombia desde el exterior');
+    (0,_metaReact__WEBPACK_IMPORTED_MODULE_7__.metaReact)('Créditos para comprar vivienda en Colombia desde el exterior | Calcula tu cuota en tiempo real | Crédito para remodelar tu casa | ¡Solicita tu crédito!');
+    /*
+    <link rel="canonical" href="https://colraices.com/credito">
+    */
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_credito_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_credito_Pasos__WEBPACK_IMPORTED_MODULE_2__.Pasos, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_credito_Bancos__WEBPACK_IMPORTED_MODULE_3__.Bancos, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_credito_Simulador__WEBPACK_IMPORTED_MODULE_4__.Simulador, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_5__.Soluciones, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_credito_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_credito_Pasos__WEBPACK_IMPORTED_MODULE_2__.Pasos, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_credito_Bancos__WEBPACK_IMPORTED_MODULE_3__.Bancos, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_credito_Simulador__WEBPACK_IMPORTED_MODULE_4__.Simulador, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_5__.Soluciones, {})]
   });
 };
 
@@ -4256,8 +4386,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_Historys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/Historys */ "./resources/js/components/home/Historys.jsx");
 /* harmony import */ var _components_home_Metas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/home/Metas */ "./resources/js/components/home/Metas.jsx");
 /* harmony import */ var _components_home_Mision__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/home/Mision */ "./resources/js/components/home/Mision.jsx");
-/* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -4272,10 +4404,14 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_8__.titleReact)('Compra tu casa en Colombia desde el exterior - Colraices');
+    (0,_titleReact__WEBPACK_IMPORTED_MODULE_9__.titleReact)('Comprar casa en Colombia desde el exterior ▷ Colraices');
+    (0,_metaReact__WEBPACK_IMPORTED_MODULE_8__.metaReact)("Compra de vivienda en Colombia desde el exterior | Compra tu casa en Colombia desde cualquier parte del mundo | colombianos en el exterior | Colraices");
+    /*
+    <link rel="canonical" href="https://colraices.com">
+    */
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Banner__WEBPACK_IMPORTED_MODULE_3__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Mision__WEBPACK_IMPORTED_MODULE_7__.Mision, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Alcanze__WEBPACK_IMPORTED_MODULE_2__.Alcanze, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Como__WEBPACK_IMPORTED_MODULE_4__.Como, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Metas__WEBPACK_IMPORTED_MODULE_6__.Metas, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_home_Historys__WEBPACK_IMPORTED_MODULE_5__.Historys, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_1__.Blogmin, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Banner__WEBPACK_IMPORTED_MODULE_3__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Mision__WEBPACK_IMPORTED_MODULE_7__.Mision, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Alcanze__WEBPACK_IMPORTED_MODULE_2__.Alcanze, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Como__WEBPACK_IMPORTED_MODULE_4__.Como, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Metas__WEBPACK_IMPORTED_MODULE_6__.Metas, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_home_Historys__WEBPACK_IMPORTED_MODULE_5__.Historys, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Blogmin__WEBPACK_IMPORTED_MODULE_1__.Blogmin, {})]
   });
 };
 
@@ -4299,7 +4435,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Soluciones__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Soluciones */ "./resources/js/components/Soluciones.jsx");
 /* harmony import */ var _components_leasing_Simulador__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/leasing/Simulador */ "./resources/js/components/leasing/Simulador.jsx");
 /* harmony import */ var _titleReact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../titleReact */ "./resources/js/titleReact.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _metaReact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../metaReact */ "./resources/js/metaReact.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -4312,10 +4450,14 @@ __webpack_require__.r(__webpack_exports__);
 var Leasing = function Leasing() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     scrollTo(0, 0);
-    (0,_titleReact__WEBPACK_IMPORTED_MODULE_6__.titleReact)('Conoce sobre el leasing habitacional en Colombia - Colraices');
+    (0,_titleReact__WEBPACK_IMPORTED_MODULE_6__.titleReact)('Leasing habitacional en Colombia ▷ Simulador crédito leasing');
+    (0,_metaReact__WEBPACK_IMPORTED_MODULE_7__.metaReact)('Leasing habitacional para comprar casa en Colombia | Compra tu casa con el arriendo que pagas mes a mes | Simulador crédito leasing habitacional');
+    /*
+    <link rel="canonical" href="https://colraices.com/leasing-habitacional">
+    */
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_leasing_Banner__WEBPACK_IMPORTED_MODULE_2__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_leasing_Beneficios__WEBPACK_IMPORTED_MODULE_3__.Beneficios, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_leasing_Simulador__WEBPACK_IMPORTED_MODULE_5__.Simulador, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_leasing_Aliados__WEBPACK_IMPORTED_MODULE_1__.Aliados, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_4__.Soluciones, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_leasing_Banner__WEBPACK_IMPORTED_MODULE_2__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_leasing_Beneficios__WEBPACK_IMPORTED_MODULE_3__.Beneficios, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_leasing_Simulador__WEBPACK_IMPORTED_MODULE_5__.Simulador, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_leasing_Aliados__WEBPACK_IMPORTED_MODULE_1__.Aliados, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Soluciones__WEBPACK_IMPORTED_MODULE_4__.Soluciones, {})]
   });
 };
 
@@ -4342,9 +4484,13 @@ var NotFound = function NotFound() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     (0,_titleReact__WEBPACK_IMPORTED_MODULE_1__.titleReact)('Not Found 404 - Colraices');
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-      children: "404"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
+    className: "fotFound",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("article", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: "/img/404.png",
+        alt: "pagina no encontrada"
+      })
     })
   });
 };
@@ -4506,6 +4652,24 @@ __webpack_require__.r(__webpack_exports__);
     'history': '“Me pareció muy bueno el servicio, fue rápido, fue muy buena experiencia. Colraices una solución para todos nosotros porque nos facilitan la forma para comprar la casa”. '
   }]
 });
+
+/***/ }),
+
+/***/ "./resources/js/metaReact.js":
+/*!***********************************!*\
+  !*** ./resources/js/metaReact.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "metaReact": () => (/* binding */ metaReact)
+/* harmony export */ });
+var metaReact = function metaReact() {
+  var newtitle = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Compra de vivienda en Colombia desde el exterior | Compra tu casa en Colombia desde cualquier parte del mundo | colombianos en el exterior | Colraices';
+  return document.querySelector('#ds').content = newtitle;
+};
 
 /***/ }),
 
