@@ -1,0 +1,68 @@
+.testimoniales {
+    margin: 5rem auto;
+    padding: 0 0 5rem;
+
+    .testimoniales-cards {
+        max-width: 90vw;
+        margin: 3rem auto 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include tablet {
+            flex-direction: row;
+        }
+        .t-card {
+            padding: 4rem 0;
+            box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+            .header-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                p {
+                    margin: 2rem 0 1.6rem;
+                    font-weight: $bold;
+                }
+                span {
+                    display: flex;
+                    font-size: 2rem;
+                    gap: 0.8rem;
+                }
+            }
+
+            .body-card {
+                max-width: 37rem;
+                padding: 0 1rem;
+                color: $gris;
+                font-size: 1.5rem;
+                font-weight: $delgada;
+                line-height: 2.5rem;
+                text-align: justify;
+                margin: 3rem auto;
+                blockquote{
+                    padding: 0 2rem;
+                }
+            }
+
+            .footer-card {
+                max-width: 32rem;
+                padding: 0 2rem;
+                text-align: center;
+                p {
+                    font-size: 1.4rem;
+                    span {
+                        font-weight: $delgada;
+                    }
+                }
+            }
+        }
+    }
+}

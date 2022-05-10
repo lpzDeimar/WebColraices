@@ -1,0 +1,203 @@
+.itemRecomend {
+    @include tabletinvert{
+        width: 100%;
+    }
+    @include tablet{
+        max-width: 57rem;
+    }
+    background-color: $blanco;
+    display: grid;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    a {
+        overflow: hidden;
+        width: 100%;
+        height: 35rem;
+    }
+    .item__itemRecomend {
+        position: relative;
+    }
+    .itemRecomed__header {
+        padding: 0 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+
+        .bgred{
+            background-color: #c1272d;
+        }
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $blanco;
+            &:first-child {
+                padding: 0.5rem;
+                background-color: $secundario;
+                border-radius: 0.5rem;
+            }
+            span {
+                padding: 0.5rem;
+                background-color: $primario;
+                border-radius: 0.5rem;
+                margin: 0 0.3rem;
+            }
+        }
+    }
+    .itemRecomed__footer {
+        padding: 0 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        p {
+            font-size: 1.4rem;
+            color: $blanco;
+            font-weight: 600;
+        }
+        span {
+            color: $blanco;
+        }
+    }
+    .item__img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 35rem;
+        transition: transform 0.2s linear;
+        position: relative;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #3546767e;
+            background: linear-gradient(180deg, rgba(255, 0, 0, 0) 60%, #3546768a 100%);
+        }
+    }
+    .item__text {
+        padding: 2rem 3rem 0 2rem;
+        @include tabletinvert {
+            padding: 2rem 2rem 0 2rem;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .item__paragraf {
+            .name {
+                margin-top: 0;
+                font-size: 2rem;
+                font-weight: 500;
+                color: $primario;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .precio {
+                color: $secundario;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+            .paragraf {
+                display: none;
+                &:nth-child(1){
+                 display: block;
+                }
+                * {
+                    margin: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 1.7rem;
+                    color: $gris;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+                ul{
+                    li{
+                        display: none;
+                        &:nth-child(1){
+                            display: block;
+                        }
+                    }
+                }
+                font-size: 1.7rem;
+                color: $gris;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+.icons-item {
+    @include tabletinvert{
+        max-width: 100%;
+    }
+    max-width: 33.333rem;
+    border-top: 0.2rem solid $blanco2;
+    display: flex;
+    justify-content: space-between;
+
+    .icons-atributos {
+        column-gap: 0.5rem;
+        display: flex;
+        i {
+            font-size: 1.9rem;
+            color: $gris;
+            margin-right: 0.3rem;
+        }
+        p {
+            padding: 1rem 0.5rem;
+            font-size: 1.4rem;
+            color: $gris;
+            display: flex;
+            align-items: center;
+            small {
+                margin-left: 0.2rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .favorite {
+        display: flex;
+        button {
+            border: none;
+            background-color: transparent;
+            svg {
+                font-size: 1.9rem;
+                color: $primario;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        p {
+            font-size: 1.3rem;
+            color: $gris;
+        }
+    }
+}

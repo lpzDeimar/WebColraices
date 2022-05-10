@@ -1,0 +1,28 @@
+.title__inmueble{
+    padding: 2rem 0;
+    .title__inmueble__title{
+        color: $negro;
+        font-size: 3.2rem;
+    }
+    .title__inmueble__subtitle{
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        color: $primario;
+    }
+    .title__inmueble__location{
+        display: flex;
+        align-items: center;
+        svg{
+            font-size: 2rem;
+            margin-right: -.5rem;
+            color: $primario;
+        }
+        p{
+            font-size: 1.6rem;
+            margin-left: 1rem;
+            &:nth-child(3){
+                color: $gris;
+            }
+        }
+    }
+}
