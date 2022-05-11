@@ -27,7 +27,7 @@ export const BarSearch = React.memo(() => {
         const baths = e.target.baths.value || '0';
         const area = e.target.area.value || '0';
 
-        navigate(`/precio=${precio}&city=${city}&rooms=${rooms}&baths=${baths}&area=${area}`);
+        navigate(`/vitrina-colombia/precio=${precio}&city=${city}&rooms=${rooms}&baths=${baths}&area=${area}`);
 
         setFilterCl(!filterCl);
         if (filter) {

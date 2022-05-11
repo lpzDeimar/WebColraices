@@ -5,6 +5,7 @@ import { isNull } from 'lodash';
 
 import { titleReact } from "../titleReact";
 import { metaReact } from "../metaReact";
+import { LayoutInmuebles } from '../Templates/LayoutInmuebles';
 
 
 
@@ -44,7 +45,7 @@ return (
         loading={loading}
         inmuebles={favoritos}
         Notion={false}
-        Elim
+        Elim={true}
     />
 )
 }

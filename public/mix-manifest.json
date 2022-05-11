@@ -1,6 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
-    "/VitrinaColombia/js/app.js": "/VitrinaColombia/js/app.js",
-    "/VitrinaColombia/sass/css/app.css": "/VitrinaColombia/sass/css/app.css",
+    "/js/VitrinaColombia/app.js": "/js/VitrinaColombia/app.js",
+    "/css/VitrinaColombia/app.css": "/css/VitrinaColombia/app.css",
     "/css/app.css": "/css/app.css"
 }

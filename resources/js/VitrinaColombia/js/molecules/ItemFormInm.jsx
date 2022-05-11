@@ -57,7 +57,7 @@ export const ItemFormInm = () => {
         const baths = e.target.baths.value || '1';
         const area = e.target.area.value || '0';
 
-        navigate(`/precio=${precio}&city=${city}&rooms=${rooms}&baths=${baths}&area=${area}`);
+        navigate(`/vitrina-colombia/precio=${precio}&city=${city}&rooms=${rooms}&baths=${baths}&area=${area}`);
 
     }
 

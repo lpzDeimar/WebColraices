@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/vitrinacolombia', function () {
-    return view('VitrinaColombia');
+Route::get('/vitrina-colombia', function () {
+    return view('vitrinaColombia');
+});
+
+Route::get('/vitrina-colombia/{todo}', function () {
+    return view('vitrinaColombia');
 });
 
 Route::get('/', [HomeController::class, 'index']);

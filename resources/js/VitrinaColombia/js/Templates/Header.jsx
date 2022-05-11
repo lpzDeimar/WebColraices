@@ -44,8 +44,8 @@ export const Header = () => {
             <header ref={nav} className='header-container animate__animated animate__fadeInDown' onClick={handleMenu}>
 
                 <div className='header-logo'>
-                    <Link to="/">
-                        <img src="./img/logobl.webp" alt="colraices logo" />
+                    <Link to="/vitrina-colombia">
+                        <img src="/img/logobl.webp" alt="colraices logo" />
                     </Link>
                 </div>
 
@@ -53,7 +53,7 @@ export const Header = () => {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to='/favoritos'>Tus favoritos</NavLink>
+                            <NavLink to='/vitrina-colombia/favoritos'>Tus favoritos</NavLink>
                         </li>
                     </ul>
                 </nav>

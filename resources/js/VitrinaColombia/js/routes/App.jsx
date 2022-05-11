@@ -31,12 +31,12 @@ export const App = () => {
             <Like.Provider value={{ handelLike, ciudades, handelDelete }}>
                 <Layout>
                     <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/region=:region' element={<InmRegion />} />
-                        <Route path='/favoritos' element={<InmFavoritos />} />
-                        <Route path='/region=:region/:inmuebleSlug' element={<Inmueble />} />
-                        <Route path='/:inmuebleSlug' element={<Inmueble />} />
-                        <Route path='/precio=:p&city=:city&rooms=:rooms&baths=:baths&area=:area' element={<InmFiltrados />} />
+                        <Route path='/vitrina-colombia/' element={<Home />} />
+                        <Route path='/vitrina-colombia/region=:region' element={<InmRegion />} />
+                        <Route path='/vitrina-colombia/favoritos' element={<InmFavoritos />} />
+                        <Route path='/vitrina-colombia/region=:region/:inmuebleSlug' element={<Inmueble />} />
+                        <Route path='/vitrina-colombia/:inmuebleSlug' element={<Inmueble />} />
+                        <Route path='/vitrina-colombia/precio=:p&city=:city&rooms=:rooms&baths=:baths&area=:area' element={<InmFiltrados />} />
                     </Routes>
                 </Layout>
             </Like.Provider>

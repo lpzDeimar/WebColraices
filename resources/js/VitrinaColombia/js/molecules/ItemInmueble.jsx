@@ -21,7 +21,7 @@ export const ItemInmueble = ({ ItemInmueble, Elim ,Notion}) => {
 
     const handelDeleteInm = (ItemInmueble) => {
         handelDelete(ItemInmueble);
-        navigate("/favoritos");
+        navigate("/vitrina-colombia/favoritos");
     }
 
 
@@ -54,7 +54,7 @@ export const ItemInmueble = ({ ItemInmueble, Elim ,Notion}) => {
                     position="top-right"
                 />
             }
-            <Link to={`/${slug}`}>
+            <Link to={`/vitrina-colombia/${slug}`}>
                 <div className="itemReciente__img">
 
                     <div className="itemReciente__img--header">
@@ -89,7 +89,7 @@ export const ItemInmueble = ({ ItemInmueble, Elim ,Notion}) => {
             <div className="itemReciente__content">
 
                 <div className="itemReciente__content--main">
-                    <Link to={`/${slug}`}><h3 className="itemReciente__content--main--title">{titulo}</h3></Link>
+                    <Link to={`/vitrina-colombia/${slug}`}><h3 className="itemReciente__content--main--title">{titulo}</h3></Link>
                     <p className="itemReciente__content--main--precio"><span>Desde:</span> {formatePrice(precio)}</p>
                     <div className="itemReciente__content--main--description" dangerouslySetInnerHTML={createMarkup(descripcion)}></div>
 

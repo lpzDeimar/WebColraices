@@ -31,14 +31,14 @@ export const Banner = (props) => {
 
                 <div className='video'>
                         <video autoPlay muted loop ref={video}>
-                            <source src={props.main ? "video/banner.mp4" : "video/banner2.mp4"} type="video/mp4" />
+                            <source src={props.main ? "/video/banner.mp4" : "/video/banner2.mp4"} type="video/mp4" />
                         </video>
                 </div>
 
 
                 <div className='banner-content'>
                     <div className='banner__text'>
-                        <img src="./img/logobl.webp" alt="colraices logo" />
+                        <img src="/img/logobl.webp" alt="colraices logo" />
                         <p className='banner__text-paragraf'>Es el momento de escoger tu vivienda ideal</p>
                     </div>
                     {screen.width >= 940 && <BarSearch />}
