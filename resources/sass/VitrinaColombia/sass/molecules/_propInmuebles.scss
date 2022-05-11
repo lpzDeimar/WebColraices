@@ -1,0 +1,34 @@
+.propInmuebles{
+    background-color: #fff;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    @include tabletinvert{
+        justify-content: space-around;
+        column-gap: 7rem;
+        row-gap: 2rem;
+    }
+    @include tablet{
+        column-gap: 4rem;
+    }
+    margin-bottom: 3rem;
+    p{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .date{
+        span{
+            display: block;
+        }
+    }
+    .propInmuebles__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        svg{
+            color: $gris;
+            font-size: 2.5rem;
+        }
+    }
+}

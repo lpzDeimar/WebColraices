@@ -1,0 +1,58 @@
+.itemFormInm {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+
+    .itemFormInm__content {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        legend{
+            font-size: 1.9rem;
+            margin: 1.5rem auto 1rem auto;
+            color: $primario;
+        }
+
+        .itemFormInm__select {
+            max-width: 32rem;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border: 0.2rem solid #e6e6e6;
+            color: $gris;
+            background-color: transparent;
+            &:focus {
+                outline-style: solid;
+                outline-width: 0.2rem;
+                outline-color: $primario;
+                box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+            }
+
+            option {
+                background-color: #ffffff;
+                color: $gris;
+            }
+        }
+
+        .itemFormInm__boton {
+            .btn {
+                width: 100%;
+                background-color: $primario;
+                color: #ffffff;
+                padding: 1rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-size: 1.5rem;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    background-color: $primario2;
+                }
+            }
+        }
+    }
+}

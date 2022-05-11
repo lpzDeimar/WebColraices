@@ -1,0 +1,10 @@
+.css-b62m3t-container{
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    color: $gris;
+    @include tabletinvert{
+        padding: 1.5rem 1.2rem;
+        border-bottom: .1rem solid $blanco2;
+    }
+}

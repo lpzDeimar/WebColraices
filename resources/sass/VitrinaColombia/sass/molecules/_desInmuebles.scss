@@ -1,0 +1,30 @@
+.desInmuebles{
+    padding: 2.5rem 3rem;
+    background-color: #fff;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+    .desInmuebles__title{
+        font-size: 1.8rem;
+    }
+    .desInmuebles__description{
+        line-height: 1.5;
+        color: $gris;
+        font-size: 1.6rem;
+        P{
+            font-size: 1.6rem;
+        }
+        ul{
+            padding-left: .5rem;
+            margin-left: .5rem;
+            list-style: disc;
+
+            li{
+                margin-bottom: 1em;
+            }
+        }
+        h2,h2,h3,h4,h5,h6{
+            font-size: 1.6rem;
+            margin-bottom: .8rem;
+            color: $primario;
+        }
+    }
+}

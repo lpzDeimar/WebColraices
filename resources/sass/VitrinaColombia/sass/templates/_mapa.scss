@@ -1,0 +1,47 @@
+.mapa-info {
+    display: none;
+    @include tablet {
+        display: block;
+        position: absolute;
+        top: 7.5rem;
+        left: 10rem;
+        background-color: $blanco;
+        padding: 3rem 3rem 0;
+        box-shadow: 0px 0px 6px 0px #354676b7;
+
+        div {
+            width: 100%;
+            margin: 0 auto 3rem;
+            font-size: 1.6rem;
+            padding: 0 .7rem;
+
+            .mapa__title {
+                font-weight: $regular;
+                margin: 0 0 1.5rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            .info-contacto li {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                margin-bottom: 1.2rem;
+                font-weight: $delgada;
+                font-size: 1.5rem;
+            }
+            .info-horario li {
+                display: flex;
+                gap: 2rem;
+
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1.2rem;
+                font-weight: $delgada;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @include desktop {
+        left: 16rem;
+    }
+}
