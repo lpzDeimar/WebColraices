@@ -8,6 +8,8 @@ import { handelLike, handelDelete } from '../Context/setLike';
 import { InmFavoritos } from '../containers/inmFavoritos';
 import { InmFiltrados } from '../containers/InmFiltrados';
 import { Layout } from '../Templates/Layout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const App = () => {
 
@@ -23,7 +25,9 @@ export const App = () => {
         }
 
         ciudadData();
-
+        AOS.init({
+            duration: 1000
+        });
     }, []);
 
     return (

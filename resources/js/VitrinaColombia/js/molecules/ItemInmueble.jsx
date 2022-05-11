@@ -47,7 +47,7 @@ export const ItemInmueble = ({ ItemInmueble, Elim ,Notion}) => {
 
 
     return (
-        <article className="itemReciente__main">
+        <article className="itemReciente__main" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="111" data-aos-offset="0">
             {Notion &&
                 <Toaster
                     containerStyle={{ zIndex: 10000000 }}
