@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo } from "react";
 
-const apiKey = "AIzaSyAU2Tf0DXHuzbhOtY23TeUe7WdUqZP-5lM";
+const apiKey = "AIzaSyAWQ4bAayePmmYTrnhxvwefzcQQaTmQk2k";
 const channelId = "UCiBystYzqzabHULJWwgAjnw";
 const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=3`;
 

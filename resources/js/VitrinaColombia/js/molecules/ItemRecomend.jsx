@@ -26,7 +26,7 @@ export const ItemRecomend = ({ inmuebleRec }) => {
     }
 
     return (
-        <article className='itemRecomend'>
+        <article className='itemRecomend' data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="111" data-aos-offset="0">
             <Link className='item__itemRecomend' to={slug}>
                 <div className='item__img' style={{ backgroundImage: `url(${thumbnail})` }}></div>
 

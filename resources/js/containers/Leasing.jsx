@@ -6,6 +6,7 @@ import { Soluciones } from '../components/Soluciones'
 import { Simulador } from '../components/leasing/Simulador'
 import { titleReact } from '../titleReact'
 import { metaReact } from '../metaReact'
+import { createCanonical } from '../canonicalReact'
 
 export const Leasing = () => {
 
@@ -13,6 +14,7 @@ export const Leasing = () => {
         scrollTo(0, 0);
         titleReact('Leasing habitacional en Colombia ▷ Simulador crédito leasing');
         metaReact('Leasing habitacional para comprar casa en Colombia | Compra tu casa con el arriendo que pagas mes a mes | Simulador crédito leasing habitacional');
+        createCanonical("https://colraices.com/leasing-habitacional");
         /*
         <link rel="canonical" href="https://colraices.com/leasing-habitacional">
         */

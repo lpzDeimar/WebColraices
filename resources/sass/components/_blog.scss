@@ -38,7 +38,8 @@
         }
 
         .paragraf {
-            p {
+            line-height:2rem;
+            p{
                 font-size: 1.6rem;
             }
             text-align: justify;
@@ -46,7 +47,15 @@
                 display: inline;
                 font-size: 1.6rem;
                 color: $primario;
-                margin-top: 3.6rem;
+            }
+            ul, ol{
+                padding-left: 3rem;
+                margin: 1.5rem;
+                li{
+                    font-size: 1.6rem;
+                    margin: 1rem;
+                    color: $gris;
+                }
             }
         }
 

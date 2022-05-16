@@ -103,6 +103,12 @@
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
             }
+            .itemReciente__content--main--subtitle{
+                margin: 0;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $gris;
+            }
 
             .itemReciente__content--main--precio {
                 span {
@@ -122,6 +128,7 @@
                  display: block;
                 }
                 * {
+                    font-weight: 500;
                     margin: 0;
                     padding-left: 0;
                     padding-right: 0;

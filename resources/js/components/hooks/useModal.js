@@ -19,7 +19,7 @@ const useModal = () => {
 
     const apiW = (e) => {
         e.preventDefault();
-        window.open("https://api.whatsapp.com/send/?phone=+573105653998");
+        window.open("https://api.whatsapp.com/send/?phone=573105653998");
     };
     return [
         activeModalBlog,
