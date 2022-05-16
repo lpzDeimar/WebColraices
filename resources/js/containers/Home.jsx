@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { createCanonical } from '../canonicalReact'
 import { Blogmin } from '../components/Blogmin'
 import { Alcanze } from '../components/home/Alcanze'
 import { Banner } from '../components/home/Banner'
@@ -15,6 +16,7 @@ export const Home = () => {
         scrollTo(0, 0);
         titleReact('Comprar casa en Colombia desde el exterior ▷ Colraices');
         metaReact("Compra de vivienda en Colombia desde el exterior | Compra tu casa en Colombia desde cualquier parte del mundo | colombianos en el exterior | Colraices");
+        createCanonical("https://colraices.com");
         /*
         <link rel="canonical" href="https://colraices.com">
         */

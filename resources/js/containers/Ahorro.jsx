@@ -7,6 +7,7 @@ import { Blogmin } from '../components/Blogmin'
 import { Finanzas } from '../components/ahorro/Finanzas'
 import { titleReact } from '../titleReact'
 import { metaReact } from '../metaReact'
+import { createCanonical } from '../canonicalReact'
 
 export const Ahorro = () => {
 
@@ -16,6 +17,9 @@ export const Ahorro = () => {
         scrollTo(0, 0);
         titleReact('Ahorro para vivienda en Colombia para colombianos en el exterior');
         metaReact('Conoce cómo hacer un plan de ahorro en Colombia para adquirir vivienda desde el exterior | Haz que tu remesa sea una inversión | Conoce los beneficios');
+
+        createCanonical("https://colraices.com/plan-de-ahorro");
+
         /*
         <link rel="canonical" href="https://colraices.com/plan-de-ahorro">
         */

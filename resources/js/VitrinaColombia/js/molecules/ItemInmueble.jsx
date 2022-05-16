@@ -90,6 +90,7 @@ export const ItemInmueble = ({ ItemInmueble, Elim ,Notion}) => {
 
                 <div className="itemReciente__content--main">
                     <Link to={`/vitrina-colombia/${slug}`}><h3 className="itemReciente__content--main--title">{titulo}</h3></Link>
+                    <h2 className="itemReciente__content--main--subtitle">{tipo} en venta en {ciudad}</h2>
                     <p className="itemReciente__content--main--precio"><span>Desde:</span> {formatePrice(precio)}</p>
                     <div className="itemReciente__content--main--description" dangerouslySetInnerHTML={createMarkup(descripcion)}></div>
 
