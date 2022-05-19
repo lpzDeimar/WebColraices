@@ -1,0 +1,96 @@
+.Aliados__main{
+    background-color: $blanco2;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+
+    .Aliados__content{
+        margin: 5rem auto;
+        box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 7px 0px #38383893 inset;
+        padding: 2rem;
+        border-radius: 2rem;
+        max-width: 120rem;
+        position: relative;
+
+        .Aliados__title{
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 3.5rem;
+            color: $primario;
+            font-weight: 700;
+            span{
+                color: $secundario;
+            }
+        }
+
+        .Aliados__subtitle{
+            text-align: center;
+            font-size: 2rem;
+            @include tablet{
+                font-size: 2.8rem;
+            }
+            color: $primario;
+            margin-top: 1rem;
+        }
+
+        .line {
+            max-width: 80rem;
+            margin: 1.8rem auto;
+            background-color: $blanco2;
+            border-radius: 0.5rem;
+            box-shadow: 0px 1px 3px -1px #38383893, -2px -2px 3px 0px #ffffff;
+            min-height: 0.7rem;
+            width: 90%;
+        }
+        .swiper{
+            background-color: $blanco2;
+            padding: 0 1rem;
+        }
+        .Aliados__logos{
+            margin: 2rem auto;
+            position: relative;
+            max-width: 100rem;
+            .Aliado-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 9rem;
+                object-fit: cover;
+            }
+            img{
+                object-fit: cover;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .Aliados__paragraf{
+            text-align: center;
+            font-size: 1.6rem;
+            color: $gris;
+            margin-top: 2rem;
+        }
+
+        .Aliados__footer{
+            text-align: center;
+            color: $primario;
+            font-size: 1.9rem;
+            @include tablet{
+                font-size: 2.3rem;
+            }
+        }
+
+        .lineSecu{
+            display: none;
+            @include tablet{
+                display: block;
+                position: absolute;
+                bottom: 8rem;
+                width: 100%;
+                max-width: 115rem;
+                height: .5rem;
+                background-color: $secundario;
+                border-radius: .5rem;
+            }
+        }
+    }
+}

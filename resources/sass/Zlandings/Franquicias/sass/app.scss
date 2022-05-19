@@ -1,0 +1,23 @@
+
+// Globales
+@import './../../../base/nomalize';
+@import './../../../base/variables';
+@import './../../../base/mixins';
+@import './../../../base/utilidades';
+@import './../../../base/globales';
+
+
+//Components
+@import './../../../components/header';
+@import './../../../components/footer';
+
+//Home
+@import 'components/banner';
+@import 'components/colombia';
+@import 'components/mapa';
+@import 'components/ciudades';
+@import 'components/ventajas';
+@import 'components/franquicias';
+@import 'components/aliados';
+@import 'components/pilares';
+@import 'components/rentabilidad';

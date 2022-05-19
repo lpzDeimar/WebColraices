@@ -1,0 +1,154 @@
+.Colombianos-franquicias {
+    margin: 1rem 0;
+    background-color: $blanco2;
+    @include tabletinvert{
+        padding-bottom: 3rem;
+    }
+    display: grid;
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Colombianos_franquicias_img {
+        @include tabletinvert{
+            order: 1;
+        }
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            position: relative;
+            left: -20rem;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: 0.5rem solid $blanco;
+            box-shadow: 0px 0px 5px 0px #30303096;
+        }
+    }
+
+    .Colombianos_franquicias_content {
+        margin: auto 0;
+        padding: 2rem;
+        @include tablet {
+            padding: 10rem 0;
+            position: relative;
+            left: -13rem;
+        }
+    }
+
+    .Colombianos_franquicias_content--top {
+        .Colombianos_franquicias--title {
+            font-size: 2.9rem;
+            font-weight: 500;
+            text-align: center;
+            color: $primario;
+            @include tablet {
+                font-size: 3.1rem;
+            }
+            span {
+                display: block;
+                color: $secundario;
+                font-size: 3.5rem;
+                font-weight: 700;
+                @include tablet {
+                    font-size: 3.7rem;
+                }
+            }
+        }
+
+        .Colombianos_franquicias--subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            color: $primario;
+            margin-top: 3rem;
+            @include tablet {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .Colombianos_franquicias_content--center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        max-width: 80rem;
+        margin: 5rem auto 3rem auto;
+
+
+        .Colombianos_franquicias_content--center--item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .item__number{
+                margin: 1rem auto;
+                padding: 1rem 3rem;
+                border-radius: 1rem;
+                border: .4rem solid $blanco;
+                box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+                p{
+                    text-align: center;
+                    font-size: 1.7rem;
+                    color: $gris;
+                    span{
+                        display: block;
+                        font-size: 2.1rem;
+                        font-weight: 700;
+                        color: $primario;
+                    }
+                }
+            }
+            .item__paragraf{
+                text-align: center;
+                font-size: 1.3rem;
+                color: $gris;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .Colombianos_franquicias_content--bottom {
+        .bottom--title {
+            @include tabletinvert{
+                padding:1rem 3rem;
+            }
+            margin: 2rem auto;
+            max-width: 70rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            color: $gris;
+            margin-top: 2rem;
+            @include tablet {
+                font-size: 1.6rem;
+            }
+        }
+
+        button {
+            margin: 3rem auto 0 auto;
+            display: block;
+            color: $primario;
+            font-size: 1.8rem;
+            background-color: $blanco2;
+            font-weight: 600;
+            padding: 1.5rem 0.9rem;
+            border-radius: 1.2rem;
+            border: .12rem solid $secundario;
+            box-shadow: 4px 4px 4px 0px #30303096,-7px -7px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+
+            &:hover {
+                box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                cursor: pointer;
+            }
+        }
+    }
+}

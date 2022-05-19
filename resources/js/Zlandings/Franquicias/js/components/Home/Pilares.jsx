@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Pilares = () => {
   return (
-    <section>
-        <div className="Pilares__main">
+    <section className="Pilares__main">
+
             <h5 className='Pilares__title'>Pilares de las <span>franquicias</span> Colraices</h5>
             <div className='Pilares__grid'>
 
@@ -32,7 +32,6 @@ export const Pilares = () => {
             <div className='cuadrado'>
 
             </div>
-        </div>
     </section>
   )
 }

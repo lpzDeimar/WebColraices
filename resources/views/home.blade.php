@@ -18,7 +18,6 @@
     <meta property="og:image" content="{{asset('/img/icon.ico')}}" />
     <meta name="theme-color" content="#354676">
     <meta name="apple-mobile-web-app-statis-bar-style" content="black-translucent">
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://colraices.com">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{asset('/img/icon.ico')}}">

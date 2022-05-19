@@ -2797,7 +2797,7 @@ var Banner = function Banner() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
       className: "banner-img",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "http://colraices.com/img/bn1.webp",
+        src: "https://colraices.com/img/bn1.webp",
         alt: "Compra tu casa en Colombia"
       })
     })]
