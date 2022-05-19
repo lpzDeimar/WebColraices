@@ -1,0 +1,124 @@
+.Emprender{
+    margin: 1rem 0;
+    padding: 0 2rem;
+    background-color: $blanco2;
+    @include tabletinvert{
+        padding-bottom: 3rem;
+    }
+    display: grid;
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Emprender__img{
+        @include tabletinvert{
+            order: 1;
+        }
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            position: relative;
+            left: -10rem;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: 0.5rem solid $blanco;
+            box-shadow: 0px 0px 5px 0px #30303096;
+        }
+    }
+    .Emprender__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            position: relative;
+            left: -7rem;
+        }
+
+        .Emprender__main--text{
+
+            .Emprender__main--title{
+                text-align: center;
+                font-weight: 500;
+                font-size: 2.7rem;
+                @include tablet{
+                    font-size: 3.1rem;
+                }
+                font-weight: bold;
+                color: $primario;
+                margin-bottom:0;
+
+                span{
+                    display: block;
+                    font-size: 2.9rem;
+                    @include tablet{
+                        font-size: 3.3rem;
+                    }
+                    font-weight: 600;
+                    color: $secundario;
+                }
+            }
+
+            p{
+                text-align: center;
+                margin-top: .3rem;
+                font-size: 2.2rem;
+                color: $primario;
+                margin-bottom: 5rem;
+            }
+        }
+
+        .Emprender__main--box{
+            box-shadow: -5px -6px 3px -1px #ffffff inset, 2px 2px 7px 0px #38383893 inset;
+                padding: 2rem 3rem;
+                max-width: 60rem;
+                border-radius: 2rem;
+
+                li{
+                    line-height: 28px;
+                    margin: 1rem 0;
+                    font-size: 1.5rem;
+                    i{
+                        margin-right: 1rem;
+                        background-color: $blanco;
+                        color: $secundario;
+                        padding: .1rem .3rem;
+                        border-radius: 50%;
+                    }
+                }
+        }
+
+        .Emprender__main--subtitle{
+            text-align: center;
+            font-size: 1.8rem;
+                color: $primario;
+                margin-bottom: 3rem;
+        }
+
+        button {
+            margin-top: 2rem;
+            display: block;
+            color: $primario;
+            font-size: 1.8rem;
+            background-color: $blanco2;
+            font-weight: 600;
+            padding: 1.5rem 0.9rem;
+            border-radius: 1.2rem;
+            border: 0.12rem solid $secundario;
+            box-shadow: 4px 4px 4px 0px #30303096, -7px -7px 3px 0px #ffffff;
+            transition: box-shadow 500ms;
+
+            &:hover {
+                box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+                cursor: pointer;
+            }
+        }
+    }
+}

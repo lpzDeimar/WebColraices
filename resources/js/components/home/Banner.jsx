@@ -9,6 +9,7 @@ export const Banner = () => {
 
     return (
         <section className='banner-main-home'>
+
             <article className='banner-text' data-aos="fade-down" data-aos-duration="1100">
                 <h1>
                     <span>¡Sí</span>, puedes comprar <br /> casa en Colombia
@@ -26,9 +27,11 @@ export const Banner = () => {
                 </div>
 
             </article>
+
             <section className='banner-img'>
-                <img src="http://colraices.com/img/bn1.webp" alt="Compra tu casa en Colombia" />
+                <img src="https://colraices.com/img/bn1.webp" alt="Compra tu casa en Colombia" />
             </section>
+
         </section>
     )
 }
