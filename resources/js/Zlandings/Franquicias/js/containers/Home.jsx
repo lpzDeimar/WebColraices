@@ -11,10 +11,12 @@ import { Pilares } from '../components/Home/Pilares'
 import { Rentabilidad } from '../components/Home/Rentabilidad'
 import { Soporte } from '../components/Home/Soporte'
 import { Ventajas } from '../components/Home/Ventajas'
+import { Layout } from '../Layout'
 
 export const Home = () => {
   return (
     <>
+    <Layout>
         <Banner/>
         <Colombianos/>
         <Mapa/>
@@ -27,6 +29,7 @@ export const Home = () => {
         <Soporte/>
         <Emprender/>
         <Familia/>
+    </Layout>
     </>
   )
 }
