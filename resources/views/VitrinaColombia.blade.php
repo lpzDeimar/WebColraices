@@ -14,7 +14,16 @@
     <meta name="copyright" content="momentumdigital.com.co">
     <link rel="stylesheet" href="/css/VitrinaColombia/app.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{asset('/img/icon.ico')}}">
-    <title>Colraices</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67767920-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67767920-1');
+    </script>
+    <title>Vitrina Colombia - Colraices</title>
 </head>
 <body>
     <noscript>Esta pagina requiere de JS para funcionar</noscript>

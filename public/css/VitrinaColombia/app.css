@@ -799,13 +799,13 @@ li {
   padding: 2rem;
 }
 .itemReciente__main .itemReciente__content .itemReciente__content--main .itemReciente__content--main--title {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #354676;
   margin-bottom: 1rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .itemReciente__main .itemReciente__content .itemReciente__content--main .itemReciente__content--main--subtitle {
@@ -830,9 +830,10 @@ li {
   font-size: 1.7rem;
   color: #424242;
   overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .itemReciente__main .itemReciente__content .itemReciente__content--main .itemReciente__content--main--description:nth-child(1) {
   display: block;
@@ -845,9 +846,10 @@ li {
   font-size: 1.7rem;
   color: #424242;
   overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .itemReciente__main .itemReciente__content .itemReciente__content--main .itemReciente__content--main--description ul li {
   display: none;
@@ -2129,7 +2131,7 @@ li {
 }
 .footer-main {
   background-color: #2A3F77;
-  padding: 2.7rem 0;
+  padding: 2.7rem 0.5rem;
 }
 @media (min-width: 930px) {
   .footer-main footer {
@@ -2157,7 +2159,6 @@ li {
   padding: 1rem;
   margin-top: 3rem;
   font-size: 3.2rem;
-  font-weight: bold;
 }
 .footer-main .footer-title h4 span {
   color: #CAA55E;
@@ -2191,6 +2192,9 @@ li {
 }
 .footer-main .footer-redes ul a {
   color: #ffffff;
+}
+.footer-main .footer-redes ul a i {
+  font-size: 2.5rem;
 }
 .footer-main .footer-redes ul a:hover {
   cursor: pointer;

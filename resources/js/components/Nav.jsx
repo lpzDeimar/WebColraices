@@ -15,7 +15,7 @@ export const Nav = () => {
                 </li>
                 <li>
                     <a
-                        href="https://proyectos.colraices.com/proyectosdeviviendaencolombiadesdeelexterior"
+                        href="https://colraices.com/vitrina-colombia"
                         target="_blank"
                     >
                         Portal Inmobiliario

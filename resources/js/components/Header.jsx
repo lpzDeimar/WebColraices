@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Nav } from './Nav';
+import { HiMenuAlt3 } from "react-icons/hi";
 
 export const Header = () => {
 
@@ -33,7 +34,7 @@ export const Header = () => {
 
             <div className='header-button' ref={menu} onClick={handleMenu}>
                 <button type='button' >
-                    <i className="fas fa-bars" ref={icon}></i>
+                    <i ref={icon}><HiMenuAlt3/></i>
                 </button>
             </div>
 

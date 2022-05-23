@@ -48,7 +48,7 @@ export const Colombianos = () => {
 
             <div className='Colombianos_franquicias_content--bottom'>
                     <p className='bottom--title'>Haz parte de un negocio con grandes oportunidades para la venta de inmuebles en Colombia desde el exterior. Únete a un modelo de inversión que te permitirá ganar y progresar mientras ayudas a otros.</p>
-                    <button type='button'>
+                    <button type='button' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998");}}>
                     ¡Únete ahora!
                     </button>
             </div>

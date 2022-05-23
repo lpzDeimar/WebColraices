@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
+import { HiMenuAlt3 } from "react-icons/hi";
 
 export const Header = () => {
 
@@ -31,7 +32,7 @@ export const Header = () => {
 
             <div className='header-button' ref={menu} onClick={handleMenu}>
                 <button type='button' >
-                    <i className="fas fa-bars" ref={icon}></i>
+                    <i ref={icon}><HiMenuAlt3/></i>
                 </button>
             </div>
 
@@ -56,7 +57,7 @@ export const Header = () => {
                 </li>
                 <li>
                     <a
-                        href="https://proyectos.colraices.com/proyectosdeviviendaencolombiadesdeelexterior"
+                        href="https://colraices.com/vitrina-colombia"
                         target="_blank"
                     >
                         Portal Inmobiliario

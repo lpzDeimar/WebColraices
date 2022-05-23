@@ -17,7 +17,7 @@ export const Banner = () => {
             <p className='banner-text--subtitle- banner-text--subtitle-P'>Invierte con estrategia, invierte con Colraices.</p>
 
             <div className='banner-botons'>
-                <button type='button'>
+                <button type='button' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998");}}>
                     ¡Abre tu franquicia ahora!
                 </button>
             </div>

@@ -22,7 +22,7 @@ export const Ventajas = () => {
                 </div>
 
                 <p>Emprende con seguridad y respaldo.</p>
-                <button type='button'>
+                <button type='button' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998");}}>
                 ¡Conviértete en aliado ahora!
                 </button>
             </div>

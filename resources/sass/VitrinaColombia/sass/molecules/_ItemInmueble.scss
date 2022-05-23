@@ -34,7 +34,7 @@
                     background-color: $secundario;
                 }
 
-                .bgred{
+                .bgred {
                     background-color: #c1272d;
                 }
 
@@ -85,7 +85,6 @@
                     color: $blanco;
                     font-size: 1.8rem;
                 }
-
             }
         }
     }
@@ -94,16 +93,16 @@
         padding: 2rem;
         .itemReciente__content--main {
             .itemReciente__content--main--title {
-                font-size: 2.1rem;
+                font-size: 2rem;
                 font-weight: 600;
                 color: $primario;
                 margin-bottom: 1rem;
                 overflow: hidden;
                 display: -webkit-box;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
             }
-            .itemReciente__content--main--subtitle{
+            .itemReciente__content--main--subtitle {
                 margin: 0;
                 font-size: 1.4rem;
                 font-weight: 400;
@@ -124,8 +123,8 @@
             .itemReciente__content--main--description {
                 margin: 2rem auto;
                 display: none;
-                &:nth-child(1){
-                 display: block;
+                &:nth-child(1) {
+                    display: block;
                 }
                 * {
                     font-weight: 500;
@@ -135,14 +134,15 @@
                     font-size: 1.7rem;
                     color: $gris;
                     overflow: hidden;
+                    text-overflow: ellipsis;
                     display: -webkit-box;
-                    -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
                 }
-                ul{
-                    li{
+                ul {
+                    li {
                         display: none;
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             display: block;
                         }
                     }
@@ -150,9 +150,10 @@
                 font-size: 1.7rem;
                 color: $gris;
                 overflow: hidden;
+                text-overflow: ellipsis;
                 display: -webkit-box;
-                -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
             }
 
             .itemReciente__content--main--footer {
