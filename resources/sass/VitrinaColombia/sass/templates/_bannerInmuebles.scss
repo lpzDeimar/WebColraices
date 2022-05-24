@@ -1,0 +1,126 @@
+.bannerInmueble{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .1rem;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:nth-child(1){
+            grid-row: 1/3;
+        }
+    }
+
+    @include tablet{
+        grid-template-columns: repeat(4, 1fr);
+        height: 71rem;
+        img{
+            object-fit: cover;
+            &:nth-child(1){
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
+        }
+    }
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 12;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .modal-content{
+        display: grid;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        @include tablet{
+            background-color: #ffffff;
+            grid-template-columns: 3fr 1fr;
+            width: 92%;
+            max-width: 160rem;
+            background-color: $blanco;
+        }
+
+        .formular{
+            .itemFormulario{
+                margin: 0 auto;
+                margin-top: 8rem;
+                box-shadow: none;
+                max-width: 33rem;
+            }
+
+            @include tabletinvert{
+                display: none;
+            }
+            position: relative;
+
+            .close{
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: none;
+                padding: 1rem 1.5rem;
+                background-color: #be2c08;
+                font-size: 2rem;
+                color: $blanco;
+                font-weight: 600;
+                transition: all .3s;
+                &:hover{
+                    background-color: #9c2203;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 120rem;
+        }
+        .mySwiper{
+            z-index: 20;
+        }
+        .swiper-slide {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: none;
+            position: relative;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            color: $blanco;
+            text-shadow: 2px 2px 2px #000000c7;
+            @include tabletinvert{
+                display: none;
+            }
+        }
+
+        img{
+            @include tabletinvert{
+                max-height: 40rem;
+            }
+            @include tablet{
+                width: 100%;
+                height: 71rem;
+            }
+            object-fit: cover;
+        }
+    }
+}
+
+.no-modal{
+    display: flex;
+}

@@ -35,7 +35,6 @@ export const Formulario = () => {
                 utm_medium: "FormularioContacto",
             })
         );
-        console.log(formData);
 
         fetch(
             "https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28",
@@ -65,8 +64,8 @@ export const Formulario = () => {
                 position="top-right"
             />
             <h1>
-                Háblemos
-                <span>Un experto se pondrá en contacto </span>
+                Hablemos
+                <span>Un experto se pondrá en contacto</span>
             </h1>
             <article className="formulario-contacto-main">
                 <section className="contacto-numeros">

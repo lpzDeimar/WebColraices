@@ -7,7 +7,7 @@ export const contrykey = [
         'oficine': 'Oficina principal Bogotá, Colombia',
         'location': 'Calle 100 # 13 - 41 Oficina: 102',
         'number': '(+57 1) 3288939',
-        'anumber': '+573105653998'
+        'anumber': '573105653998'
     },
     {
         'id': '2',
@@ -17,7 +17,7 @@ export const contrykey = [
         'oficine': 'Oficina principal Bogotá, Colombia',
         'location': 'Calle 100 # 13 - 41 Oficina: 102',
         'number': '(+34) 603 486 757',
-        'anumber': '+34603486757'
+        'anumber': '34603486757'
     },
     {
         'id': '3',
@@ -37,6 +37,6 @@ export const contrykey = [
         'oficine': 'Oficina principal Bogotá, Colombia',
         'location': 'Calle 100 # 13 - 41 Oficina: 102',
         'number': '(+44) 074 7663 7603',
-        'anumber': '+4407476637603'
+        'anumber': '4407476637603'
     }
 ];

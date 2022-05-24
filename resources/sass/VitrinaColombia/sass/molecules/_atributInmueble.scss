@@ -1,0 +1,50 @@
+.atributosInmueble{
+    margin-top: 3rem;
+    padding: 2.5rem  3rem;
+    background-color: #fff;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+
+    .atributosInmueble__titel{
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+
+    .atributosInmueble__icon,
+    .atributosInmueble__icon--no{
+        padding-left: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 70rem;
+        gap: 1rem;
+    }
+
+    .atributosInmueble__icon__item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        p{
+            font-size: 1.8rem;
+            color: $primario;
+            margin: 1.4rem 0;
+        }
+    }
+
+    .atributosInmueble__icon{
+        column-gap: 8rem;
+        .atributosInmueble__icon__item{
+            i{
+                font-size: 2.5rem;
+                color: $primario;
+            }
+            p{
+                color: $gris;
+            }
+        }
+    }
+
+    .atributosInmueble__icon--no{
+        column-gap: 6rem;
+    }
+}

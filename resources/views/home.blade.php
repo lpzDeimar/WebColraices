@@ -9,7 +9,7 @@
     <meta name="robots" content="index, all, follow">
     <meta name="googlebot" content="index, all, follow">
     <meta name="google" content="translete">
-    <meta name="description" content="¿Buscas invertir en una casa en Colombia? Ahora es más fácil comprarla desde el exterior. Ingresa al nuevo sitio web Colraices y conoce más información." id="ds"/>
+    <meta name="description" content="¿Buscas invertir en una casa en Colombia? Ahora es más fácil comprarla desde el exterior. Ingresa al nuevo sitio web Colraices y conoce más información."/>
     <meta name="keywords" content="Casa en Colombia | Comprar casa en Colombia | Invertir en Colombia desde el exterior | Crédito hipotecario | Crédito hipotecario en Colombia | Consultoría financiera | Requisitos para el crédito | Envio de dinero a Colombia" />
     <meta name="copyright" content="momentumdigital.com.co">
     <meta name="author" content="Deimar Lopez | Cristian Orrego" />
@@ -18,7 +18,7 @@
     <meta property="og:image" content="{{asset('/img/icon.ico')}}" />
     <meta name="theme-color" content="#354676">
     <meta name="apple-mobile-web-app-statis-bar-style" content="black-translucent">
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://colraices.com">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{asset('/img/icon.ico')}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->

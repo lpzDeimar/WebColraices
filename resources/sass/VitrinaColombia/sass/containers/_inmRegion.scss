@@ -1,0 +1,21 @@
+.inmRegion {
+    padding: 0 2rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding-bottom: 7rem;
+    .inmRegion__grid {
+        display: grid;
+        max-width: 130rem;
+        margin: 0 auto;
+        gap: 2rem;
+        @include tablet {
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .inmRegion__grid__inm {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+    }
+}

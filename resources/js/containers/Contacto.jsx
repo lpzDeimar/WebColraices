@@ -4,6 +4,7 @@ import { Blogmin } from '../components/Blogmin';
 import { Soluciones } from '../components/Soluciones';
 import { titleReact } from '../titleReact'
 import { metaReact } from '../metaReact';
+import { createCanonical } from '../canonicalReact';
 
 
 export const Contacto = () => {
@@ -11,6 +12,7 @@ export const Contacto = () => {
         scrollTo(0, 0);
         titleReact('Recibe ayuda de un asesor para comprar casa en Colombia');
         metaReact('¿Buscas invertir en una casa en Colombia? Recibe ayuda de un asesor para comprar casa en Colombia desde el exterior ▷ Alcanza tus metas con nosotros | Colraices');
+        createCanonical("https://colraices.com/contacto");
         /*
         <link rel="canonical" href="https://colraices.com/contacto">
         */
