@@ -35,7 +35,7 @@ export const Mapa = () => {
             </article>
 
         </section>
-        <button type='button'>
+        <button type='button' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998");}}>
             ¡Elige tu plaza!
         </button>
     </section>

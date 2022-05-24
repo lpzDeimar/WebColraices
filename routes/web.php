@@ -7,7 +7,7 @@ Route::get('/vitrina-colombia', function () {
     return view('vitrinaColombia');
 });
 
-Route::get('/franquicias', function () {
+Route::get('/franquicias-colraices', function () {
     return view('franquicias');
 });
 

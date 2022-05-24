@@ -26,7 +26,7 @@ export const Emprender = () => {
 
             <p className='Emprender__main--subtitle'>Haz inversiones inteligentes, alcanza tus metas <br/>y llega al siguiente nivel.</p>
 
-            <button type='button'>¡Haz clic para conocer más! </button>
+            <button type='button' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998");}}>¡Haz clic para conocer más! </button>
         </div>
     </section>
   )

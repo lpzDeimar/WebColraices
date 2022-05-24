@@ -12,7 +12,7 @@ export const Banner = () => {
 
             <article className='banner-text' data-aos="fade-down" data-aos-duration="1100">
                 <h1>
-                    <span>¡Sí</span>, puedes comprar <br /> casa en Colombia
+                    <span>¡Sí</span>, puedes comprar <br /> casas en Colombia
                     <br /> desde <span>{NombrePaís}!</span>
                 </h1>
 

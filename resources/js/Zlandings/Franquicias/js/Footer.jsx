@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiFillFacebook,AiFillInstagram,AiFillLinkedin,AiFillYoutube,AiOutlineWhatsApp } from "react-icons/ai";
 
 export const Footer = () => {
 
@@ -32,27 +33,27 @@ export const Footer = () => {
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/colraices" target="_blank" >
-                                        <i className="fab fa-facebook-f"></i>
+                                    <i><AiFillFacebook/></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.instagram.com/colraices" target="_blank" >
-                                        <i className="fab fa-instagram"></i>
+                                    <i><AiFillInstagram/></i>
                                     </a>
                                 </li>
                                 <li>
                                 <a href="https://www.linkedin.com/company/colraices/mycompany" target="_blank" >
-                                        <i className="fab fa-linkedin-in"></i>
+                                <i><AiFillLinkedin/></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.youtube.com/c/Colraicesserviciosinmobiliariosfinancieros" target="_blank" >
-                                        <i className="fab fa-youtube"></i>
+                                    <i><AiFillYoutube/></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href={"https://api.whatsapp.com/send/?phone=+573105653998"} target="_blank" >
-                                        <i className="fab fa-whatsapp"></i>
+                                    <a href={"https://api.whatsapp.com/send/?phone=573105653998"} target="_blank" >
+                                        <i><AiOutlineWhatsApp/></i>
                                     </a>
                                 </li>
                             </ul>
