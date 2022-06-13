@@ -4,7 +4,11 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/vitrina-colombia', function () {
-    return view('vitrinaColombia');
+    return view('VitrinaColombia');
+});
+
+Route::get('/remesa', function () {
+    return view('remesas');
 });
 
 Route::get('/franquicias-colraices', function () {

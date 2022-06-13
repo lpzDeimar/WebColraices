@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { createCanonical } from '../canonicalReact';
-import { Blogs } from '../components/blogscreen/blogs';
+import { Blogs } from '../components/blogscreen/Blogs';
 import { metaReact } from '../metaReact';
 import { titleReact } from '../titleReact';
 

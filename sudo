@@ -1,0 +1,17 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libhtml-template-perl libmecab2
+  mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libhtml-template-perl libmecab2
+  mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-server mysql-server-8.0 mysql-server-core-8.0
+0 upgraded, 12 newly installed, 0 to remove and 0 not upgraded.
+Need to get 31,0 MB of archives.
+After this operation, 260 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 

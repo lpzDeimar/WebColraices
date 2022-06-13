@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { createCanonical } from '../canonicalReact'
 import { Banner } from '../components/blogscreen/Banner'
-import { Blogs } from '../components/blogscreen/blogs'
-import { Inde } from '../components/blogscreen/inde'
+import { Blogs } from '../components/blogscreen/Blogs'
+import { Inde } from '../components/blogscreen/Inde'
 import { Videos } from '../components/blogscreen/Videos'
 import { titleReact } from '../titleReact'
 
@@ -22,7 +22,7 @@ export const BlogScreen = () => {
         <Banner/>
         <Inde/>
         <Blogs/>
-        <Videos />
+        <Videos/>
         </>
     )
 }
