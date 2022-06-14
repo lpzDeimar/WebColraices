@@ -5,6 +5,9 @@
 @import './../../../base/utilidades';
 @import './../../../base/globales';
 
+//Global 
+@import './../../../../sass/components/header';
+
 
 //Components
 @import './components/banner';
@@ -13,3 +16,4 @@
 @import './components/casa';
 @import './components/meta';
 @import './components/avanzas';
+@import './components/header';

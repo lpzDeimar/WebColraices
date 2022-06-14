@@ -4,7 +4,12 @@
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
+  @include tabletinvert {
+    min-height: 100vh;
+}
+  @include tablet {
+      height: 100vh;
+  }
   max-height: 85rem;
   display: flex;
   align-items: center;

@@ -3,6 +3,7 @@ import { Avanzas } from '../components/Avanzas';
 import { Banner } from '../components/Banner';
 import { Casa } from '../components/Casa';
 import { Futuro } from '../components/Futuro';
+import { Header } from '../components/Header';
 import { Meta } from '../components/Meta';
 import { Riqueza } from '../components/Riqueza';
 
@@ -10,6 +11,7 @@ export const Home = () => {
 
   return (
     <>
+      <Header/>
       <Banner/>
       <Futuro/>
       <Riqueza/>
