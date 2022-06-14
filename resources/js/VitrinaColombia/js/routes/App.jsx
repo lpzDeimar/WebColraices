@@ -5,7 +5,7 @@ import { Inmueble } from '../containers/Inmueble';
 import { InmRegion } from '../containers/InmRegion';
 import { Like } from '../Context/Like';
 import { handelLike, handelDelete } from '../Context/setLike';
-import { InmFavoritos } from '../containers/inmFavoritos';
+import { InmFavoritos } from '../containers/InmFavoritos';
 import { InmFiltrados } from '../containers/InmFiltrados';
 import { Layout } from '../Templates/Layout';
 import AOS from 'aos';

@@ -1,0 +1,66 @@
+.Mate__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //background-color: $blanco2;
+  position: relative;
+  z-index: 2;
+
+  .Futuro__bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -14.7rem;
+  }
+
+  .Meta__title{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: $primario;
+    
+    span{
+      display: block;
+      color: $secundario;
+    }
+  }
+
+  .Meta__grid{
+    width: 90%;
+    max-width: 140rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .Meta__item{
+      width: 100%;
+      max-width: 45rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .Meta__item-paragraf{
+        
+        padding: 1rem 4rem;
+        background-color: $primario;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        border-radius: 8% 92% 11% 89% / 89% 10% 90% 11%;
+        
+        p{
+          font-size: 2rem;
+          color: $blanco;
+        }
+      }
+
+      .Meta__item-paragraf-dif{
+        background-color: $secundario;
+      }
+    }
+
+  }
+}

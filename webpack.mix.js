@@ -1,17 +1,37 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js("resources/js/app.js", "public/js")
     .react()
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass("resources/sass/app.scss", "public/css");
 
-    //Vitrina Colombia
-mix.js('resources/js/VitrinaColombia/js/app.js', 'public/js/VitrinaColombia')
+//Vitrina Colombia
+mix.js("resources/js/VitrinaColombia/js/app.js", "public/js/VitrinaColombia")
     .react()
-    .sass('resources/sass/VitrinaColombia/sass/app.scss', 'public/css/VitrinaColombia');
+    .sass(
+        "resources/sass/VitrinaColombia/sass/app.scss",
+        "public/css/VitrinaColombia"
+    );
 
-    //Landings
+//Landings
 
-    //Franquicias
-mix.js('resources/js/Zlandings/Franquicias/js/app.js', 'public/js/Zlandings/Franquicias')
+//Franquicias
+mix.js(
+    "resources/js/Zlandings/Franquicias/js/app.js",
+    "public/js/Zlandings/Franquicias"
+)
     .react()
-    .sass('resources/sass/Zlandings/Franquicias/sass/app.scss', 'public/css/Zlandings/Franquicias');
+    .sass(
+        "resources/sass/Zlandings/Franquicias/sass/app.scss",
+        "public/css/Zlandings/Franquicias"
+    );
+
+//Remesas
+mix.js(
+    "resources/js/Zlandings/Remesas/js/app.js",
+    "public/js/Zlandings/Remesas"
+)
+    .react()
+    .sass(
+        "resources/sass/Zlandings/Remesas/sass/app.scss",
+        "public/css/Zlandings/Remesas"
+    );

@@ -7,7 +7,7 @@ import { AtributInmueble } from '../molecules/AtributInmueble';
 import { DesInmuebles } from '../molecules/DesInmuebles';
 import { ItemMap } from '../molecules/ItemMap';
 import { ItemFormulario } from '../molecules/ItemFormulario';
-import { ItemPlano } from '../molecules/itemPlano';
+import { ItemPlano } from '../molecules/ItemPlano';
 import { PrecioInmueble } from '../molecules/PrecioInmueble';
 import { PropInmuebles } from '../molecules/PropInmuebles';
 import { TitleInmueble } from '../molecules/TitleInmueble';

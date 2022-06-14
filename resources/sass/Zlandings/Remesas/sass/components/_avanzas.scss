@@ -1,0 +1,76 @@
+.Avanzas__main{
+  padding: 0 2rem;
+  background-image: url('/img/remesas/avanza.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 85rem;
+  position: relative;
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .Avanza__title{
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .Avanza__title--main{
+      margin-top: 15rem;
+      text-align: center;
+      font-weight: 300;
+      font-size: 4.5rem;
+
+      span{
+        font-weight: 600;
+        display: block;
+        font-size: 6rem;
+        @include tablet{
+          font-size: 7rem;
+        }
+        color: $secundario;
+      }
+    }
+
+    .Avanza__title--btn{
+
+      @include tabletinvert{
+        width: 100%;
+      }
+
+      font-size: 2rem;
+      color: $blanco;
+      font-weight: 900;
+      border: 3px solid $blanco;
+      padding: .4rem 2rem;
+      border-radius: .7rem;
+      transition: all .3s ease-in-out;
+      background-color: transparent;
+      margin: 0 auto;
+  
+      &:hover{
+        background: radial-gradient(circle, rgba(53,27,233,1) 0%, rgba(21,5,99,1) 100%);
+        color: $blanco;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,100 @@
+.Casa{
+  position: relative;
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.48); 
+box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.48);
+
+  @include tablet {
+    max-height: 90rem;
+  }
+  background-color: $blanco2;
+
+  .Futuro__top{
+    position: absolute;
+    width: 100%;
+    top: -13rem;
+  }
+
+  .Casa__main{
+    padding: 0 2rem;
+    padding-top: 4rem;
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    @include tablet{
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    .Casa__content{
+      padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .Casa_title--main{
+
+        color: $primario;
+        font-weight: 300;
+        font-size: 3.8rem;
+        text-align: center;
+        margin-bottom: 0;
+
+        span{
+          margin-top: .3rem;
+          display: block;
+          font-weight: 600;
+          color: $secundario;
+          font-size: 3.8rem;
+          @include tablet{
+            font-size: 4.3rem;
+          }    
+        }
+      }
+
+      .Casa_title--sub{
+        text-align: center;
+        color: $primario;
+        font-weight: 500;
+      }
+
+      .Casa_paragraf{
+        font-size: 1.7rem;
+        color: $blanco;
+        line-height: 2.4rem;
+        text-align: center;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $secundario;
+        color: $gris;
+      }
+
+      .Casa_paragraf--sub{
+        text-align: center;
+        font-size: 2.2rem;
+
+        color: $primario;
+      }
+
+      .Casa--btn{
+        @include tabletinvert{
+          width: 100%;
+        }
+        font-size: 2rem;
+        color: $primario;
+        font-weight: 900;
+        border: 3px solid $secundario;
+        padding: .4rem 1.5rem;
+        border-radius: .7rem;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          background: radial-gradient(circle, rgba(53,27,233,1) 0%, rgba(21,5,99,1) 100%);
+          color: $blanco;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}
