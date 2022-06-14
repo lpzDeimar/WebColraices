@@ -590,8 +590,8 @@ strong {
     background-color: transparent;
     cursor: pointer;
   }
-  .header-button button svg {
-    font-size: 2.6rem;
+  .header-button button i {
+    font-size: 3rem;
     color: #354676;
   }
 
@@ -618,7 +618,7 @@ strong {
 }
 .footer-main {
   background-color: #2A3F77;
-  padding: 3rem 0;
+  padding: 2.7rem 0.5rem;
 }
 @media (min-width: 930px) {
   .footer-main footer {
@@ -679,6 +679,9 @@ strong {
 }
 .footer-main .footer-redes ul a {
   color: #ffffff;
+}
+.footer-main .footer-redes ul a i {
+  font-size: 2.5rem;
 }
 .footer-main .footer-redes ul a:hover {
   cursor: pointer;
@@ -929,6 +932,7 @@ strong {
   }
 }
 .blog-main .blog-content .paragraf {
+  line-height: 2rem;
   text-align: justify;
 }
 .blog-main .blog-content .paragraf p {
@@ -938,7 +942,15 @@ strong {
   display: inline;
   font-size: 1.6rem;
   color: #354676;
-  margin-top: 3.6rem;
+}
+.blog-main .blog-content .paragraf ul, .blog-main .blog-content .paragraf ol {
+  padding-left: 3rem;
+  margin: 1.5rem;
+}
+.blog-main .blog-content .paragraf ul li, .blog-main .blog-content .paragraf ol li {
+  font-size: 1.6rem;
+  margin: 1rem;
+  color: #3b3b3b;
 }
 .blog-main .blog-content .blog-head {
   margin-bottom: 2rem;

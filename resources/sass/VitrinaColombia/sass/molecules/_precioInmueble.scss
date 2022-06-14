@@ -1,0 +1,36 @@
+.precioinmueble{
+    padding-bottom: 3rem;
+    @include tablet{
+        padding: 2rem 0 0 0;
+    }
+    .precioinmueble__title{
+        font-size: 2rem;
+        span{
+            font-size: 2.6rem;
+        }
+        font-weight: 500;
+        margin-bottom: 2rem;
+        @include tablet{
+            span{
+                font-size: 3rem;
+            }
+        }
+    }
+    .precioinmueble__buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        button{
+            background-color: #fff;
+            border: none;
+            padding: .7rem 1rem;
+            box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            font-size: 1.47rem;
+        }
+    }
+}

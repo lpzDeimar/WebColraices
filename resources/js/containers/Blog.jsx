@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { Blogs } from '../components/blogscreen/blogs';
+import { useNavigate, useParams } from 'react-router-dom';
+import { createCanonical } from '../canonicalReact';
+import { Blogs } from '../components/blogscreen/Blogs';
 import { metaReact } from '../metaReact';
 import { titleReact } from '../titleReact';
 
@@ -14,29 +15,25 @@ export const Blog = () => {
 
 
     useEffect((blogSlug = '') => {
+
+        scrollTo(0, 0);
+
         const blog = async () => {
             const resp = await fetch(api);
             const blog = await resp.json();
             setBlog(blog);
             setLoading(true);
+            titleReact(blog.data.meta_title);
+            metaReact(blog.data.description);
+            createCanonical(`https://colraices.com/blog/${blog.data.slug}`);
         }
+
         blog();
     }, [blogSlug]);
-
-    const datos = async () =>{
-        const {description,meta_title } = await blog.data ?? {};
-        titleReact(meta_title);
-        metaReact(description);
-    }
-    datos();
 
     const { titulo, extracto, imagen, contenido, categoria, autor, creacion,alt} = blog.data ?? {};
 
     const navigate = useNavigate();
-
-    useEffect(() => {
-        scrollTo(0, 0);
-    }, [blogSlug])
 
     return (
         <>

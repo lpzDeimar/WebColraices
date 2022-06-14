@@ -1,4 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/VitrinaColombia/app.js": "/js/VitrinaColombia/app.js",
+    "/js/Zlandings/Franquicias/app.js": "/js/Zlandings/Franquicias/app.js",
+    "/js/Zlandings/Remesas/app.js": "/js/Zlandings/Remesas/app.js",
+    "/css/Zlandings/Remesas/app.css": "/css/Zlandings/Remesas/app.css",
+    "/css/Zlandings/Franquicias/app.css": "/css/Zlandings/Franquicias/app.css",
+    "/css/VitrinaColombia/app.css": "/css/VitrinaColombia/app.css",
     "/css/app.css": "/css/app.css"
 }

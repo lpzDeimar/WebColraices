@@ -1,0 +1,46 @@
+.eligenos{
+    background-color: #f8f8f6;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    .eligenos__container{
+        @include tablet{
+            width: 85%;
+        }
+        margin: 0 auto;
+
+        .eligenos__grid{
+            box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+            background-color: $blanco;
+            display: grid;
+            @include tablet{
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .eligenos__img-in{
+                @include tablet{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+            }
+
+            .eligenos__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .eligenos__img{
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 40rem;
+                width: 40rem;
+                width: 100%;
+                @include tablet{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

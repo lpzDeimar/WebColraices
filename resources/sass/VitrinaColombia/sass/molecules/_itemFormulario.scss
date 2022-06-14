@@ -1,0 +1,58 @@
+.itemFormulario {
+    padding: 2rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+    .itemFormulario__form {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        legend{
+            font-size: 1.9rem;
+            margin: 1.5rem auto 1rem auto;
+            color: $primario;
+        }
+        .itemFormulario__input,
+        .itemFormulario__textarea {
+            max-width: 28rem;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border: .2rem solid #e6e6e6;
+            color: $gris;
+            &:focus {
+                outline-style: solid;
+                outline-width: .2rem;
+                outline-color: $primario;
+                box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.14);
+            }
+        }
+        .itemFormulario__button {
+            width: 100%;
+            background-color: $primario;
+            color: #ffffff;
+            padding: 1rem;
+            border: none;
+            border-radius: .5rem;
+            font-size: 1.5rem;
+            transition: all .3s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background-color: $primario2;
+            }
+        }
+        .itemFormulario__cta{
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            column-gap: .5rem;
+        }
+    }
+}
+

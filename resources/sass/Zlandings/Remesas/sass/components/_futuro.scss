@@ -1,0 +1,103 @@
+.Futuro__main{
+  position: relative;
+  background-color: $blanco2;
+  position: relative;
+  z-index: 1;
+
+  .Futuro__top{
+    position: absolute;
+    width: 100%;
+    top: -14rem;
+  }
+
+  .Futuro__bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -14.7rem;
+  }
+
+  .Futuro__content{
+    padding: 4rem 2rem;
+    @include tablet{
+      padding: 6rem 2rem;
+    }
+    max-width: 140rem;
+    margin: 0 auto;
+    display: grid;
+    @include tablet{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Futuro__text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .Futuro__title{
+        padding: 2rem 0;
+        @include tablet{
+          border-right: 2px solid $secundario;
+          padding-right: 3rem;
+          margin-right: 3rem;
+        }
+        color: $primario;
+        font-weight: 400;
+        font-size: 3.8rem;
+        text-align: center;
+        span{
+          margin-top: .7rem;
+          display: block;
+          font-weight: 600;
+          color: $secundario;
+          font-size: 3.8rem;
+          
+          @include tablet{
+            justify-content: flex-end;
+            font-size: 4.3rem;
+          }
+        }
+      }
+    }
+
+    .Futuro__component{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .Futuro__paragraf{
+        margin-top: 2rem;
+
+        p{
+          text-align: center;
+          color: $gris;
+          line-height: 2.4rem;
+          margin-bottom: 2rem;
+          font-size: 1.7rem;
+        }
+
+        .Futuro__paragraf--footer{
+          color: $primario;
+          font-weight: 600;
+          font-size: 1.9rem;
+        }
+      }
+
+      .Futuro__btn{
+        @include tabletinvert{
+          width: 100%;
+        }
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: $primario;
+        border: 2px solid $secundario;
+        padding: .4rem 1.8rem;
+        border-radius: 1rem;
+        background-color: $blanco;
+        box-shadow: -7px -7px 20px 0 #fff9,-4px -4px 5px 0 #fff9,7px 7px 20px 0 #0002,4px 4px 5px 0 #0001;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

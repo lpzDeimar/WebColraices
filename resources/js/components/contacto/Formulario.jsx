@@ -49,8 +49,8 @@ export const Formulario = () => {
                 position="top-right"
             />
             <h1>
-                Háblemos
-                <span>Un experto se pondrá en contacto </span>
+                Hablemos
+                <span>Un experto se pondrá en contacto</span>
             </h1>
             <article className="formulario-contacto-main">
                 <section className="contacto-numeros">

@@ -1,0 +1,135 @@
+.Riqueza{
+  background-image: url("/img/remesas/riqueza.webp");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  max-height: 85rem;
+  display: flex;
+  align-items: center;
+  
+
+  &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0, 0, 0, 0.5) 10%, rgba(0,0,0,0.5) 13%, rgba(0,0,0,0.5) 100%);
+  }
+
+  .Riqueza__main {
+  
+      margin-top: -5rem;
+      position: relative;
+      z-index: 1;
+  
+      display: grid;
+      padding: 0 2rem;
+
+      max-width: 140rem;
+      width: 100%;
+      margin: 0 auto;
+      
+  
+      @include tablet {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  
+  
+      .Riqueza__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+  
+          .Riqueza__title {
+              .Riqueza__title--main {
+                  text-align: center;
+                  font-size: 2.5rem;
+                  @include tablet {
+                      font-size: 3.5rem;
+                  }
+                  font-weight: 300;
+                  color: $blanco;
+                  margin-bottom: 2rem;
+                  color: $blanco;
+  
+                  span {
+                      display: block;
+                      font-weight: 600;
+                      font-size: 5rem;
+                      @include tablet {
+                          font-size: 6.6rem;
+                      }
+                      color: $secundario;
+                  }
+              }
+  
+              .Riqueza__title--sub{
+                  text-align: center;
+                  color: $blanco;
+                  font-size: 1.5rem;
+                  @include tablet {
+                      font-size: 2.7rem;
+                  }
+              }
+          }
+  
+          .Riqueza__paragraf{
+            .Riqueza__paragraf--main{
+              font-size: 1.7rem;
+              color: $blanco;
+              line-height: 2.4rem;
+              text-align: center;
+            }
+            .Riqueza__paragraf--sub{
+              font-size: 1.7rem;
+              margin-top: 3rem;
+              line-height: 2.4rem;
+              text-align: center;
+              color: $secundario;
+            }
+          }
+          .Riqueza__btn{
+            @include tabletinvert {
+              width: 100%;
+            }
+            margin-top: 5rem;
+            font-size: 1.8rem;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid $blanco;
+            border-radius: .7rem;
+            color: $blanco;
+            background-color: transparent;
+            transition: all .3s ease-in-out;
+  
+            &:hover{
+              cursor: pointer;
+              background-color: $blanco;
+              color: $secundario;
+              border: 1px solid $secundario;
+            }
+          }
+      }
+  
+      .Riqueza__img{
+        @include tabletinvert {
+          display: none;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+        img{
+          @include tabletinvert{
+            width: 80%;
+          }
+          max-width: 55rem;
+        }
+      }
+  }
+}

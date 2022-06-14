@@ -13,7 +13,8 @@ export const getContryByCod = (cod) => {
             'colex': '4.700.000',
             'oficine': 'Oficina principal Bogotá, Colombia',
             'location': 'Calle 100 # 13 - 41 Oficina: 102',
-            'number': '(+57 1) 3288939'
+            'number': '(+57 1) 3288939',
+            'anumber': '573105653998'
         }
 
         return datas
