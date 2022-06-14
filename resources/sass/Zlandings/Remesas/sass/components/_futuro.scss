@@ -1,6 +1,8 @@
 .Futuro__main{
+  position: relative;
   background-color: $blanco2;
   position: relative;
+  z-index: 1;
 
   .Futuro__top{
     position: absolute;
@@ -16,6 +18,9 @@
 
   .Futuro__content{
     padding: 4rem 2rem;
+    @include tablet{
+      padding: 6rem 2rem;
+    }
     max-width: 140rem;
     margin: 0 auto;
     display: grid;
@@ -25,8 +30,8 @@
 
     .Futuro__text{
       display: flex;
-      justify-content: flex-end;
       align-items: center;
+      justify-content: center;
       .Futuro__title{
         padding: 2rem 0;
         @include tablet{
@@ -42,8 +47,13 @@
           margin-top: .7rem;
           display: block;
           font-weight: 600;
-          font-size: 4.3rem;
           color: $secundario;
+          font-size: 3.8rem;
+          
+          @include tablet{
+            justify-content: flex-end;
+            font-size: 4.3rem;
+          }
         }
       }
     }
@@ -59,19 +69,22 @@
         p{
           text-align: center;
           color: $gris;
-          line-height: 2.3rem;
+          line-height: 2.4rem;
           margin-bottom: 2rem;
-          font-size: 1.5rem;
+          font-size: 1.7rem;
         }
 
         .Futuro__paragraf--footer{
           color: $primario;
           font-weight: 600;
-          font-size: 1.8rem;
+          font-size: 1.9rem;
         }
       }
 
       .Futuro__btn{
+        @include tabletinvert{
+          width: 100%;
+        }
         margin-top: 3rem;
         font-size: 2rem;
         color: $primario;
@@ -80,6 +93,10 @@
         border-radius: 1rem;
         background-color: $blanco;
         box-shadow: -7px -7px 20px 0 #fff9,-4px -4px 5px 0 #fff9,7px 7px 20px 0 #0002,4px 4px 5px 0 #0001;
+
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }

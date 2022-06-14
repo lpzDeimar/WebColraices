@@ -521,12 +521,22 @@ strong {
 
 .Banner__main {
   padding: 0 2rem;
-  min-height: 100vh;
+  max-height: 85rem;
   background-image: url("/img/remesas/banner1.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   display: grid;
+}
+@media (max-width: 930px) {
+  .Banner__main {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 930px) {
+  .Banner__main {
+    height: 100vh;
+  }
 }
 @media (min-width: 930px) {
   .Banner__main {
@@ -539,13 +549,17 @@ strong {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hwb(0 0% 100%/0.3);
+}
+@media (min-width: 930px) {
+  .Banner__main:after {
+    height: 100vh;
+  }
 }
 .Banner__main .Banner__text {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -578,7 +592,7 @@ strong {
   padding: 0.4rem 1.8rem;
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 4px 2px #FFFFFF;
+  box-shadow: 1px 1px 4px 2px #ffffff;
   transition: transform 0.3s ease-in-out;
 }
 @media (max-width: 930px) {
@@ -607,8 +621,10 @@ strong {
 }
 
 .Futuro__main {
+  position: relative;
   background-color: #e9e9e9;
   position: relative;
+  z-index: 1;
 }
 .Futuro__main .Futuro__top {
   position: absolute;
@@ -628,13 +644,18 @@ strong {
 }
 @media (min-width: 930px) {
   .Futuro__main .Futuro__content {
+    padding: 6rem 2rem;
+  }
+}
+@media (min-width: 930px) {
+  .Futuro__main .Futuro__content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 .Futuro__main .Futuro__content .Futuro__text {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
 }
 .Futuro__main .Futuro__content .Futuro__text .Futuro__title {
   padding: 2rem 0;
@@ -654,8 +675,14 @@ strong {
   margin-top: 0.7rem;
   display: block;
   font-weight: 600;
-  font-size: 4.3rem;
   color: #CAA55E;
+  font-size: 3.8rem;
+}
+@media (min-width: 930px) {
+  .Futuro__main .Futuro__content .Futuro__text .Futuro__title span {
+    justify-content: flex-end;
+    font-size: 4.3rem;
+  }
 }
 .Futuro__main .Futuro__content .Futuro__component {
   display: flex;
@@ -669,14 +696,14 @@ strong {
 .Futuro__main .Futuro__content .Futuro__component .Futuro__paragraf p {
   text-align: center;
   color: #3b3b3b;
-  line-height: 2.3rem;
+  line-height: 2.4rem;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 .Futuro__main .Futuro__content .Futuro__component .Futuro__paragraf .Futuro__paragraf--footer {
   color: #354676;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 .Futuro__main .Futuro__content .Futuro__component .Futuro__btn {
   margin-top: 3rem;
@@ -687,4 +714,362 @@ strong {
   border-radius: 1rem;
   background-color: #ffffff;
   box-shadow: -7px -7px 20px 0 #fff9, -4px -4px 5px 0 #fff9, 7px 7px 20px 0 #0002, 4px 4px 5px 0 #0001;
+}
+@media (max-width: 930px) {
+  .Futuro__main .Futuro__content .Futuro__component .Futuro__btn {
+    width: 100%;
+  }
+}
+.Futuro__main .Futuro__content .Futuro__component .Futuro__btn:hover {
+  cursor: pointer;
+}
+
+.Riqueza {
+  background-image: url("/img/remesas/riqueza.webp");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  max-height: 85rem;
+  display: flex;
+  align-items: center;
+}
+.Riqueza:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, black 1%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.5) 13%, rgba(0, 0, 0, 0.5) 100%);
+}
+.Riqueza .Riqueza__main {
+  margin-top: -5rem;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  padding: 0 2rem;
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 930px) {
+  .Riqueza .Riqueza__main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--main {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+@media (min-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--main {
+    font-size: 3.5rem;
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--main span {
+  display: block;
+  font-weight: 600;
+  font-size: 5rem;
+  color: #CAA55E;
+}
+@media (min-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--main span {
+    font-size: 6.6rem;
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--sub {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+@media (min-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__content .Riqueza__title .Riqueza__title--sub {
+    font-size: 2.7rem;
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__paragraf .Riqueza__paragraf--main {
+  font-size: 1.7rem;
+  color: #ffffff;
+  line-height: 2.4rem;
+  text-align: center;
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__paragraf .Riqueza__paragraf--sub {
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #CAA55E;
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__btn {
+  margin-top: 5rem;
+  font-size: 1.8rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.7rem;
+  color: #ffffff;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__content .Riqueza__btn {
+    width: 100%;
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__content .Riqueza__btn:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #CAA55E;
+  border: 1px solid #CAA55E;
+}
+.Riqueza .Riqueza__main .Riqueza__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+@media (max-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__img {
+    display: none;
+  }
+}
+.Riqueza .Riqueza__main .Riqueza__img img {
+  max-width: 55rem;
+}
+@media (max-width: 930px) {
+  .Riqueza .Riqueza__main .Riqueza__img img {
+    width: 80%;
+  }
+}
+
+.Casa {
+  position: relative;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.48);
+  background-color: #e9e9e9;
+}
+@media (min-width: 930px) {
+  .Casa {
+    max-height: 90rem;
+  }
+}
+.Casa .Futuro__top {
+  position: absolute;
+  width: 100%;
+  top: -13rem;
+}
+.Casa .Casa__main {
+  padding: 0 2rem;
+  padding-top: 4rem;
+  width: 90%;
+  max-width: 150rem;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+}
+@media (min-width: 930px) {
+  .Casa .Casa__main {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+.Casa .Casa__main .Casa__content {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Casa .Casa__main .Casa__content .Casa_title--main {
+  color: #354676;
+  font-weight: 300;
+  font-size: 3.8rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+.Casa .Casa__main .Casa__content .Casa_title--main span {
+  margin-top: 0.3rem;
+  display: block;
+  font-weight: 600;
+  color: #CAA55E;
+  font-size: 3.8rem;
+}
+@media (min-width: 930px) {
+  .Casa .Casa__main .Casa__content .Casa_title--main span {
+    font-size: 4.3rem;
+  }
+}
+.Casa .Casa__main .Casa__content .Casa_title--sub {
+  text-align: center;
+  color: #354676;
+  font-weight: 500;
+}
+.Casa .Casa__main .Casa__content .Casa_paragraf {
+  font-size: 1.7rem;
+  color: #ffffff;
+  line-height: 2.4rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #CAA55E;
+  color: #3b3b3b;
+}
+.Casa .Casa__main .Casa__content .Casa_paragraf--sub {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #354676;
+}
+.Casa .Casa__main .Casa__content .Casa--btn {
+  font-size: 2rem;
+  color: #354676;
+  font-weight: 900;
+  border: 3px solid #CAA55E;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 930px) {
+  .Casa .Casa__main .Casa__content .Casa--btn {
+    width: 100%;
+  }
+}
+.Casa .Casa__main .Casa__content .Casa--btn:hover {
+  background: radial-gradient(circle, #351be9 0%, #150563 100%);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.Mate__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.Mate__main .Futuro__bottom {
+  position: absolute;
+  width: 100%;
+  bottom: -14.7rem;
+}
+.Mate__main .Meta__title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #354676;
+}
+.Mate__main .Meta__title span {
+  display: block;
+  color: #CAA55E;
+}
+.Mate__main .Meta__grid {
+  width: 90%;
+  max-width: 140rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Mate__main .Meta__grid .Meta__item {
+  width: 100%;
+  max-width: 45rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Mate__main .Meta__grid .Meta__item .Meta__item-paragraf {
+  padding: 1rem 4rem;
+  background-color: #354676;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  border-radius: 8% 92% 11% 89%/89% 10% 90% 11%;
+}
+.Mate__main .Meta__grid .Meta__item .Meta__item-paragraf p {
+  font-size: 2rem;
+  color: #ffffff;
+}
+.Mate__main .Meta__grid .Meta__item .Meta__item-paragraf-dif {
+  background-color: #CAA55E;
+}
+
+.Avanzas__main {
+  padding: 0 2rem;
+  background-image: url("/img/remesas/avanza.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 85rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Avanzas__main:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Avanzas__main .Avanza__title {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Avanzas__main .Avanza__title .Avanza__title--main {
+  margin-top: 15rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 4.5rem;
+}
+.Avanzas__main .Avanza__title .Avanza__title--main span {
+  font-weight: 600;
+  display: block;
+  font-size: 6rem;
+  color: #CAA55E;
+}
+@media (min-width: 930px) {
+  .Avanzas__main .Avanza__title .Avanza__title--main span {
+    font-size: 7rem;
+  }
+}
+.Avanzas__main .Avanza__title .Avanza__title--btn {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 900;
+  border: 3px solid #ffffff;
+  padding: 0.4rem 2rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  margin: 0 auto;
+}
+@media (max-width: 930px) {
+  .Avanzas__main .Avanza__title .Avanza__title--btn {
+    width: 100%;
+  }
+}
+.Avanzas__main .Avanza__title .Avanza__title--btn:hover {
+  background: radial-gradient(circle, #351be9 0%, #150563 100%);
+  color: #ffffff;
+  cursor: pointer;
 }

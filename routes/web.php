@@ -7,7 +7,7 @@ Route::get('/vitrina-colombia', function () {
     return view('VitrinaColombia');
 });
 
-Route::get('/remesa', function () {
+Route::get('/remesas', function () {
     return view('remesas');
 });
 

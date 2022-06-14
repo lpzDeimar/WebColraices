@@ -2,6 +2,55 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/js/Zlandings/Remesas/js/components/Avanzas.jsx":
+/*!******************************************************************!*\
+  !*** ./resources/js/Zlandings/Remesas/js/components/Avanzas.jsx ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Avanzas": () => (/* binding */ Avanzas)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Avanzas = function Avanzas() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+    className: "Avanzas__main",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "Avanza__title",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h5", {
+        className: "Avanza__title--main",
+        children: ["Colombia crece ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          children: "mientras t\xFA avanzas"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        className: "Avanza__title--btn",
+        children: "\xA1Invierte ya!"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+        href: "",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "",
+          alt: ""
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+        href: "",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "",
+          alt: ""
+        })
+      })]
+    })]
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/Zlandings/Remesas/js/components/Banner.jsx":
 /*!*****************************************************************!*\
   !*** ./resources/js/Zlandings/Remesas/js/components/Banner.jsx ***!
@@ -54,6 +103,86 @@ var Banner = function Banner() {
 
 /***/ }),
 
+/***/ "./resources/js/Zlandings/Remesas/js/components/Casa.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/Zlandings/Remesas/js/components/Casa.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Casa": () => (/* binding */ Casa)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Casa = function Casa() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+    className: "Casa",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "Futuro__top",
+      style: {
+        height: "150px",
+        overflow: "hidden"
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+        viewBox: "0 0 500 150",
+        preserveAspectRatio: "none",
+        style: {
+          height: '100%',
+          width: '100%'
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+          d: "M0.00,119.70 C54.17,107.85 338.59,93.05 500.00,134.50 L500.56,151.27 L-0.56,151.27 Z",
+          style: {
+            stroke: "none",
+            fill: "#e9e9e9"
+          }
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "Casa__main",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "Casa__img",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "./img/remesas/casa.webp",
+          alt: ""
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "Casa__content",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
+          className: "Casa_title--main",
+          children: ["El momento de tener ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            children: "casa propia es ahora"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          className: "Casa_title--sub",
+          children: "Bancolombia y Colraices unidos para cumplir tus metas"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+          className: "Casa_paragraf",
+          children: ["Nuestros 17 a\xF1os de experiencia te ayudar\xE1naser el propietario", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "de la casa que siempre imaginaste y en tu ciudad favorita.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "Contamos con el apoyo de reconocidas constructoras y", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "trabajamos de la mano con los mejores aliados financieros."]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+          className: "Casa_paragraf--sub",
+          children: ["Conoce m\xE1s sobre todo lo que tu", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "remesa puede hacer"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "https://biblioteca.org.ar/libros/11390.pdf",
+          target: "_blank",
+          download: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "Casa--btn",
+            children: "\xA1Descarga aqu\xED el pdf!"
+          })
+        })]
+      })]
+    })]
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/Zlandings/Remesas/js/components/Futuro.jsx":
 /*!*****************************************************************!*\
   !*** ./resources/js/Zlandings/Remesas/js/components/Futuro.jsx ***!
@@ -86,7 +215,7 @@ var Futuro = function Futuro() {
           width: '100%'
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-          d: "M0.00,124.63 C14.67,124.63 58.68,97.00 501.69,140.42 L501.12,152.27 L0.00,150.00 Z",
+          d: "M0.00,119.70 C54.17,107.85 338.59,93.05 500.00,134.50 L500.56,151.27 L-0.56,151.27 Z",
           style: {
             stroke: "none",
             fill: "#e9e9e9"
@@ -132,7 +261,7 @@ var Futuro = function Futuro() {
           width: '100%'
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-          d: "M0.00,13.12 C20.87,15.08 301.91,-12.52 500.00,15.08 L500.00,0.28 L0.00,-3.65 Z",
+          d: "M0.00,17.07 C286.11,11.15 325.61,12.13 500.00,19.03 L500.56,-0.68 L-0.56,-2.65 Z",
           style: {
             stroke: "none",
             fill: "#e9e9e9"
@@ -143,6 +272,151 @@ var Futuro = function Futuro() {
   });
 };
 "";
+
+/***/ }),
+
+/***/ "./resources/js/Zlandings/Remesas/js/components/Meta.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/Zlandings/Remesas/js/components/Meta.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Meta": () => (/* binding */ Meta)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Meta = function Meta() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+    className: "Mate__main",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
+      className: "Meta__title",
+      children: ["Resuelve tus dudas ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        children: "y alcancemos juntos tu meta"
+      }), " "]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "Meta__grid",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+        className: "Meta__item",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "./img/remesas/meta1.webp",
+          alt: ""
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "Meta__item-paragraf",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            children: ["\xBFCu\xE1les son los", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "beneficiosalos que", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "puedo acceder?"]
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+        className: "Meta__item",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "./img/remesas/meta2.webp",
+          alt: ""
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "Meta__item-paragraf Meta__item-paragraf-dif",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            children: ["\xBFC\xF3mo puedo", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "materializar mi meta?"]
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+        className: "Meta__item",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "./img/remesas/meta3.webp",
+          alt: ""
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "Meta__item-paragraf",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            children: ["\xBFD\xF3nde puedo", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "contactarme con ustedes?"]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "Futuro__bottom",
+      style: {
+        height: "150px",
+        overflow: "hidden"
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+        viewBox: "0 0 500 150",
+        preserveAspectRatio: "none",
+        tyle: {
+          height: '100%',
+          width: '100%'
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+          d: "M0.00,17.07 C286.11,11.15 325.61,12.13 500.00,19.03 L500.56,-0.68 L-0.56,-2.65 Z",
+          style: {
+            stroke: "none",
+            fill: "#F5F5F5"
+          }
+        })
+      })
+    })]
+  });
+};
+
+/***/ }),
+
+/***/ "./resources/js/Zlandings/Remesas/js/components/Riqueza.jsx":
+/*!******************************************************************!*\
+  !*** ./resources/js/Zlandings/Remesas/js/components/Riqueza.jsx ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Riqueza": () => (/* binding */ Riqueza)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Riqueza = function Riqueza() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+    className: "Riqueza",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "Riqueza__main",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "Riqueza__content",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "Riqueza__title",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
+            className: "Riqueza__title--main",
+            children: ["Convierte tu remesa ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              children: "en riqueza"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            className: "Riqueza__title--sub",
+            children: "Invierte tu dinero en tu casa ideal"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "Riqueza__paragraf",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            className: "Riqueza__paragraf--main",
+            children: ["\xA1Todos pueden comprar! No importa si eres quien recibeo", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " env\xEDa la remesa.En Colraices te ofrecemos la oportunidad", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " de convertirte en propietario y pagar tu casa gracias a las", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " opciones de financiaci\xF3n que te ofrece Bancolombia.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " Aprovecha tu remesaytransforma tu vida .."]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            className: "Riqueza__paragraf--sub",
+            children: ["Vitrina Colombia cuenta con m\xFAltiples proyectos", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " inmobiliarios para ti en las mejores ciudades del pa\xEDs."]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          className: "Riqueza__btn",
+          children: "\xA1Cont\xE1ctanos!"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "Riqueza__img",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "./img/remesas/bancolombia.webp",
+          alt: "Invierte en casa"
+        })
+      })]
+    })
+  });
+};
 
 /***/ }),
 
@@ -157,9 +431,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Home": () => (/* binding */ Home)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_Banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Banner */ "./resources/js/Zlandings/Remesas/js/components/Banner.jsx");
-/* harmony import */ var _components_Futuro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Futuro */ "./resources/js/Zlandings/Remesas/js/components/Futuro.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Avanzas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Avanzas */ "./resources/js/Zlandings/Remesas/js/components/Avanzas.jsx");
+/* harmony import */ var _components_Banner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Banner */ "./resources/js/Zlandings/Remesas/js/components/Banner.jsx");
+/* harmony import */ var _components_Casa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Casa */ "./resources/js/Zlandings/Remesas/js/components/Casa.jsx");
+/* harmony import */ var _components_Futuro__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Futuro */ "./resources/js/Zlandings/Remesas/js/components/Futuro.jsx");
+/* harmony import */ var _components_Meta__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Meta */ "./resources/js/Zlandings/Remesas/js/components/Meta.jsx");
+/* harmony import */ var _components_Riqueza__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Riqueza */ "./resources/js/Zlandings/Remesas/js/components/Riqueza.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
 
 
 
@@ -167,8 +449,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Banner__WEBPACK_IMPORTED_MODULE_1__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Futuro__WEBPACK_IMPORTED_MODULE_2__.Futuro, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Banner__WEBPACK_IMPORTED_MODULE_2__.Banner, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Futuro__WEBPACK_IMPORTED_MODULE_4__.Futuro, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Riqueza__WEBPACK_IMPORTED_MODULE_6__.Riqueza, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Casa__WEBPACK_IMPORTED_MODULE_3__.Casa, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Meta__WEBPACK_IMPORTED_MODULE_5__.Meta, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Avanzas__WEBPACK_IMPORTED_MODULE_1__.Avanzas, {})]
   });
 };
 
