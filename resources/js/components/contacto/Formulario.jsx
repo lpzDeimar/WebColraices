@@ -5,6 +5,8 @@ const scriptURL =
     "https://script.google.com/macros/s/AKfycbx57y419piaWgHTOiCAKMvPD-3xVOqsbHmx0bi7Zfoa_yPVquxlwMmwNkIZhxSlY7wyAg/exec";
 
 export const Formulario = () => {
+    const API =
+        "https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28";
     const [contactoInfo, setContactoInfo] = useState({
         nombre: "",
         apellido: "",
@@ -20,35 +22,17 @@ export const Formulario = () => {
             [name]: value,
         }));
     };
-    const sendData = (e) => {
+
+    const sendData = async (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append(
-            "arguments",
-            JSON.stringify({
-                nombre: contactoInfo.nombre,
-                apellido: contactoInfo.apellido,
-                telefono: contactoInfo.telefono,
-                correo: contactoInfo.correo,
-                mensaje: contactoInfo.mensaje,
-                utm_source: "SitioWeb",
-                utm_medium: "FormularioContacto",
-            })
-        );
+        formData.append("arguments", JSON.stringify(contactoInfo));
         console.log(formData);
 
-        fetch(
-            "https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28",
-            {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                },
-                body: formData,
-            }
-        )
+        await fetch(API, {
+            method: "POST",
+            body: formData,
+        })
             .then((response) => response.text())
             .then((result) => console.log(result))
             .catch((error) => console.log("error", error));
