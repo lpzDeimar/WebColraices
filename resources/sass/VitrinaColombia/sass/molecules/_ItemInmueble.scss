@@ -1,6 +1,7 @@
 .itemReciente__main {
     position: relative;
     background-color: $blanco;
+    padding-bottom: 2rem;
     max-width: 43rem;
     min-height: 520px;
     max-height: 53rem;
@@ -160,6 +161,7 @@
                 display: flex;
                 margin: 0;
                 column-gap: 1.5rem;
+                padding-bottom: 2rem;
                 .itemReciente__content--footer--icon {
                     display: flex;
                     column-gap: 0.4rem;
@@ -181,7 +183,6 @@
         .itemReciente__content--actions--content {
             padding: 1rem 2rem;
             border-top: 0.2rem solid $blanco2;
-            padding-top: 1rem;
             display: flex;
             justify-content: flex-end;
             gap: 1.5rem;

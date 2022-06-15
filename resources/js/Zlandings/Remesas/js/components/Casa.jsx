@@ -20,7 +20,7 @@ export const Casa = () => {
           
 
           <p className='Casa_paragraf'>
-            Nuestros 17 años de experiencia te ayudaránaser el propietario
+            Nuestros 17 años de experiencia te ayudarán a ser el propietario
             <br />de la casa que siempre imaginaste y en tu ciudad favorita.
             <br />Contamos con el apoyo de reconocidas constructoras y
             <br />trabajamos de la mano con los mejores aliados financieros.
