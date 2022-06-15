@@ -7,12 +7,11 @@ const scriptURL =
 export const Formulario = () => {
     const [contactoInfo, setContactoInfo] = useState({
         nombre: "",
-        apellido: "",
         correo: "",
-        telefono: "",
+        whatsapp: "",
         mensaje: "",
     });
-    console.log(JSON.stringify(contactoInfo));
+
     const handleInput = (e) => {
         const { name, value } = e.target;
         setContactoInfo((prevState) => ({
@@ -20,37 +19,25 @@ export const Formulario = () => {
             [name]: value,
         }));
     };
+
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append(
-            "arguments",
-            JSON.stringify({
-                nombre: contactoInfo.nombre,
-                apellido: contactoInfo.apellido,
-                telefono: contactoInfo.telefono,
-                correo: contactoInfo.correo,
-                mensaje: contactoInfo.mensaje,
-                utm_source: "SitioWeb",
-                utm_medium: "FormularioContacto",
-            })
-        );
+        formData.append("nombre", contactoInfo.nombre);
+        formData.append("correo", contactoInfo.correo);
+        formData.append("whatsapp", contactoInfo.whatsapp);
+        formData.append("mensaje", contactoInfo.mensaje);
 
-        fetch(
-            "https://www.zohoapis.com/crm/v2/functions/formulariocolraices/actions/execute?auth_type=apikey&zapikey=1003.607b14fd2caa1dcc275e5b3cd66034f1.1077b614af10cdd9da5862277659be28",
-            {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                },
-                body: formData,
+        fetch(scriptURL, { method: "POST", body: formData }).then(
+            (response) => {
+                const r = response;
+                if (r.status === 200) {
+                    toast("!Hemos recibido tu solicitud!", { icon: "🏠" });
+                    e.target.reset();
+                    console.log(r.status);
+                }
             }
-        )
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.log("error", error));
+        );
     };
 
     return (
