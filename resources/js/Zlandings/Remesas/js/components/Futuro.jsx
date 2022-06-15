@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Futuro = () => {
   return (
-    <section className='Futuro__main'>
+    <section className='Futuro__main' id='casa'>
 
       <div className='Futuro__top' style={{ height: "150px", overflow: "hidden" }} ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}><path d="M0.00,119.70 C54.17,107.85 338.59,93.05 500.00,134.50 L500.56,151.27 L-0.56,151.27 Z" style={{ stroke: "none", fill: "#e9e9e9" }}></path></svg></div>
 
@@ -24,7 +24,7 @@ export const Futuro = () => {
             <p className='Futuro__paragraf--footer'>Construye un mejor futuro para ti y tu familia.</p>
           </div>
 
-          <button className='Futuro__btn'>¡Empieza ahora!</button>
+          <button className='Futuro__btn' onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998")}}>¡Empieza ahora!</button>
         </div>
 
       </div>

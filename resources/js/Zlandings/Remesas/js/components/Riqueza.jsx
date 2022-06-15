@@ -2,7 +2,7 @@ import React from "react";
 
 export const Riqueza = () => {
   return (
-    <section className="Riqueza">
+    <section className="Riqueza" id="remesa">
 
       <div className="Riqueza__main">
 
@@ -30,7 +30,7 @@ export const Riqueza = () => {
               <br /> inmobiliarios para ti en las mejores ciudades del país.</p>
           </div>
 
-          <button className="Riqueza__btn">¡Contáctanos!</button>
+          <button className="Riqueza__btn" onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998")}} >¡Contáctanos!</button>
 
         </div>
 

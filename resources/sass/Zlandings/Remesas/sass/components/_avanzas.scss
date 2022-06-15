@@ -1,10 +1,14 @@
 .Avanzas__main{
-  padding: 0 2rem;
   background-image: url('/img/remesas/avanza.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  @include tabletinvert {
+    min-height: 100vh;
+}
+  @include tablet {
+      height: 100vh;
+  }
   max-height: 85rem;
   position: relative;
   
@@ -24,6 +28,7 @@
   }
 
   .Avanza__title{
+    padding: 0 2rem;
     position: relative;
     z-index: 2;
     font-weight: bold;
@@ -36,12 +41,15 @@
       margin-top: 15rem;
       text-align: center;
       font-weight: 300;
-      font-size: 4.5rem;
+      font-size: 3.8rem;
+      @include tablet{
+        font-size: 4.5rem;
+      }
 
       span{
         font-weight: 600;
         display: block;
-        font-size: 6rem;
+        font-size: 5rem;
         @include tablet{
           font-size: 7rem;
         }
@@ -53,6 +61,7 @@
 
       @include tabletinvert{
         width: 100%;
+        margin-bottom: 5rem;
       }
 
       font-size: 2rem;
@@ -72,5 +81,35 @@
       }
     }
 
+  }
+
+
+  .Avanaza__footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include tablet{
+      justify-content: space-between;
+    }
+    align-items: center;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 3rem 7rem 0 0;
+    @include tablet{
+      border-radius: 6rem 15rem 0 0;
+    }
+
+    .Avanza__logo{
+      img{
+        width: 100%;
+        max-width: 22rem;
+        @include tablet{
+          max-width: 42rem;
+        }
+      }
+    }
   }
 }

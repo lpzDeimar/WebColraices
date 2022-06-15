@@ -13,8 +13,8 @@
     <meta name="keywords" content="Casa en Colombia | Comprar casa en Colombia | Invertir en Colombia desde el exterior | Crédito hipotecario | Crédito hipotecario en Colombia | Consultoría financiera | Requisitos para el crédito | Envio de dinero a Colombia" />
     <meta name="copyright" content="momentumdigital.com.co">
     <link rel="stylesheet" href="/css/Zlandings/Remesas/app.css">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="{{asset('/img/icon.ico')}}">
-    <title>Remesas- Colraices</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://colraices.com/img/icon.ico">
+    <title>Remesas-Colraices</title>
 </head>
 <body>
     <noscript>Esta pagina requiere de JS para funcionar</noscript>
