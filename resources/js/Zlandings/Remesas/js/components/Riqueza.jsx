@@ -24,7 +24,7 @@ export const Riqueza = () => {
               gracias a las
               <br /> opciones de financiación que te ofrece
               Bancolombia.
-              <br /> Aprovecha tu remesa y transforma tu vida ..
+              <br /> Aprovecha tu remesa y transforma tu vida.
             </p>
             <p className="Riqueza__paragraf--sub">Vitrina Colombia cuenta con múltiples proyectos
               <br /> inmobiliarios para ti en las mejores ciudades del país.</p>

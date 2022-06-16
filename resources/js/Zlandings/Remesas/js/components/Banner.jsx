@@ -18,7 +18,7 @@ export const Banner = () => {
 
       <div className='Banner__content'>
           <div className='Banner__video'>
-            <video loop ref={vd} controls>
+            <video loop ref={vd} controls poster='./img/remesas/poster.jpg'>
               <source src="./video/remesas.mp4" type="video/mp4"/>
             </video>
           </div>

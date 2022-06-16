@@ -101,6 +101,7 @@ var Banner = function Banner() {
           loop: true,
           ref: vd,
           controls: true,
+          poster: "./img/remesas/poster.jpg",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("source", {
             src: "./video/remesas.mp4",
             type: "video/mp4"
@@ -249,7 +250,7 @@ var Futuro = function Futuro() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "Futuro__paragraf",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["Cada vez m\xE1s colombianos se suman a nuestra lista de propietarios.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\xBFQuieres ser parte de este grupo? Solo tienes que invertir de manera", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "inteligente el valor de tu remesa y pronto tendr\xE1s la casa que siempre", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "planeaste. Hazlo juntoalos mejores, Bancolombia y Colraices."]
+            children: ["Cada vez m\xE1s colombianos se suman a nuestra lista de propietarios.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\xBFQuieres ser parte de este grupo? Solo tienes que invertir de manera", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "inteligente el valor de tu remesa y pronto tendr\xE1s la casa que siempre", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "planeaste. Hazlo junto a los mejores, Bancolombia y Colraices."]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             className: "Futuro__paragraf--footer",
             children: "Construye un mejor futuro para ti y tu familia."
@@ -422,7 +423,7 @@ var Meta = function Meta() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "Meta__item-paragraf",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-            children: ["\xBFCu\xE1les son los", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "beneficiosalos que", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "puedo acceder?"]
+            children: ["\xBFCu\xE1les son los", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "beneficios a los que", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "puedo acceder?"]
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
@@ -513,7 +514,7 @@ var Riqueza = function Riqueza() {
           className: "Riqueza__paragraf",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
             className: "Riqueza__paragraf--main",
-            children: ["\xA1Todos pueden comprar! No importa si eres quien recibe o", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " env\xEDa la remesa. En Colraices te ofrecemos la oportunidad", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " de convertirte en propietario y pagar tu casa gracias a las", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " opciones de financiaci\xF3n que te ofrece Bancolombia.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " Aprovecha tu remesa y transforma tu vida .."]
+            children: ["\xA1Todos pueden comprar! No importa si eres quien recibe o", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " env\xEDa la remesa. En Colraices te ofrecemos la oportunidad", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " de convertirte en propietario y pagar tu casa gracias a las", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " opciones de financiaci\xF3n que te ofrece Bancolombia.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " Aprovecha tu remesa y transforma tu vida."]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
             className: "Riqueza__paragraf--sub",
             children: ["Vitrina Colombia cuenta con m\xFAltiples proyectos", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " inmobiliarios para ti en las mejores ciudades del pa\xEDs."]

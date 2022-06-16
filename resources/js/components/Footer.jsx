@@ -64,7 +64,7 @@ export const Footer = () => {
                             </ul>
                         </li>
 
-                        <li>Política de privacidad</li>
+                        <li><Link to="derechos">Política de privacidad</Link></li>
                         <li>Mapa del sitio</li>
                         <li>{new Date().getFullYear()} <a href="https://momentumdigital.com.co/" target="_blank">Momentum</a> </li>
                     </ul>
