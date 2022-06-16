@@ -21,7 +21,8 @@ export const Footer = () => {
                             <li><Link to="credito">Crédito para comprar casa en Colombia</Link></li>
                             <li><Link to="leasing-habitacional">Leasing Habitacional</Link></li>
                             <li><Link to="plan-de-ahorro">¿Cómo hacer un plan de ahorro?</Link></li>
-                            <li><Link to="portal-inmobiliario">Portal inmobiliario - Vitrina Colombia</Link></li>
+                            <li><a href="vitrina-colombia" target="_blank">Portal inmobiliario - Vitrina Colombia</a></li>
+                            <li><Link to="derechos">Politicas de seguridad y tratamiento de datos</Link></li>
                             <li><Link to="blog">El blog para colombianos en el exterior</Link></li>
                             <li><a href="">Atención telefónica para compra de casa en Colombia desde el exterior</a></li>
                         </ul>

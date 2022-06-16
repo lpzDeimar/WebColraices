@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { AiFillFacebook,AiFillInstagram,AiFillLinkedin,AiOutlineWhatsApp } from "react-icons/ai";
 
 const scriptURL =
     "https://script.google.com/macros/s/AKfycbx57y419piaWgHTOiCAKMvPD-3xVOqsbHmx0bi7Zfoa_yPVquxlwMmwNkIZhxSlY7wyAg/exec";
@@ -23,9 +24,9 @@ export const Formulario = () => {
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("nombre", contactoInfo.nombre);
+        formData.append("nombre", `${contactoInfo.nombre} ${contactoInfo.apellido}`);
         formData.append("correo", contactoInfo.correo);
-        formData.append("whatsapp", contactoInfo.whatsapp);
+        formData.append("whatsapp", contactoInfo.telefono);
         formData.append("mensaje", contactoInfo.mensaje);
 
         fetch(scriptURL, { method: "POST", body: formData }).then(
@@ -34,7 +35,6 @@ export const Formulario = () => {
                 if (r.status === 200) {
                     toast("!Hemos recibido tu solicitud!", { icon: "🏠" });
                     e.target.reset();
-                    console.log(r.status);
                 }
             }
         );
@@ -68,7 +68,7 @@ export const Formulario = () => {
                                     target="_blank"
                                     title="Facebook"
                                 >
-                                    <i className="fab fa-facebook-f"></i>
+                                    <i><AiFillFacebook/></i>
                                 </a>
                             </li>
                             <li>
@@ -77,7 +77,7 @@ export const Formulario = () => {
                                     target="_blank"
                                     title="Instagram"
                                 >
-                                    <i className="fab fa-instagram"></i>
+                                    <i><AiFillInstagram/></i>
                                 </a>
                             </li>
                             <li>
@@ -86,7 +86,7 @@ export const Formulario = () => {
                                     target="_blank"
                                     title="LinkedIn"
                                 >
-                                    <i className="fab fa-linkedin-in"></i>
+                                    <i><AiFillLinkedin/></i>
                                 </a>
                             </li>
                         </ul>
@@ -98,7 +98,7 @@ export const Formulario = () => {
                             target="_blank"
                             title="WhatsApp"
                         >
-                            <i className="fab fa-whatsapp"></i> +57 310 565 3998
+                            <i><AiOutlineWhatsApp/></i> +57 310 565 3998
                         </a>
                     </div>
                     <div>
@@ -160,7 +160,7 @@ export const Formulario = () => {
                                 type="text"
                                 name="telefono"
                                 onChange={handleInput}
-                                placeholder="Tu numero de contacto"
+                                placeholder="Tu numero de contacto: +57 321 123 1231" 
                                 required
                                 autoComplete="off"
                             />

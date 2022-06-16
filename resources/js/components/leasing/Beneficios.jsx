@@ -78,7 +78,7 @@ export const Beneficios = () => {
                                 Cuotas<span>más</span>
                             </p>
                             <div className="line"></div>
-                            <h4 className="interes">BAJOS</h4>
+                            <h4 className="interes">BAJAS</h4>
                         </div>
                     </div>
                 </section>

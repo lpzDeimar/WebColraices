@@ -16,6 +16,7 @@ import { Contacto } from "../containers/Contacto";
 import { getContryByCod } from "../selectors/getContryByCod";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Derechos } from "../containers/Derechos";
 
 const contry = document.querySelector('#contry').value;
 
@@ -44,6 +45,7 @@ export const App = () => {
                         <Route path='blog' element={<BlogScreen />}/>
                         <Route path='blog/:blogSlug' element={<Blog />} />
                         <Route path='contacto' element={<Contacto />} />
+                        <Route path='derechos' element={<Derechos />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </Layout>

@@ -1,19 +1,19 @@
 .Banner__main {
     padding: 0 2rem;
-    @include tabletinvert {
-      min-height: 100vh;
-  }
-    @include tablet {
-        height: 100vh;
-    }
+    display: grid;
     max-height: 85rem;
     background-image: url("/img/remesas/banner1.webp");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    position: relative;
+    
+    @include tabletinvert {
+        min-height: 100vh;
+    }
 
-    display: grid;
     @include tablet {
+        height: 100vh;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -90,7 +90,6 @@
         margin-bottom: 10rem;
 
         .Banner__video {
-            
             video {
                 width: 100%;
                 max-width: 55rem;

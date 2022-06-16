@@ -1,0 +1,30 @@
+.derechos__main {
+  padding: 0 2rem;
+    .derechos__content {
+        width: 90%;
+        max-width: 140rem;
+        margin: 10rem auto;
+        padding: 3rem 2rem;
+        border-radius: 1.2rem;
+        box-shadow: 4px 4px 4px 0px #30303096, -7px -7px 3px 0px #ffffff;
+
+        .derechos__item{
+          margin-bottom: 3rem;
+          padding: 2rem 2rem;
+          border-radius: 2rem;
+          box-shadow: -5px -6px 3px -1px #ffffff inset,
+              2px 2px 7px 0px #38383893 inset;
+
+          .title_derechos{
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: $primario;
+          }   
+          .text_derechos{
+            font-size: 1.6rem;
+            color: $gris;
+          } 
+        }
+    }
+}

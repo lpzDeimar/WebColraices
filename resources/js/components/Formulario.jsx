@@ -24,7 +24,7 @@ export const Formulario = () => {
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("nombre", contactoInfo.nombre);
+        formData.append("nombre", `${contactoInfo.nombre} ${contactoInfo.apellido}`);
         formData.append("correo", contactoInfo.correo);
         formData.append("whatsapp", contactoInfo.whatsapp);
         formData.append("mensaje", contactoInfo.mensaje);
@@ -68,12 +68,23 @@ export const Formulario = () => {
                                 action=""
                             >
                                 <label className="info-contacto">
-                                    <span>Nombre completo</span>
+                                    <span>Nombre</span>
                                     <input
                                         onChange={handleChange}
                                         type="text"
                                         name="nombre"
                                         placeholder="¿Cúal es tu nombre?"
+                                        autoComplete="off"
+                                        required
+                                    />
+                                </label>
+                                <label className="info-contacto">
+                                    <span>Apellido</span>
+                                    <input
+                                        onChange={handleChange}
+                                        type="text"
+                                        name="apellido"
+                                        placeholder="¿Cúal es tu apellido?"
                                         autoComplete="off"
                                         required
                                     />
