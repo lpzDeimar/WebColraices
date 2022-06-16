@@ -17,14 +17,14 @@ export const Riqueza = () => {
 
           <div className="Riqueza__paragraf">
             <p className="Riqueza__paragraf--main">
-              ¡Todos pueden comprar! No importa si eres quien recibeo
-              <br /> envía la remesa.En Colraices te ofrecemos la
+              ¡Todos pueden comprar! No importa si eres quien recibe o
+              <br /> envía la remesa. En Colraices te ofrecemos la
               oportunidad
               <br /> de convertirte en propietario y pagar tu casa
               gracias a las
               <br /> opciones de financiación que te ofrece
               Bancolombia.
-              <br /> Aprovecha tu remesaytransforma tu vida ..
+              <br /> Aprovecha tu remesa y transforma tu vida ..
             </p>
             <p className="Riqueza__paragraf--sub">Vitrina Colombia cuenta con múltiples proyectos
               <br /> inmobiliarios para ti en las mejores ciudades del país.</p>
