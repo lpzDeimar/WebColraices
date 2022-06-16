@@ -14,7 +14,7 @@ export const Meta = () => {
           <div className='Meta__item-paragraf'>
             <p>
               ¿Cuáles son los
-              <br />beneficiosalos que
+              <br />beneficios a los que
               <br />puedo acceder?
             </p>
           </div>
