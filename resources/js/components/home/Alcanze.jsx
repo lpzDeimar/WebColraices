@@ -1,4 +1,5 @@
 import React from 'react'
+import { Formulario } from '../Formulario'
 
 export const Alcanze = () => {
 
@@ -30,7 +31,7 @@ export const Alcanze = () => {
             </section>
 
             <h4>También contamos con el apoyo de <span>las mejores constructoras de Colombia.</span></h4>
-
+            <Formulario/>
         </section>
     )
 }
