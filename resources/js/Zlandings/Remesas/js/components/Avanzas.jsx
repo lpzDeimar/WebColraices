@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ActiveContext } from '../../../../components/ActiveContext'
+import { Formulario } from '../../../../components/Formulario'
 
 export const Avanzas = () => {
+
+  const {activarModalForm} = useContext(ActiveContext)
+
   return (
     <section className='Avanzas__main'>
 
       <div className='Avanza__title'>
         <h5 className='Avanza__title--main'>Colombia crece <span>mientras tú avanzas</span></h5>
-        <button onClick={()=>{window.open("https://api.whatsapp.com/send/?phone=573105653998")}} className='Avanza__title--btn'>¡Invierte ya!</button>
+        <button className='Avanza__title--btn' onClick={() => activarModalForm()}>
+          ¡Invierte ya!
+        </button>
+
       </div>
 
       <div className='Avanaza__footer'>
@@ -18,6 +26,7 @@ export const Avanzas = () => {
         </a>
       </div>
 
+      <Formulario/>
     </section>
   )
 }
