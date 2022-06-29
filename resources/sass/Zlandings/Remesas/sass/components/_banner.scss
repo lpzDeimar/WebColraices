@@ -27,7 +27,7 @@
         @include tablet {
             height: 100vh;
         }
-        background-color: hwb(0 0% 100% / 0.3);
+        background-color: #0000007d !important;
     }
 
     .Banner__text {
@@ -45,6 +45,7 @@
 
         .Banner__title {
             text-align: center;
+            text-shadow: 0px 0px 7px #000000;
             font-size: 3.7rem;
             font-weight: 500;
             color: $blanco;

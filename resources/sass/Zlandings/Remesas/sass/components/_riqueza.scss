@@ -4,6 +4,7 @@
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
+  padding-bottom: 4rem;
   @include tabletinvert {
     min-height: 100vh;
 }
@@ -103,7 +104,7 @@
             @include tabletinvert {
               width: 100%;
             }
-            margin-top: 5rem;
+            margin-top: 3rem;
             font-size: 1.8rem;
             padding: .9rem 2rem;
             border: 1px solid $blanco;

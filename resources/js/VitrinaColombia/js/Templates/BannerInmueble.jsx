@@ -38,7 +38,7 @@ export const BannerInmueble = ({ imagenes }) => {
 
     return (
         <>
-            <section className='bannerInmueble' style={{gridTemplateColumns: `repeat(${imagenes.length <= 4 ? imagenes.length : 4 }, 1fr)`}}>
+            <section className='bannerInmueble'>
                 {imagenes.slice(0,5).map((imagen, index) => (
                     <img onClick={() => { handleImagenSpan() }} key={`imagen-${index}`} src={`${imagen}`} alt="imagen" />
                 ))}

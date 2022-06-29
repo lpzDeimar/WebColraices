@@ -2,7 +2,7 @@
     position: relative;
     background-color: $blanco;
     padding-bottom: 2.5rem;
-    max-width: 56rem;
+    max-width: 40rem;
     min-height: 520px;
     max-height: 53rem;
     box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.15);
@@ -182,7 +182,7 @@
         width: 100%;
         .itemReciente__content--actions--content {
             padding: 1rem 2rem;
-            border-top: 0.2rem solid $blanco2;
+            // border-top: 0.2rem solid $blanco2;
             display: flex;
             justify-content: flex-end;
             gap: 1.5rem;

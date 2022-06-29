@@ -10,6 +10,10 @@ Route::get('/vitrina-colombia', function () {
 Route::get('/vitrina-colombia/{todo}', function () {
     return view('vitrinaColombia');
 });
+Route::get('/vitrina-colombia/{todo}/{tod}', function () {
+    return view('vitrinaColombia');
+});
+
 
 Route::get('/remesas', function () {
     return view('remesas');

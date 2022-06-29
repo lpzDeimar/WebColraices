@@ -17,7 +17,7 @@ export const ItemFormulario = () => {
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("nombre", e.target.nombre.value);
+        formData.append("nombre", `${e.target.nombre.value} ${e.target.apellido.value}`);
         formData.append("email", e.target.email.value);
         formData.append("telefono", e.target.telefono.value);
         formData.append("pais", e.target.pais.value);
@@ -60,9 +60,10 @@ export const ItemFormulario = () => {
 
                     <legend>Tienes una duda?</legend>
                     <input className='itemFormulario__input' name='nombre' type="text" placeholder='Nombre' required/>
+                    <input className='itemFormulario__input' name='apellido' type="text" placeholder='Apellido' required/>
                     <input className='itemFormulario__input' name='email' type="email" placeholder='Correo' required/>
                     <input className='itemFormulario__input' name='telefono' type="tel" placeholder='+57 321 123 3213' required/>
-                    <input className='itemFormulario__input' name='pais' type="text" placeholder='Pais en el que reside' required/>
+                    <input className='itemFormulario__input' name='pais' type="text" placeholder='Pais en el que resides' required/>
 
                     <textarea className='itemFormulario__textarea' name='mensaje' onChange={handleMessage} ref={men}
                         cols="30" rows="6" placeholder='Deja tu mensaje y un asesor te ayudará'>
