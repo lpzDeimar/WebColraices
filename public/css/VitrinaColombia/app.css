@@ -716,8 +716,8 @@ li {
 .itemReciente__main {
   position: relative;
   background-color: #ffffff;
-  padding-bottom: 2rem;
-  max-width: 43rem;
+  padding-bottom: 2.5rem;
+  max-width: 40rem;
   min-height: 520px;
   max-height: 53rem;
   box-shadow: 0 -1px 19px 0 rgba(3, 101, 172, 0.15);
@@ -884,7 +884,6 @@ li {
 }
 .itemReciente__main .itemReciente__content--actions .itemReciente__content--actions--content {
   padding: 1rem 2rem;
-  border-top: 0.2rem solid #e9e9e9;
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
@@ -2207,33 +2206,41 @@ li {
   margin: 0;
 }
 
-.inmueble {
+.inmueblee {
   padding-top: 3rem;
   background-color: #f7f7f7;
   padding-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 930px) {
-  .inmueble {
+  .inmueblee {
     padding-top: 9rem;
   }
 }
-.inmueble .inmueble__grid {
-  max-width: 130rem;
-  width: 90%;
+.inmueblee .inmueble__grid {
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  justify-content: center;
   padding: 0 2rem;
+  width: 98%;
   grid-gap: 3rem;
+  flex-wrap: wrap;
 }
 @media (min-width: 930px) {
-  .inmueble .inmueble__grid {
-    grid-template-columns: 2.9fr 1fr;
+  .inmueblee .inmueble__grid {
+    max-width: 122rem;
   }
 }
-.inmueble .inmueble__formularios {
+.inmueblee .inmueble__grid .inmueble__main {
+  width: 100%;
+  max-width: 82rem;
+}
+.inmueblee .inmueble__formularios {
   width: 100%;
 }
-.inmueble .itemFormulario__cta {
+.inmueblee .itemFormulario__cta {
   margin: 0.7rem auto;
   width: 100%;
   display: flex;

@@ -19,7 +19,7 @@ export const Futuro = () => {
               Cada vez más colombianos se suman a nuestra lista de propietarios.
               <br />¿Quieres ser parte de este grupo? Solo tienes que invertir de manera
               <br />inteligente el valor de tu remesa y pronto tendrás la casa que siempre
-              <br />planeaste. Hazlo juntoalos mejores, Bancolombia y Colraices.
+              <br />planeaste. Hazlo junto a los mejores, Bancolombia y Colraices.
             </p>
             <p className='Futuro__paragraf--footer'>Construye un mejor futuro para ti y tu familia.</p>
           </div>

@@ -29,7 +29,7 @@ export const MiVivienda = () => {
     const sendData = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("nombre", formInfo.nombre);
+        formData.append("nombre", `${formInfo.nombre} ${formInfo.apellido}`);
         formData.append("correo", formInfo.correo);
         formData.append("whatsapp", formInfo.whatsapp);
         formData.append("tipo", formInfo.tipo);
@@ -84,6 +84,16 @@ export const MiVivienda = () => {
                                 <label className="info-contacto">
                                     <input
                                         onChange={handleChange}
+                                        type="text"
+                                        name="apellido"
+                                        placeholder="Apellido"
+                                        autoComplete="off"
+                                        required
+                                    />
+                                </label>
+                                <label className="info-contacto">
+                                    <input
+                                        onChange={handleChange}
                                         type="email"
                                         name="correo"
                                         placeholder="Correo electrónico"
@@ -96,7 +106,7 @@ export const MiVivienda = () => {
                                         onChange={handleChange}
                                         type="text"
                                         name="whatsapp"
-                                        placeholder="WhatsApp"
+                                        placeholder="WhatsApp +57 321 123 4567"
                                         autoComplete="off"
                                         required
                                     />

@@ -76,6 +76,39 @@ var ActiveContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createCon
 
 /***/ }),
 
+/***/ "./resources/js/components/ArticleDerechos.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/ArticleDerechos.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ArticleDerechos": () => (/* binding */ ArticleDerechos)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var ArticleDerechos = function ArticleDerechos(_ref) {
+  var title = _ref.title,
+      children = _ref.children;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+    className: "derechos__item",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: "title_derechos",
+      children: title
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: "text_derechos",
+      children: children
+    })]
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/components/BlogItem.jsx":
 /*!**********************************************!*\
   !*** ./resources/js/components/BlogItem.jsx ***!
@@ -283,9 +316,15 @@ var Footer = function Footer() {
                 children: "\xBFC\xF3mo hacer un plan de ahorro?"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-                to: "portal-inmobiliario",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                href: "vitrina-colombia",
+                target: "_blank",
                 children: "Portal inmobiliario - Vitrina Colombia"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+                to: "derechos",
+                children: "Politicas de seguridad y tratamiento de datos"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -361,7 +400,10 @@ var Footer = function Footer() {
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-            children: "Pol\xEDtica de privacidad"
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+              to: "derechos",
+              children: "Pol\xEDtica de privacidad"
+            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
             children: "Mapa del sitio"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
@@ -445,7 +487,7 @@ var Formulario = function Formulario() {
   var sendData = function sendData(e) {
     e.preventDefault();
     var formData = new FormData();
-    formData.append("nombre", contactoInfo.nombre);
+    formData.append("nombre", "".concat(contactoInfo.nombre, " ").concat(contactoInfo.apellido));
     formData.append("correo", contactoInfo.correo);
     formData.append("whatsapp", contactoInfo.whatsapp);
     formData.append("mensaje", contactoInfo.mensaje);
@@ -496,12 +538,24 @@ var Formulario = function Formulario() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
               className: "info-contacto",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                children: "Nombre completo"
+                children: "Nombre"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                 onChange: handleChange,
                 type: "text",
                 name: "nombre",
                 placeholder: "\xBFC\xFAal es tu nombre?",
+                autoComplete: "off",
+                required: true
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
+              className: "info-contacto",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                children: "Apellido"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                onChange: handleChange,
+                type: "text",
+                name: "apellido",
+                placeholder: "\xBFC\xFAal es tu apellido?",
                 autoComplete: "off",
                 required: true
               })]
@@ -727,7 +781,7 @@ var MiVivienda = function MiVivienda() {
   var sendData = function sendData(e) {
     e.preventDefault();
     var formData = new FormData();
-    formData.append("nombre", formInfo.nombre);
+    formData.append("nombre", "".concat(formInfo.nombre, " ").concat(formInfo.apellido));
     formData.append("correo", formInfo.correo);
     formData.append("whatsapp", formInfo.whatsapp);
     formData.append("tipo", formInfo.tipo);
@@ -786,6 +840,16 @@ var MiVivienda = function MiVivienda() {
               className: "info-contacto",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                 onChange: handleChange,
+                type: "text",
+                name: "apellido",
+                placeholder: "Apellido",
+                autoComplete: "off",
+                required: true
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+              className: "info-contacto",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                onChange: handleChange,
                 type: "email",
                 name: "correo",
                 placeholder: "Correo electr\xF3nico",
@@ -798,7 +862,7 @@ var MiVivienda = function MiVivienda() {
                 onChange: handleChange,
                 type: "text",
                 name: "whatsapp",
-                placeholder: "WhatsApp",
+                placeholder: "WhatsApp +57 321 123 4567",
                 autoComplete: "off",
                 required: true
               })
@@ -1006,7 +1070,7 @@ var Soluciones = function Soluciones() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
           children: "Portal inmobiliario"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-          href: "https://colraices.com/proyectosdeviviendaencolombiadesdeelexterior",
+          href: "https://colraices.com/vitrina-colombia",
           target: "_blank",
           children: "Clic aqu\xED"
         })]
@@ -2047,6 +2111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hot-toast */ "./node_modules/react-hot-toast/dist/react-hot-toast.esm.js");
+/* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons/ai */ "./node_modules/react-icons/ai/index.esm.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -2065,6 +2130,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -2094,9 +2160,9 @@ var Formulario = function Formulario() {
   var sendData = function sendData(e) {
     e.preventDefault();
     var formData = new FormData();
-    formData.append("nombre", contactoInfo.nombre);
+    formData.append("nombre", "".concat(contactoInfo.nombre, " ").concat(contactoInfo.apellido));
     formData.append("correo", contactoInfo.correo);
-    formData.append("whatsapp", contactoInfo.whatsapp);
+    formData.append("whatsapp", contactoInfo.telefono);
     formData.append("mensaje", contactoInfo.mensaje);
     fetch(scriptURL, {
       method: "POST",
@@ -2109,7 +2175,6 @@ var Formulario = function Formulario() {
           icon: "🏠"
         });
         e.target.reset();
-        console.log(r.status);
       }
     });
   };
@@ -2143,7 +2208,7 @@ var Formulario = function Formulario() {
                 target: "_blank",
                 title: "Facebook",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fab fa-facebook-f"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ai__WEBPACK_IMPORTED_MODULE_3__.AiFillFacebook, {})
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
@@ -2152,7 +2217,7 @@ var Formulario = function Formulario() {
                 target: "_blank",
                 title: "Instagram",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fab fa-instagram"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ai__WEBPACK_IMPORTED_MODULE_3__.AiFillInstagram, {})
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
@@ -2161,7 +2226,7 @@ var Formulario = function Formulario() {
                 target: "_blank",
                 title: "LinkedIn",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fab fa-linkedin-in"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ai__WEBPACK_IMPORTED_MODULE_3__.AiFillLinkedin, {})
                 })
               })
             })]
@@ -2174,7 +2239,7 @@ var Formulario = function Formulario() {
             target: "_blank",
             title: "WhatsApp",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-              className: "fab fa-whatsapp"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ai__WEBPACK_IMPORTED_MODULE_3__.AiOutlineWhatsApp, {})
             }), " +57 310 565 3998"]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -2239,7 +2304,7 @@ var Formulario = function Formulario() {
               type: "text",
               name: "telefono",
               onChange: handleInput,
-              placeholder: "Tu numero de contacto",
+              placeholder: "Tu numero de contacto: +57 321 123 1231",
               required: true,
               autoComplete: "off"
             })]
@@ -2662,69 +2727,71 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Alcanze": () => (/* binding */ Alcanze)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Formulario__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Formulario */ "./resources/js/components/Formulario.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 var Alcanze = function Alcanze() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("section", {
     className: "alcanze-main",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h3", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h3", {
       "data-aos": "fade-down",
       "data-aos-duration": "1000",
-      children: ["Alcanza tus metas ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      children: ["Alcanza tus metas ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         children: "con nosotros"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("section", {
       className: "alcanze-counter",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         "data-aos": "zoom-in-up",
         "data-aos-duration": "1000",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
           children: "16"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "A\xF1os de experiencia"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "cuadrado"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         "data-aos": "zoom-in-up",
         "data-aos-duration": "1050",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-          children: ["77 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h4", {
+          children: ["77 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             children: "mil"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "Colombianos asesorados en todo el mundo"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "cuadrado"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         "data-aos": "zoom-in-up",
         "data-aos-duration": "1150",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
           children: "1400"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "Casas entregadas"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "cuadrado"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
         "data-aos": "zoom-in-up",
         "data-aos-duration": "1200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
           children: "5700"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: "Cr\xE9ditos desembolsados"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "cuadrado"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-      children: ["Tambi\xE9n contamos con el apoyo de ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h4", {
+      children: ["Tambi\xE9n contamos con el apoyo de ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         children: "las mejores constructoras de Colombia."
       })]
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Formulario__WEBPACK_IMPORTED_MODULE_1__.Formulario, {})]
   });
 };
 
@@ -2765,7 +2832,7 @@ var Banner = function Banner() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
           children: "\xA1S\xED"
-        }), ", puedes comprar ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), " DL en Colombia", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), " desde ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+        }), ", puedes comprar ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "en Colombia", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), " desde ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
           children: [NombrePaís, "!"]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -3425,7 +3492,7 @@ var Beneficios = function Beneficios() {
               className: "line"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
               className: "interes",
-              children: "BAJOS"
+              children: "BAJAS"
             })]
           })
         })]
@@ -4334,6 +4401,69 @@ var Credito = function Credito() {
 
 /***/ }),
 
+/***/ "./resources/js/containers/Derechos.jsx":
+/*!**********************************************!*\
+  !*** ./resources/js/containers/Derechos.jsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Derechos": () => (/* binding */ Derechos)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ArticleDerechos */ "./resources/js/components/ArticleDerechos.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var Derechos = function Derechos() {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    scrollTo(0, 0);
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
+    className: "derechos__main",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
+      className: "derechos__content",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "Presentación",
+        children: "\xA1Gracias por confiar en Colraices! En Colraices Ltda. queremos ofrecerle la mejor experiencia en el proceso de financiaci\xF3n y compra de vivienda en Colombia desde el exterior. Reconocemos que llevar a cabo este proceso requiere de tiempo. Por esta raz\xF3n y con el objeto de ofrecer un servicio excepcional requerimos mantener una comunicaci\xF3n directa con nuestros clientes a trav\xE9s de sus datos personales. Para Colra\xEDces Ltda. su privacidad y la seguridad de sus datos personales es importante. En esta Pol\xEDtica de Privacidad queremos explicarle de forma transparente c\xF3mo y por qu\xE9 recopilamos, almacenamos, compartimos y utilizamos sus datos personales."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: " Acerca de esta Política",
+        children: "Esta Pol\xEDtica de Privacidad establece los detalles esenciales relativos a su relaci\xF3n de datos personales con Colra\xEDces Ltda. La Pol\xEDtica de Privacidad se aplica a todos los servicios que ofrece Colra\xEDces Ltda. y a su red de franquicias. Espor\xE1dicamente podremos desarrollar nuevos servicios; si la presentaci\xF3n de estos servicios genera alg\xFAn cambio en la forma en que recopilamos o procesamos sus datos personales, le proporcionaremos m\xE1s informaci\xF3n acerca del cambio de las Pol\xEDticas."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "Sus derechos",
+        children: ["Debido a la nueva ley de la Uni\xF3n Europea, que se denomina Reglamento General de Protecci\xF3n de Datos, o \u201CGDPR\u201D, ofrece ciertos derechos a las personas sobre sus datos personales: Derecho de acceso: el derecho de ser informado y solicitar acceso a los datos personales que procesamos sobre usted. Derecho de rectificaci\xF3n: el derecho de solicitar que corrijamos o actualicemos sus datos personales cuando sean inexactos o est\xE9n incompletos. Derecho a eliminaci\xF3n: el derecho de solicitar que se eliminen sus datos personales. Derecho a restringir: el derecho de solicitar que se detenga el procesamiento de forma temporal o permanente de todos o algunos de sus datos personales. Derecho a objetar: el derecho, en cualquier momento, de objetar el procesamiento de sus datos personales por motivos relacionados con su situaci\xF3n particular. el derecho a oponerse a que su datos personales se procesen para fines de marketing directo. Derecho a la portabilidad de datos: el derecho de solicitar una copia de sus datos personales en formato electr\xF3nico. Si le enviamos mensajes de marketing electr\xF3nico basados en su consentimiento, o seg\xFAn lo permita la ley correspondiente de otro modo, usted puede \u201Cdarse de baja\u201D en cualquier momento. Los mensajes informativos y de marketing electr\xF3nico que recibe de Colra\xEDces Ltda. incluyen tambi\xE9n en el mismo mensaje un mecanismo para dejar de recibir comunicaciones (p. ej., un enlace para cancelar la suscripci\xF3n en los correos electr\xF3nicos que le enviamos).", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Si tiene alguna pregunta acerca de su privacidad, sus derechos, o c\xF3mo ejercerlos, p\xF3ngase en contacto con el \xE1rea responsable de la protecci\xF3n de datos mediante el formulario \u201CCont\xE1ctenos\u201D. Responderemos su solicitud dentro de un per\xEDodo razonable una vez verificada su identidad.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Si no est\xE1 satisfecho con la forma en que usamos sus datos personales, puede comunicarse y es libre de presentar una queja con la autoridad de protecci\xF3n de datos local."]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "¿Cómo recopilamos sus datos personales?",
+        children: "Recopilamos sus datos personales de las siguientes maneras: Cuando se registra en la web de Colra\xEDces y/o Buscador de Inmuebles: cuando registra sus datos personales en los diferentes formularios de contacto publicados en las secciones de la web de Colra\xEDces (https://www.colraices.com/) y/o de nuestro Buscador de Inmuebles (http://inmuebles.colraices.com) Recopilamos ciertos datos personales para poderle contactar y as\xED ampliar la informaci\xF3n solicitada (ej. su direcci\xF3n de correo electr\xF3nico, m\xF3vil y pa\xEDs y ciudad de residencia). Mediante publicaciones en Facebook y redes sociales: cuando suministra sus datos personales a trav\xE9s de nuestra p\xE1gina oficial de Facebook (http://facebook.com/colra\xEDces/). Desde terceros: recibiremos datos personales sobre usted desde nuestros aliados, tales como las entidades financieras colombianas (Davivienda, Bancolombia, BBVA de Colombia y Giros & Finanzas). Utilizar\xE9mos estos datos personales, ya sea que haya proporcionado su consentimiento a nuestro aliado o a Colra\xEDces para ese intercambio de datos, o cuando Colra\xEDces tenga un inter\xE9s leg\xEDtimo para utilizar los datos personales para proporcionarle informaci\xF3n sobre nuestros servicios o su proceso de financiaci\xF3n y compra de vivienda en Colombia desde el exterior."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "¿Qué datos personales recopilamos de usted?",
+        children: ["- Datos de registro en formularios de contacto: estos son los datos personales que ha proporcionado en los formularios de contacto de Colra\xEDces Ltda., Vitrina Colombia o de nuestros aliados comerciales. Estos datos incluyen su nombre, apellido, direcci\xF3n de correo electr\xF3nico, pa\xEDs, ciudad de residencia y tel\xE9fono m\xF3vil. Datos personales recopilados con su permiso que nos permiten ampliar su solicitud o comentario, tales como: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "-Datos de concursos, encuestas y sorteos: estos datos personales se utilizan para que se registre y participe en estos tipos de promociones. Los datos personales exactos que recopilamos variar\xE1n en funci\xF3n de la promoci\xF3n, concurso o sorteo. -Datos de marketing: estos datos personales se utilizan para permitir a Colra\xEDces Ltda. y a nuestros aliados comerciales enviar comunicaciones de marketing por correo electr\xF3nico o mediante SMS. Esta comunicaci\xF3n se har\xE1 siempre cobijados bajo una campa\xF1a de marketing en la que Colra\xEDces Ltda. participe, de esa manera ninguno de nuestros aliados podr\xE1n hacer uso exclusivo de sus datos personales."]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "¿Para qué usamos sus datos personales?",
+        children: "Cuando se registra a trav\xE9s de nuestros formuarios de la web, buscador de Inmuebles y redes sociales, procesamos los datos personales que recopilamos sobre usted para: Campa\xF1as de marketing, investigaci\xF3n, participaci\xF3n en concursos, encuestas y sorteos, prop\xF3sitos promocionales, por correo electr\xF3nico, notificaciones u otros mensajes, consistentes con los permisos que nos pueda haber comunicado (ej., a trav\xE9s de la p\xE1gina web de Colra\xEDces y buscador de Inmuebles)."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "Compartir sus datos personales",
+        children: "Compartimos sus datos personales con nuestra Red de Franquicias con el fin de llevar a cabo campa\xF1as de marketing, investigaci\xF3n, participaci\xF3n en concursos, encuestas, sorteos, promociones por correo electr\xF3nico, notificaciones y otros mensajes. Nuestros franquiciados hacen uso de sus datos personales \xFAnica y exclusivamente para temas relacionados directamente con los productos y servicios de Colra\xEDces Ltda. Nuestros franquiciados no har\xE1n uso de sus datos personales para fines diferentes a los productos y servicios de Colra\xEDces Ltda."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "Seguridad de sus datos",
+        children: "Estamos comprometidos con proteger los datos personales de nuestros clientes implementando seguridad HTTPS en nuestras p\xE1ginas web; sin embargo, tenga en cuenta que ning\xFAn sistema es completamente seguro."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "Cambios a esta Política de privacidad",
+        children: "Ocasionalmente podemos hacer cambios a esta Pol\xEDtica. Cuando hagamos cambios importantes a esta Pol\xEDtica, le proporcionaremos un aviso notorio de forma adecuada sobre las circunstancias, por ejemplo mediante un email. Podemos notificarle con anticipaci\xF3n. Por lo tanto, aseg\xFArese de leer cualquier aviso cuidadosamente."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_components_ArticleDerechos__WEBPACK_IMPORTED_MODULE_1__.ArticleDerechos, {
+        title: "¿Cómo contactarnos?",
+        children: ["Gracias por leer nuestra Pol\xEDtica de Privacidad. Si tiene alguna pregunta acerca de esta Pol\xEDtica, p\xF3ngase en contacto con el \xE1rea responsable de la protecci\xF3n de datos mediante el formulario \u201CCont\xE1ctenos\u201D. Asimismo puede enviarnos un correo electr\xF3nico a info@colraices.co o escribi\xE9ndonos a la siguiente direcci\xF3n ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Colraices Ltda. ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Calle 100 # 13 \u2013 41. Oficina 102 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Bogot\xE1 - Colombia ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Colraices Ltda. es el controlador de datos para el procesamiento de los datos personales en virtud de esta Pol\xEDtica."]
+      })]
+    })
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/containers/Home.jsx":
 /*!******************************************!*\
   !*** ./resources/js/containers/Home.jsx ***!
@@ -4658,8 +4788,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "App": () => (/* binding */ App)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./resources/js/components/Layout.jsx");
 /* harmony import */ var _containers_Ahorro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../containers/Ahorro */ "./resources/js/containers/Ahorro.jsx");
 /* harmony import */ var _containers_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../containers/Home */ "./resources/js/containers/Home.jsx");
@@ -4675,7 +4805,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _containers_Derechos__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../containers/Derechos */ "./resources/js/containers/Derechos.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -4687,6 +4818,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -4727,7 +4859,7 @@ var App = function App() {
     setContr((0,_selectors_getContryByCod__WEBPACK_IMPORTED_MODULE_12__.getContryByCod)(contry));
     aos__WEBPACK_IMPORTED_MODULE_13___default().init();
   }, [contry]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_components_ActiveContext__WEBPACK_IMPORTED_MODULE_9__.ActiveContext.Provider, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_ActiveContext__WEBPACK_IMPORTED_MODULE_9__.ActiveContext.Provider, {
     value: {
       activeModalBlog: activeModalBlog,
       activarModalBlog: activarModalBlog,
@@ -4738,33 +4870,36 @@ var App = function App() {
       contr: contr,
       apiW: apiW
     },
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.BrowserRouter, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_components_Layout__WEBPACK_IMPORTED_MODULE_1__.Layout, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Routes, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.BrowserRouter, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_Layout__WEBPACK_IMPORTED_MODULE_1__.Layout, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Routes, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "/",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Home__WEBPACK_IMPORTED_MODULE_3__.Home, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Home__WEBPACK_IMPORTED_MODULE_3__.Home, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "credito",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Credito__WEBPACK_IMPORTED_MODULE_6__.Credito, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Credito__WEBPACK_IMPORTED_MODULE_6__.Credito, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "leasing-habitacional",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Leasing__WEBPACK_IMPORTED_MODULE_4__.Leasing, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Leasing__WEBPACK_IMPORTED_MODULE_4__.Leasing, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "plan-de-ahorro",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Ahorro__WEBPACK_IMPORTED_MODULE_2__.Ahorro, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Ahorro__WEBPACK_IMPORTED_MODULE_2__.Ahorro, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "blog",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_BlogScreen__WEBPACK_IMPORTED_MODULE_7__.BlogScreen, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_BlogScreen__WEBPACK_IMPORTED_MODULE_7__.BlogScreen, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "blog/:blogSlug",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Blog__WEBPACK_IMPORTED_MODULE_8__.Blog, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Blog__WEBPACK_IMPORTED_MODULE_8__.Blog, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "contacto",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_Contacto__WEBPACK_IMPORTED_MODULE_11__.Contacto, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Contacto__WEBPACK_IMPORTED_MODULE_11__.Contacto, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
+            path: "derechos",
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_Derechos__WEBPACK_IMPORTED_MODULE_15__.Derechos, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.Route, {
             path: "*",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_containers_NotFound__WEBPACK_IMPORTED_MODULE_5__.NotFound, {})
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_containers_NotFound__WEBPACK_IMPORTED_MODULE_5__.NotFound, {})
           })]
         })
       })

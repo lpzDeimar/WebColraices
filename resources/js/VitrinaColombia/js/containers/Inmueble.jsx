@@ -61,18 +61,20 @@ export const Inmueble = () => {
     }, [inmuebleSlug])
 
 
-    const { titulo, descripcion, precio, baños, habitaciones, garajes, area_const, fecha_const, pro_ser, region, ciudad, like, imagenes, planos,tipo_inmueble } = inmueble;
+    const { titulo, descripcion, precio, baños, habitaciones, garajes, area_const, fecha_const, pro_ser, region, ciudad, like, imagenes, planos, tipo_inmueble } = inmueble;
 
 
     return (
         <>
             {loading ?
                 <>
-                    {imagenes.length > 0 &&
-                        <BannerInmueble imagenes={imagenes} />
-                    }
-                    <section className='inmueble'>
+
+                    <BannerInmueble imagenes={imagenes} />
+
+                    <section className='inmueblee'>
+
                         <div className='inmueble__grid'>
+
                             <main className='inmueble__main'>
                                 <TitleInmueble
                                     titulo={titulo}
@@ -117,8 +119,8 @@ export const Inmueble = () => {
                                     />
                                 }
 
-
                             </main>
+
                             <section>
                                 {screen.width >= 940 &&
                                     <PrecioInmueble
@@ -130,7 +132,9 @@ export const Inmueble = () => {
                                     <ItemFormInm />
                                 </div>
                             </section>
+
                         </div>
+
                     </section>
                 </>
                 :

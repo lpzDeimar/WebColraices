@@ -1,33 +1,49 @@
-.inmueble{
+.inmueblee {
     padding-top: 3rem;
-    @include tablet{
+    background-color: #f7f7f7;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
         padding-top: 9rem;
     }
-    background-color:#f7f7f7;
-    padding-bottom: 7rem;
-    .inmueble__grid{
-        max-width: 130rem;
-        width: 90%;
+
+    .inmueble__grid {
         margin: 0 auto;
-        display: grid;
+        display: flex;
+        justify-content: center;
         padding: 0 2rem;
-        @include tablet{
-            grid-template-columns: 2.9fr 1fr;
-        }
+        width: 98%;
         grid-gap: 3rem;
+        flex-wrap: wrap;
+
+        @include tablet {
+            max-width: 122rem;
+            // grid-template-columns: 2.9fr 1fr;
+        }
+
+        .inmueble__main {
+            width: 100%;
+            max-width: 82rem;
+        }
     }
-    .inmueble__formularios{
+
+    .inmueble__formularios {
         width: 100%;
     }
-    .itemFormulario__cta{
-        margin: .7rem auto;
+
+    .itemFormulario__cta {
+        margin: 0.7rem auto;
         width: 100%;
         display: flex;
         gap: 1rem;
     }
 
 }
-.loading{
+
+.loading {
     position: fixed;
     top: 0;
     left: 0;

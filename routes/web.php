@@ -7,17 +7,22 @@ Route::get('/vitrina-colombia', function () {
     return view('VitrinaColombia');
 });
 
+Route::get('/vitrina-colombia/{todo}', function () {
+    return view('vitrinaColombia');
+});
+Route::get('/vitrina-colombia/{todo}/{tod}', function () {
+    return view('vitrinaColombia');
+});
+
+
 Route::get('/remesas', function () {
     return view('remesas');
 });
 
-Route::get('/franquicias-colraices', function () {
+Route::get('/franquicias', function () {
     return view('franquicias');
 });
 
-Route::get('/vitrina-colombia/{todo}', function () {
-    return view('vitrinaColombia');
-});
 
 Route::get('/', [HomeController::class, 'index']);
 

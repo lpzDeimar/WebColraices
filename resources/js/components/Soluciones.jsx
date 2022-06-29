@@ -20,7 +20,7 @@ export const Soluciones = () => {
                         <img src="img/soluciones/Portal.webp" alt="Portal inmobiliario" />
                     </figure>
                     <p>Portal inmobiliario</p>
-                    <a href="https://colraices.com/proyectosdeviviendaencolombiadesdeelexterior" target="_blank">Clic aquí</a>
+                    <a href="https://colraices.com/vitrina-colombia" target="_blank">Clic aquí</a>
                 </div>
                 <div className="soluciones-item">
                     <figure>
