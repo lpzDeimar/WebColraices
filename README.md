@@ -1,4 +1,4 @@
-<p align="center"><a href="https://colraices.com" target="_blank"><img src="https://col.colraices.com/img/colraices.webp" width="300"></a></p>
+<p align="center"><a href="https://colraices.com" target="_blank"><img src="https://colraices.com/img/colraices.webp" width="300"></a></p>
 
 ## About Colracies
 
